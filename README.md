@@ -14,7 +14,7 @@ Requirements you must have
 
 # Screenshot 
 <p align="center">
-  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1553679424/weather34_meteobridge2019_bzq4sa.png" width="550" title="weather34 meteobridge template ">
+  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1555166379/wfmb_n8scsq.png" width="550" title="weather34 meteobridge template ">
  
 
 
