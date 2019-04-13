@@ -12,7 +12,7 @@ Requirements you must have
 
 4.some basic knowledge of mysql/phpmyadmin use
 
-5. Meteobridge hub must be on latest firmware of 3.9 or above
+5.Meteobridge hub must be on latest firmware of 3.9 or above
 
 # Screenshot 
 <p align="center">
