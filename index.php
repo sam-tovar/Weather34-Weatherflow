@@ -1,11 +1,11 @@
 <?php header('Content-type: text/html; charset=utf-8');error_reporting(0);
 ####################################################################################################
-# HOME WEATHER STATION TEMPLATE by BRIAN UNDERDOWN 2015-2016-2017-2018                             #
+# HOME WEATHER STATION TEMPLATE by BRIAN UNDERDOWN 2017-2018-2019                    			   #
 # CREATED FOR HOMEWEATHERSTATION TEMPLATE at                									   #
 #   https://weather34.com/homeweatherstation/index.html                                            #
-#  WEATHER STATION TEMPLATE 2015-2016-2017-2018-2019 Meteobridge.     							   #
-#  Meteobridge Version  															               #
-#   https://www.weather34.com                                                                      #
+#  WEATHER STATION TEMPLATE 2017-2018-2019 Meteobridge.     									   #
+#  Weatherflow Meteobridge Version  April 2019  									               #
+#   https://github.com/weather34/Weather34-Weatherflow                                             #
 ####################################################################################################
 //original weather34 script original css/svg/php by weather34 2015-2019 clearly marked as original by weather34//
 include_once('livedata.php');include_once('common.php');include_once('settings1.php'); date_default_timezone_set($TZ);?>
@@ -159,7 +159,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <a href="https://www.meteobridge.com/wiki/index.php/Home" alt="https://www.meteobridge.com/wiki/index.php/Home" title="https://www.meteobridge.com/wiki/index.php/Home">
 <?php
 if ($mbplatform== "Meteobridge Pro"){echo '<img src="img/MeteobridgePRO.svg" alt="Davis Instruments-Meteobridge" title="Davis Instruments-Meteobridge"  width="140px" height="45px" >';}
-else if ($mbplatform== "MB TP-Link"){echo '<img src="img/TP-LINK.svg" alt="Meteobridge TP-LINK" title="Meteobridge TP-LINK"  width="140px" height="45px" >';}
+else if ($mbplatform== "MB TP-Link"){echo '<img src="img/meteobridge.svg" alt="Meteobridge TP-LINK" title="Meteobridge TP-LINK"  width="140px" height="45px" >';}
 else if ($mbplatform== "MB D-Link"){echo '<img src="img/meteobridge.svg" alt="Meteobridge D-LINK" title="Meteobridge D-LINK"  width="140px" height="45px" >';}
 else if ($mbplatform== "MB Asus"){echo '<img src="img/meteobridge.svg" alt="Meteobridge Asus" title="Meteobridge Asus"  width="140px" height="45px" >';}
 else if ($mbplatform== "Meteobridge"){echo '<img src="img/meteobridge.svg" alt="Meteobridge TP-LINK" title="Meteobridge TP-LINK"  width="140px" height="45px" >';}

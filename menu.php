@@ -65,5 +65,5 @@ else echo "";?>
      <?php // please do not remove this and if so no support is given and your domain will be blacklisted it is not much to ask //?>
      <li><a href="https://github.com/weather34/Meteobridge-Weather34-Template" title="https://github.com/weather34/Meteobridge-Weather34-Template/" target="_blank"><?php echo $github;?> Designed by weather34.com</a></li>
      <?php // Maintained by William Bailey https://lightmaster.pw //?>
-     <li><a href="https://github.com/weather34/Meteobridge-Weather34-Template" title="https://github.com/weather34/Meteobridge-Weather34-Template/" target="_blank"><?php echo $github;?> Download Repository</a></li>
+     <li><a href="https://github.com/weather34/Weather34-Weatherflow" title="Weatherflow version via Github " target="_blank"><?php echo $github;?> Download Weatherflow Template</a></li>
      </div></div></header>  

@@ -166,12 +166,11 @@ if (isset($_POST['submit_pwd'])){    $pass = isset($_POST['passwd']) ? $_POST['p
 
 
 </div>
-<div span style="width:390px;margin:0 auto;margin-top:10px;text-align:center;color:#4a636f;background:0;font-family:arial;padding:20px;border-radius:4px;border:1px solid rgba(74, 99, 111, 0.4);"> 
-<img src='img/easyweathersetupweather34.svg' width='120px'>
-<img src='img/nano.svg' width='40px' style="float:none;transform: rotate(100grad)"><img src='img/MeteobridgePRO.svg' width='60px' style="float:none;"><img src='img/TP-LINK.svg' width='60px' style="float:none;">
+<div span style="width:390px;margin:0 auto;margin-top:10px;text-align:center;color:#4a636f;background:rgba(230, 232, 239,0.1);font-family:arial;padding:20px;border-radius:4px;border:1px solid rgba(74, 99, 111, 0.4);"> 
+<img src='img/menuheaderweatherflow.svg' width='220px' style="float:none;">
 <br>
 
-Welcome you have logged into the WEATHER34 Meteobridge setup screen <?php echo date("M jS Y H:i"); ?>
+Welcome you have logged into the WEATHER34 Meteobridge Weatherflow setup screen <br><?php echo date("M jS Y H:i"); ?>
 </span>
 </div>
 </div></div>
