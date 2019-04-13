@@ -18,6 +18,9 @@ Requirements you must have
 
 7.more info about meteobridge https://www.meteobridge.com/wiki/index.php/Home
 
+8.more info about weatherflow https://community.weatherflow.com
+
+
 # Screenshot 
 <p align="center">
   <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1555166604/wfmb_arm1ag.png" width="550" title="weather34 meteobridge weatherflow template ">
