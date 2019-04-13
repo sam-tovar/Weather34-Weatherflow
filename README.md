@@ -2,7 +2,7 @@
 
 # Template is a slimmed down version of the original Meteobridge version specifically for Weatherflow Hardware and fully tested on 2019 Weatherflow hardware package with solar panel and vibration absorber mount APRIL 2019 .
 
-Requirements you must have 
+Requirements you need to aware of and have 
 
 1.Meteobridge HUB capable of using Weatherflow Hardware .
 
