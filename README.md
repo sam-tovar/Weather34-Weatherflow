@@ -23,7 +23,7 @@ Requirements you need to aware of and have
 
 # Screenshot 
 <p align="center">
-  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1555183845/wfgithub_hhw0xq.png" width="550" title="weather34 meteobridge weatherflow template ">
+  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1555183957/wfgithub2_nclyb5.png" width="550" title="weather34 meteobridge weatherflow template ">
  
 
 
