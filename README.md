@@ -12,6 +12,8 @@ Requirements you must have
 
 4.some basic knowledge of mysql/phpmyadmin use
 
+5. Meteobridge hub must be on latest firmware of 3.9 or above
+
 # Screenshot 
 <p align="center">
   <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1555166604/wfmb_arm1ag.png" width="550" title="weather34 meteobridge weatherflow template ">
