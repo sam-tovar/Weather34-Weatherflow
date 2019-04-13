@@ -14,6 +14,8 @@ Requirements you must have
 
 5.Meteobridge hub must be on latest firmware of 3.9 or above
 
+6.Uses a dedicated weather34 API function in meteobridge so above is important to be firmware 3.9
+
 # Screenshot 
 <p align="center">
   <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1555166604/wfmb_arm1ag.png" width="550" title="weather34 meteobridge weatherflow template ">
