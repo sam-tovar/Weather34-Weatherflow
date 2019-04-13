@@ -1,6 +1,6 @@
 # Weather34-Weatherflow
 
-# Template is a slimmed down version of the original Meteobridge version specifically for Weatherflow Hardware
+# Template is a slimmed down version of the original Meteobridge version specifically for Weatherflow Hardware and fully tested on 2019 Weatherflow hardware package with solar panel and vibration absorber mount APRIL 2019 .
 
 Requirements you must have 
 
