@@ -32,9 +32,9 @@ else echo' <div class="menucolor"><a href="./?units=metric">Units</a></div>';?><
 <?php if($weatherflowoption=="yes"){ echo "<a href=https://staging.smartweather.weatherflow.com/map/".$lat."/".$lon."/".$weatherflowmapzoom." data-featherlight=iframe>". $locationinfo." Weatherflow Map </a></li>" ;}
 else echo "";?>
 <li><!---webcam---> <a href="cam.php" data-featherlight="iframe" title="WEATHERSTATION WEBCAM"> <?php echo $webcam34icon;?> Web Cam </a></li>  
-<li><!--info---> <a href="bio.php" data-featherlight="iframe" title="Contact WEATHERSTATION Info"> <?php echo $svgmailmenu;?> Contact Info</a></li> 
-<li><!--info---> <a href="stationinfo.php" data-featherlight="iframe" title="Hardware WEATHERSTATION Info"> <?php echo $info;?> Hardware Info</a></li>   
-
+<li><!--contact info---> <a href="bio.php" data-featherlight="iframe" title="Contact WEATHERSTATION Info"> <?php echo $svgmailmenu;?> Contact Info</a></li> 
+<li><!--hardware info---> <a href="stationinfo.php" data-featherlight="iframe" title="Hardware WEATHERSTATION Info"> <?php echo $info;?> Hardware Info</a></li>   
+<li><!--template info---> <a href="weather34_template_info.php" data-featherlight="iframe" title="weather34 Template Info"> <?php echo $info;?> Template Info</a></li>   
 <!---languages---> 
   <br>   <?php if($languages=="yes") echo '<li><a href="">
    
