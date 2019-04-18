@@ -33,8 +33,8 @@ else echo' <div class="menucolor"><a href="./?units=metric">Units</a></div>';?><
 else echo "";?>
 <li><!---webcam---> <a href="cam.php" data-featherlight="iframe" title="WEATHERSTATION WEBCAM"> <?php echo $webcam34icon;?> Web Cam </a></li>  
 <li><!--contact info---> <a href="bio.php" data-featherlight="iframe" title="Contact WEATHERSTATION Info"> <?php echo $svgmailmenu;?> Contact Info</a></li> 
-<li><!--hardware info---> <a href="stationinfo.php" data-featherlight="iframe" title="Hardware WEATHERSTATION Info"> <?php echo $info;?> Hardware Info</a></li>   
-<li><!--template info---> <a href="weather34_template_info.php" data-featherlight="iframe" title="weather34 Template Info"> <?php echo $info;?> Template Info</a></li>   
+<li><!--hardware info---> <a href="stationinfo.php" data-featherlight="iframe" title="Hardware WEATHERSTATION Info"> <?php echo $info;?> Hardware Info</a></li>  
+
 <!---languages---> 
   <br>   <?php if($languages=="yes") echo '<li><a href="">
    
@@ -66,4 +66,5 @@ else echo "";?>
      <li><a href="https://github.com/weather34/Meteobridge-Weather34-Template" title="https://github.com/weather34/Meteobridge-Weather34-Template/" target="_blank"><?php echo $github;?> Designed by weather34.com</a></li>
      <?php // Maintained by William Bailey https://lightmaster.pw //?>
      <li><a href="https://github.com/weather34/Weather34-Weatherflow" title="Weatherflow version via Github " target="_blank"><?php echo $github;?> Download Weatherflow Template</a></li>
+     <li><!--template info---> <a href="weather34_template_info.php" data-featherlight="iframe" title="weather34 Template Info"> <?php echo $info;?> Weather34 Template Info</a></li>
      </div></div></header>  
