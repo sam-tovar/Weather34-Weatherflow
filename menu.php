@@ -1,9 +1,7 @@
-<header style="z-index:auto"><!---start menu.php 23-02-2018--><h1><ogreyh1><?php echo $stationName;?>&nbsp; Home Weather Station</h1>
-<button class="button right"></button><div class='w34logo'>
-<?php if($units!='us'){echo' <a href="./?units=us" alt="select fahrenhiet" title="select fahrenhiet"><topbarimperial>&deg;F</topbarimperial></a></div>';}
-else if($units!='metric'){echo' <a  alt="select metric" title="select metric" href="./?units=metric"><topbarmetric>&deg;C</topbarmetric></a></div>';}
-else echo' <div class="menucolor"><a href="./?units=metric">Units</a></div>';?></div>
-<div class="w34uptime"><?php echo $info."&nbsp; Uptime: "?><?php if ($uptimedays <1 ){echo "$uptimehours Hours";} else echo $uptimedays," Days";?></div>
+<div class="weather34admin"><header class="weather34admin__header"><div class="weather34toolbar">
+<div class="weather34toolbar__left"><button class="weather34btn weather34btn--primary"></button></div><div class="weather34toolbar__center"><button class="weather34btn weather34btn--primary"><weather34toptitle><?php echo $stationName;?>&nbsp; Home Weather Station</weather34toptitle> 
+</button></div><div class="weather34toolbar__right"><weather34mbuptime><?php echo $info."Uptime:"?><?php if ($uptimedays <1 ){echo "$uptimehours Hours";} else echo $uptimedays," Days";?></weather34mbuptime><a href="#"><?php if($units!='us'){echo' <a href="./?units=us" alt="select fahrenhiet" title="select fahrenhiet"><topbarimperial>&deg;F</topbarimperial></a></div>';}else if($units!='metric'){echo' <a  alt="select metric" title="select metric" href="./?units=metric"><topbarmetric>&deg;C</topbarmetric></a></div>';}
+else echo' <div class="menucolor"><a href="./?units=metric">Units</a></div>';?></a></div></div></header>
  <input type="checkbox" class="openweather34sidebarMenu" id="openweather34sidebarMenu">
   <label for="openweather34sidebarMenu" class="weather34sidebarIconToggle">
     <div class="weather34spinner weather34cross part-1"></div>

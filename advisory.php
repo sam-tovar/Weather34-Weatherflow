@@ -31,7 +31,7 @@ $parsed_weather34wujson = json_decode($weather34wuurl,false);
 	 $wuskysnow4 = $parsed_weather34wujson->{'daypart'}[0]->{'qpfSnow'}[4];
 	 $wuskysnow5 = $parsed_weather34wujson->{'daypart'}[0]->{'qpfSnow'}[5];
 	 $wuskysnow6 = $parsed_weather34wujson->{'daypart'}[0]->{'qpfSnow'}[6];
-	 $wuskysnow7 = $parsed_weather34wujson->{'daypart'}[0]->{'qpfSnow'}[7];
+	 $wuskysnow7 = $parsed_weather34wujson->{'daypart'}[0]->{'qpfSnow'}[7]; 
 	 
 	 }}?>
 
@@ -139,5 +139,6 @@ $parsed_weather34wujson = json_decode($weather34wuurl,false);
    </spanelightning></div></div></div>';} 
  //WEATHER34 solar eclipse events and no alerts 
  else {echo '<spanelightning><alertvalue>'.$eclipse_default.'</spanelightning></div></div></div>';}   
+  
  
   ?></noalert></div></div>
