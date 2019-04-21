@@ -12,31 +12,32 @@ else echo' <div class="menucolor"><a href="./?units=metric">Units</a></div>';?><
 <ul class="weather34sidebarMenuInner">
 <br /><br /><br />
 <li><a href="#">ADMIN</a></li>
-<li><a href="easyweathersetup.php" target="_blank" title="WEATHERSTATION SETTINGS PAGE"><?php echo $weather34settingsicon; echo " ",$lang['Settings']; ?> </a></li> 
+<li><a href="easyweathersetup.php" target="_blank" title="WEATHERSTATION SETTINGS PAGE"><?php echo " <weather34menumarkeryellow></weather34menumarkeryellow> ",$lang['Settings']; ?> </a></li> 
 <p>
 <li><a href="#">USER PREFERENCES</a></li>
-<li><a href="index.php" title="WEATHERSTATION HOME PAGE"> <?php echo $weather34homeicon; echo ' Home'; ?> </a></li>  
-<li><a href=<?php if($theme=='dark'){echo'?theme=light';}else{echo'?theme=dark';}?>><?php echo $arrow34icon;?><?php if($theme=='dark'){echo' Light Theme';}else{echo' Dark Theme';}?></a></li>
+<li><a href="index.php" title="WEATHERSTATION HOME PAGE"> <weather34menumarkergreen></weather34menumarkergreen> Home </a></li>  
+<li><a href=<?php if($theme=='dark'){echo'?theme=light';}else{echo'?theme=dark';}?>>
+<?php if($theme=='dark'){echo' <weather34menumarkerlight></weather34menumarkerlight> Light Theme';}else{echo'<weather34menumarkerbluegrey></weather34menumarkerbluegrey> Dark Theme';}?></a></li>
 <p>
 <li><a href="#">UNITS</a></li>
-<?php if($units!='us'){
-	echo '<li> <a  href="./?units=us"> '.$arrow34icon.'  Non Metric  '.$weatherunitfm.'</a><br />  ';}if($units!='metric'){
-	echo '<li> <a  href="./?units=metric"> '.$arrow34icon.' Metric '.$weatherunitcm.'</a><br />  ';}if($units!='uk'){
-	echo '<li> <a  href="./?units=uk">  '.$arrow34icon.' UK ( MPH)  '.$weatherunitcm.'</a><br /> ';}if($units!='scandinavia'){
-	echo '<li> <a  href="./?units=scandinavia"> '.$arrow34icon.' M/S  '.$weatherunitcm.'</a>';}?>
+<?php
+if($units!='us'){echo '<li> <a  href="./?units=us"> <weather34menumarkerorange></weather34menumarkerorange>  Imperial <topbarimperialf>&deg;F</topbarimperialf> </a><br />  ';}
+if($units!='metric'){echo '<li> <a  href="./?units=metric"> <weather34menumarkerblue></weather34menumarkerblue> Metric <topbarmetricc>&deg;C</topbarmetricc></a><br />  ';}
+if($units!='uk'){echo '<li> <a  href="./?units=uk"> <weather34menumarkeryellow></weather34menumarkeryellow> UK ( MPH) <topbarmetricc>&deg;C</topbarmetricc></a><br /> ';}
+if($units!='scandinavia'){echo '<li> <a  href="./?units=scandinavia"><weather34menumarkerred></weather34menumarkerred> M/S  <topbarmetricc>&deg;C</topbarmetricc></a><br /> ';}?>
 
 <li><a href="#">EXTRAS</a></li>
 <li>
-<?php if($weatherflowoption=="yes"){ echo "<a href=https://staging.smartweather.weatherflow.com/map/".$lat."/".$lon."/".$weatherflowmapzoom." data-featherlight=iframe>". $locationinfo." Weatherflow Map </a></li>" ;}
+<?php if($weatherflowoption=="yes"){ echo "<a href=https://staging.smartweather.weatherflow.com/map/".$lat."/".$lon."/".$weatherflowmapzoom." data-featherlight=iframe title='see your weather station on official weatherflow map'><weather34menumarkerblue></weather34menumarkerblue> Weatherflow Map </a></li>" ;}
 else echo "";?>
-<li><!---webcam---> <a href="cam.php" data-featherlight="iframe" title="WEATHERSTATION WEBCAM"> <?php echo $webcam34icon;?> Web Cam </a></li>  
-<li><!--contact info---> <a href="bio.php" data-featherlight="iframe" title="Contact WEATHERSTATION Info"> <?php echo $svgmailmenu;?> Contact Info</a></li> 
-<li><!--hardware info---> <a href="stationinfo.php" data-featherlight="iframe" title="Hardware WEATHERSTATION Info"> <?php echo $info;?> Hardware Info</a></li>  
+<li><!---webcam---> <a href="cam.php" data-featherlight="iframe" title="WEATHERSTATION WEBCAM"> <weather34menumarkeryellow></weather34menumarkeryellow> Web Cam </a></li>  
+<li><!--contact info---> <a href="bio.php" data-featherlight="iframe" title="Weather Station Owner Contact Card Info"> <weather34menumarkerorange></weather34menumarkerorange> Contact Card</a></li> 
+<li><!--hardware info---> <a href="stationinfo.php" data-featherlight="iframe" title="Hardware Weather Station Hardware Info"> <weather34menumarkerred></weather34menumarkerred> Hardware Info</a></li>  
 
 <!---languages---> 
   <br>   <?php if($languages=="yes") echo '<li><a href="">
    
-   '.$arrow34icon,' '.$lang["language"], '</a></li>','
+   <weather34menumarkerbluegrey></weather34menumarkerbluegrey> '.$lang["language"], '</a></li>','
      <br>
   <div class="languages34">
   <a href="index.php?lang=en"><img src="img/flags/en.svg"  title="English" width="25px" height="25px"></a>&nbsp;
@@ -59,10 +60,11 @@ else echo "";?>
   <a href="index.php?lang=sp"><img src="img/flags/ar.svg"  title="Argentina" width="25px" height="25px"></a>&nbsp;
   <br>
      '?>
-     <!---credits---> 
-     <?php // please do not remove this and if so no support is given and your domain will be blacklisted it is not much to ask //?>
-     <li><a href="https://github.com/weather34/Meteobridge-Weather34-Template" title="https://github.com/weather34/Meteobridge-Weather34-Template/" target="_blank"><?php echo $github;?> Designed by weather34.com</a></li>
-     <?php // Maintained by William Bailey https://lightmaster.pw //?>
-     <li><a href="https://github.com/weather34/Weather34-Weatherflow" title="Weatherflow version via Github " target="_blank"><?php echo $github;?> Download Weatherflow Template</a></li>
-     <li><!--template info---> <a href="weather34_template_info.php" data-featherlight="iframe" title="weather34 Template Info"> <?php echo $info;?> Weather34 Template Info</a></li>
-     </div></div></header>  
+     <!---credits | download info---> 
+<?php // please do not remove this and if so no support is given and your domain will be blacklisted from support it is not much to ask //?>
+<li><a href="https://github.com/weather34/Meteobridge-Weather34-Template/" title="Weather34 Meteobridge version via Github " target="_blank">
+<weather34menumarkerbluegrey></weather34menumarkerbluegrey> Download Meteobridge Template</a></li>
+<li><a href="https://github.com/weather34/Weather34-Weatherflow" title="Weather34 Weatherflow version via Github " target="_blank">
+<weather34menumarkerbluegrey></weather34menumarkerbluegrey> Download Weatherflow Template</a></li>
+<li><a href="https://github.com/weather34/Meteobridge-Weather34-Template" title="https://github.com/weather34/Meteobridge-Weather34-Template/" target="_blank"><weather34menumarkerbluegrey></weather34menumarkerbluegrey> Designed by weather34.com</a></li>    
+</div></div></header>  
