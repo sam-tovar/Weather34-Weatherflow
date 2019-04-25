@@ -5,138 +5,90 @@ uppercase{ text-transform:capitalize;}
 </style>
 <?php 
 //original weather34 script original css/svg/php by weather34 2015-2019 clearly marked as original by weather34//
-include('metar34get.php');include('common.php');error_reporting(0);
-$result = date_sun_info(time(), $lat, $lon);
-$sunr=date_sunrise(time(), SUNFUNCS_RET_STRING, $lat, $lon, $rise_zenith, $UTC);
-$suns=date_sunset(time(), SUNFUNCS_RET_STRING, $lat, $lon, $set_zenith, $UTC);
-$sunr1=date_sunrise(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, $rise_zenith, $UTC);
-$suns1=date_sunset(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, $set_zenith, $UTC);
-$tw=date_sunrise(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, 96, $UTC);
-$twe=date_sunset(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, 96, $UTC);
-$suns2 =date('G.i', $result['sunset']);
-$sunr2 =date('G.i', $result['sunrise']);
-$suns3 =date('G.i', $result['sunset']);
-$sunr3 =date('G.i', $result['sunrise']);
-$sunrisehour =date('G', $result['sunrise']);
-$sunsethour =date('G', $result['sunset']);
-$twighlight_begin =date('G:i', $result['civil_twilight_begin']);
-$twighlight_end =date('G:i', $result['civil_twilight_end']);
-$now =date('G.i');?>
+include('metar34get.php'); error_reporting(0);$weather["cloudbase3"] = round((anyToC($weather["temp"]) - anyToC($weather["dewpoint"])) * 1000 /2.4444) ;
+$result = date_sun_info(time(), $lat, $lon);$sunr=date_sunrise(time(), SUNFUNCS_RET_STRING, $lat, $lon, $rise_zenith, $UTC);$suns=date_sunset(time(), SUNFUNCS_RET_STRING, $lat, $lon, $set_zenith, $UTC);
+$sunr1=date_sunrise(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, $rise_zenith, $UTC);$suns1=date_sunset(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, $set_zenith, $UTC);
+$tw=date_sunrise(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, 96, $UTC);$twe=date_sunset(strtotime('+1 day', time()), SUNFUNCS_RET_STRING, $lat, $lon, 96, $UTC);
+$suns2 =date('G.i', $result['sunset']);$sunr2 =date('G.i', $result['sunrise']);$suns3 =date('G.i', $result['sunset']);$sunr3 =date('G.i', $result['sunrise']);$sunrisehour =date('G', $result['sunrise']);
+$sunsethour =date('G', $result['sunset']);$twighlight_begin =date('G:i', $result['civil_twilight_begin']);$twighlight_end =date('G:i', $result['civil_twilight_end']);$now =date('G.i');
+?>
 <div class="updatedtimecurrent">
-<?php $forecastime=filemtime('jsondata/metar34.txt');
-	$weather34wuurl = file_get_contents("jsondata/metar34.txt");
-	if(filesize('jsondata/metar34.txt')<160){echo $online;}else echo $online,"";echo " ",	date($timeFormat,$forecastime);	?></div>
+<?php $forecastime=filemtime('jsondata/metar34.txt');$weather34wuurl = file_get_contents("jsondata/metar34.txt");if(filesize('jsondata/metar34.txt')<10){echo  $online;}
+else echo $online,"";echo " ",	date($timeFormat,$forecastime);	?></div>
+<div class="cloudconverter">
+<?php //cloudbase-weather34
+if ($weather['temp_units']=='C' && $weather["cloudbase3"]>=1999){echo "<div class=cloudconvertercircle2000>Clouds<tyellow> ".round($weather["cloudbase3"])."</tyellow><smalltempunit2> ft</tblue><smalltempunit2>" ;}
+else if ($weather['temp_units']=='C' && $weather["cloudbase3"]<1999){echo "<div class=cloudconvertercircle>Clouds<tblue> ".round($weather["cloudbase3"])."</tblue><smalltempunit2> ft</tblue><smalltempunit2>" ;}
+else if ($weather['temp_units']=='F' && $weather["cloudbase3"]*0.3048>=609){echo "<div class=cloudconvertercircle2000>Clouds<tyellow> ".round($weather["cloudbase3"]*0.3048,0)."</tyellow><smalltempunit2> m<smalltempunit2>" ;}
+else if ($weather['temp_units']=='F' && $weather["cloudbase3"]*0.3048<609){echo "<div class=cloudconvertercircle>Clouds<tblue> ".round($weather["cloudbase3"]*0.3048,0)."</tblue><smalltempunit2> m</tblue><smalltempunit2>" ;}
+?></div></div>
 <div class="darkskyiconcurrent"><span1>
 <?php 
-
-//lightning
-if ($weather["lightningtimeago"]>0 && $weather["lightningtimeago"]<600 && $weather["rain_rate"]>0){echo "<img rel='prefetch' src='css/icons/tstorm.svg' width='70px' height='60px' alt='weather34 rain lightning icon'>";}
-else if ($weather["lightningtimeago"]>0 && $weather["lightningtimeago"]<600 ){echo "<img rel='prefetch' src='css/icons/lightning.svg' width='70px' height='60px' alt='weather34 rain lightning icon'>";}
-
-
+//homeweatherstation weather34 current conditions using hardware values
 //rain-weather34
+if($weather["rain_rate"]>0 && $weather["wind_speed_avg"]>15){echo "<img rel='prefetch' src='css/icons/windyrain.svg' width='60px' height='55px' alt='weather34 windy rain icon'>";}
 else if($weather["rain_rate"]>10){echo "<img rel='prefetch' src='css/icons/rain.svg' width='70px' height='60px' alt='weather34 heavy rain icon'>";}
 else if($weather["rain_rate"]>0){echo "<img rel='prefetch' src='css/icons/rain.svg' width='70px' height='60px' alt='weather34 rain icon'>";}
-
+else if($weather["rain_rate2"]>10){echo "<img rel='prefetch' src='css/icons/rain.svg' width='70px' height='60px' alt='weather34 heavy rain icon'>";}
+else if($weather["rain_rate2"]>0){echo "<img rel='prefetch' src='css/icons/rain.svg' width='70px' height='60px' alt='weather34 rain icon'>";}
 //fog-weather34
-else if($weather["temp"] -$weather["dewpoint"] <0.5  && $now >$suns2 && $weather["temp"]>5){echo "<img rel='prefetch' src='css/icons/nt_fog.svg' width='70px' height='60px' alt='weather34 fog icon'>";}
-else if($weather["temp"] -$weather["dewpoint"] <0.5  && $now <$sunr2 && $weather["temp"]>5){echo "<img rel='prefetch' src='css/icons/nt_fog.svg' width='70px' height='60px' alt='weather34 fog icon'>";}
-else if($weather["temp"] -$weather["dewpoint"] <0.5  && $weather["temp"]>5){echo "<img rel='prefetch' src='css/icons/fog.svg' width='70px' height='60px' alt='weather34 fog'>";}
-//override
-
-
-//windy moderate
-else if($weather["wind_speed_avg"]>20 && $now >$suns2){echo "<img rel='prefetch' src='css/icons/nt_windy.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
-else if($weather["wind_speed_avg"]>20 && $now <$sunr2){echo "<img rel='prefetch' src='css/icons/nt_windy.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
-else if($weather["wind_speed_avg"]>20){echo "<img rel='prefetch' src='css/icons/windy.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
-
-//metar with darksky fallback
+else if($weather["temp"] -$weather["dewpoint"] <0.8  && $now >$suns2 && $weather["temp"]>5){echo "<img rel='prefetch' src='css/icons/nt_fog.svg' width='70px' height='60px' alt='weather34 fog icon'>";}
+else if($weather["temp"] -$weather["dewpoint"] <0.8  && $now <$sunr2 && $weather["temp"]>5){echo "<img rel='prefetch' src='css/icons/nt_fog.svg' width='70px' height='60px' alt='weather34 fog icon'>";}
+else if($weather["temp"] -$weather["dewpoint"] <0.8  && $weather["temp"]>5){echo "<img rel='prefetch' src='css/icons/fog.svg' width='70px' height='60px' alt='weather34 fog'>";}
+//windy moderate-weather34
+else if($weather["wind_speed_avg"]>=15 && $now >$suns2 && $sky_icon=='clear' ){echo "<img rel='prefetch' src='css/icons/nt_windyclear.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
+else if($weather["wind_speed_avg"]>=15 && $now <$sunr2 && $sky_icon=='clear'){echo "<img rel='prefetch' src='css/icons/nt_windyclear.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
+else if($weather["wind_speed_avg"]>=15 && $sky_icon=='clear'){echo "<img rel='prefetch' src='css/icons/windyclear.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
+//windy moderate-weather34
+else if($weather["wind_speed_avg"]>=15 && $now >$suns2){echo "<img rel='prefetch' src='css/icons/nt_windy.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
+else if($weather["wind_speed_avg"]>=15 && $now <$sunr2){echo "<img rel='prefetch' src='css/icons/nt_windy.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
+else if($weather["wind_speed_avg"]>=15){echo "<img rel='prefetch' src='css/icons/windy.svg' width='70px' height='60px' alt='weather34 windy icon'>";}
+//metar with darksky fallback-weather34
 else if(filesize('jsondata/metar34.txt')<160){
 echo "<img rel='prefetch' src='css/icons/offline.svg'width='70px' height='60px' alt='weather34 offline icon'>";} 	
 else echo "<img rel='prefetch' src='css/icons/".$sky_icon."' width='70px' height='60px'>";
 ?></div>
 <div class="darkskysummary"><span>
-
-<?php 
-
-echo '';
-//lightning
-if($weatherflowoption=='yes' &&  $weather["lightningtimeago"]>0 && $weather["lightningtimeago"]<600 && $weather["rain_rate"]>0){echo "<oblue>Rain</oblue> <oorange>Lightning ".$alert." <br>Caution<br>";}
-else if ($weatherflowoption=='yes' &&  $weather["lightningtimeago"]>0 && $weather["lightningtimeago"]<600){echo "<oorange>Nearby Lightning  ".$alert."</oorange> <br>".$lang['Conditions']."" ;}
+<?php echo '';
 
 //rain-weather34
+if($weather["rain_rate"]>0 && $weather["wind_speed_avg"]>15){echo "Rain Showers"; echo '<br>';echo "Windy Conditions";}
 else if($weather["rain_rate"]>=20){echo "Heavy Rain"; echo '<br>';echo "Flooding Possible";}
 else if($weather["rain_rate"]>=10){echo "Heavy Rain"; echo '<br>Showers';}
 else if($weather["rain_rate"]>=5){echo "Moderate Rain"; echo '<br>Showers';}
 else if($weather["rain_rate"]>=1){echo "Steady Rain";echo '<br>Showers';}
 else if($weather["rain_rate"]>0){echo "Light Rain";echo '<br>Showers';}
 //fog-weather34
-else if($weather["temp"] -$weather["dewpoint"] <0.2  && $now >$suns2 && $weather["temp"]>5){echo "Misty Fog <br>Conditions ".$alert."";}
-else if($weather["temp"] -$weather["dewpoint"] <0.2  && $now <$sunr2 && $weather["temp"]>5) {echo "Misty Fog<br>Conditions ".$alert."";}
-else if($weather["temp"] -$weather["dewpoint"] <0.2  && $weather["temp"]>5){echo "Misty Fog <br>Conditions ".$alert."";}
+else if($weather["temp"] -$weather["dewpoint"] <0.5  && $now >$suns2 && $weather["temp"]>5){echo "Misty Fog<br>Conditions ".$alert."";}
+else if($weather["temp"] -$weather["dewpoint"] <0.5  && $now <$sunr2 && $weather["temp"]>5) {echo "Misty Fog<br>Conditions ".$alert."";}
+else if($weather["temp"] -$weather["dewpoint"] <0.5  && $weather["temp"]>5){echo "Misty Fog<br>Conditions ".$alert."";}
 //misty-weather34
-else if($weather["temp"] -$weather["dewpoint"] <0.5  && $now >$suns2 && $weather["temp"]>5){echo "Misty <br>Conditions";}
-else if($weather["temp"] -$weather["dewpoint"] <0.5  && $now <$sunr2 && $weather["temp"]>5) {echo " Misty <br>Conditions";}
-else if($weather["temp"] -$weather["dewpoint"] <0.5  && $weather["temp"]>5){echo "Misty <br>Conditions";}
-
+else if($weather["temp"] -$weather["dewpoint"] <0.8  && $now >$suns2 && $weather["temp"]>5){echo "Fog Hazy<br>Conditions";}
+else if($weather["temp"] -$weather["dewpoint"] <0.8  && $now <$sunr2 && $weather["temp"]>5) {echo " Misty Hazy<br>Conditions";}
+else if($weather["temp"] -$weather["dewpoint"] <0.8  && $weather["temp"]>5){echo "Misty Hazy<br>Conditions";}
 //windy-weather34
-else if($weather["wind_speed_avg"]>40){echo "Strong Wind ".$alert."<br>Conditions" ;}
-else if($weather["wind_speed_avg"]>30){echo "Very Windy ".$alert."<br>Conditions";}
-else if($weather["wind_speed_avg"]>20){echo "Moderate Wind <br>Conditions";}
-else if(filesize('jsondata/metar34.txt')<160){echo "<uppercase>Conditions<br>Not Available</uppercase>";}
-//metar conditions
-else echo '<uppercase>',$sky_desc.'</uppercase>'; 
-
+else if($weather["wind_speed_avg"]>=40){echo "Strong Wind ".$alert."<br>Conditions" ;}
+else if($weather["wind_speed_avg"]>=30){echo "Very Windy ".$alert."<br>Conditions";}
+else if($weather["wind_speed_avg"]>=22){echo "Moderate Wind <br>Conditions";}
+else if($weather["wind_speed_avg"]>=15){echo "Breezy <br>Conditions";}
+else if(filesize('jsondata/metar34.txt')<160){echo "<uppercase>Conditions<br>Not Available</uppercase>";} 
+//metar conditions-weather34
+else echo '<uppercase>',$sky_desc.'</uppercase><br>'; 
 ?>
 </span></div>
-<!-- Darksky Hourly Next 3 hours HOMEWEATHER STATION--> 
+<!-- weather34 Weatherflow Meteobridge generated Data--> 
 <div class="darkskynexthours">
-
-<?php 
-
-echo $lang['Hourlyforecast'];echo "<br>";
-//weather34 darksky script for current conditions next hours
-      $hi = 0;
-      foreach ($darkskyhourlyCond as $cond) {
-        $darkskyhourlyTime = $cond['time'];
-        $darkskyhourlySummary = $cond['summary'];
-        $darkskyhourlyIcon = $cond['icon'];
-        $darkskyhourlyTemp = round($cond['temperature']);            
-         $darkskyhourlyWinddir = $cond['windBearing'];
-			$darkskyhourlyuv = $cond['uvIndex'];
-			$darkskyhourlyClouds = $cond['cloudCover']*100;
-            $darkskyhourlyHumidity = $cond['humidity']*100;
-            $darkskyhourlyPrecipProb = $cond['precipProbability']*100;
-            if (isset($cond['precipType'])){
-            $darkskyhourlyPrecipType = $cond['precipType'];}
-			$darkskyhourlyprecipIntensity = number_format($cond['precipIntensityMax'],1);         
-            $darkskyhourlyWindSpeed = round($cond['windSpeed'],0);
-			$darkskyhourlyWindGust = round($cond['windGust'],0);   
-			
-			echo " ".$lang['Temperature']." ";
-			//celsius
-			if($tempunit=="C" && $darkskyhourlyTemp>=20){echo "<oorange>" .$darkskyhourlyTemp."</oorange>°".$tempunit;} 
-			else if($tempunit=="C" && $darkskyhourlyTemp<=10){echo "<oblue>" .$darkskyhourlyTemp."</oblue>°".$tempunit;}
-			else if($tempunit=="C" && $darkskyhourlyTemp<20){echo "<ogreen>" .$darkskyhourlyTemp."</ogreen>°".$tempunit;} 			
-			//fahrenheitt
-			if($tempunit=="F" && $darkskyhourlyTemp>=65){echo "<oorange>" .$darkskyhourlyTemp."</oorange>°".$tempunit;}
-			else if($tempunit=="F" && $darkskyhourlyTemp<=40){echo "<oblue>" .$darkskyhourlyTemp."</oblue>°".$tempunit;}   
-			else if($tempunit=="F" && $darkskyhourlyTemp<65){echo "<ogreen>" .$darkskyhourlyTemp."</ogreen>°".$tempunit;} 
-			echo  "<ogreen> ".$darkskyhourlySummary."	</ogreen>".$lang['Conditions'].". <oorange><br>".$lang['Windspeed']. " "  .$lang['Gust']."</oorange> ";
-			if($tempunit=="C" && $darkskyhourlyWindGust>=40){echo "<oorange>" .$darkskyhourlyWindGust."</oorange> ".$windunit;} 			
-			else if($tempunit=="C" && $darkskyhourlyWindGust>=0){echo "<ogreen>" .$darkskyhourlyWindGust."</ogreen> ".$windunit;} 	
-			
-			if($tempunit=="F" && $darkskyhourlyWindGust>=30){echo "<oorange>" .$darkskyhourlyWindGust."</oorange> ".$windunit;} 
-			else if($tempunit=="F" && $darkskyhourlyWindGust>=0){echo "<ogreen>" .$darkskyhourlyWindGust."</ogreen> ".$windunit;}			
-			echo ". ".$lang['Rainfall']."   ".$rainsvg." ".$darkskyhourlyPrecipProb. "%<oblue> " .$darkskyhourlyprecipIntensity."</oblue> " .$rainunit;  
-			
-			//uvindex forecast
-			echo "<br><oorange>UVI</oorange> ".$lang['Forecast']. " ";
-			if ($darkskyhourlyuv>=8){ echo "<uviforecasthourred>"  .$darkskyhourlyuv."</uviforecasthourred>".$uvhigh ;}
-			else if ($darkskyhourlyuv>=6){ echo "<uviforecasthourorange>"  .$darkskyhourlyuv."</uviforecasthourorange>".$uvnormal ;}
-			else if ($darkskyhourlyuv>=3){ echo "<uviforecasthouryellow>"  .$darkskyhourlyuv."</uviforecasthouryellow>".$uvnormal ;}
-			else if ($darkskyhourlyuv>=0.1){ echo "<uviforecasthourgreen>"  .$darkskyhourlyuv."</uviforecasthourgreen>".$uvnormal ;}
-			else echo "<uviforecasthourgreen>"  .$darkskyhourlyuv."</uviforecasthourgreen>".$uvdark ;
-			
-      if ($hi++ == 0) break; };?>   
-    </div></div>
+<?php //weather34 average station data 
+echo "Average <oorange>Temperature</oorange> last 60 minutes ";if($weather["temp_avg"]>=20){echo "<oorange>" .$weather["temp_avg"]."</oorange>°<valuetext>".$tempunit;} else if($weather["temp_avg"]<=10){echo "<oblue>" .$weather["temp_avg"]."</oblue>°<valuetext>".$tempunit;}else if($weather["temp_avg"]<20){echo "<ogreen>" .$weather["temp_avg"]."</ogreen>°<valuetext>".$tempunit;}echo "</valuetext><br>";
+echo  "Max <oblue>Wind Speed</oblue> ";
+if($weather["wind_speed_max"]>=50){echo "<ored>" .$weather["wind_speed_max"]."</ored> ".$windunit;}
+else if($weather["wind_speed_max"]>=30){echo "<oorange>" .$weather["wind_speed_max"]."</oorange><valuetext> ".$windunit;}
+else if($weather["wind_speed_max"]>=0){echo "<ogreen>" .$weather["wind_speed_max"]."</ogreen><valuetext> ".$windunit;}echo " </valuetext>last 10 minutes ";
+echo  " <br>Average <oblue>Wind Speed</oblue> last 60 minutes ";if($weather["wind_speed_avg"]>=30){echo "<ored>" .$weather["wind_speed_avg"]."</ored> ".$windunit;}else if($weather["wind_speed_avg"]>=20){echo "<oorange>" .$weather["wind_speed_avg"]."</oorange><valuetext> ".$windunit;}
+else if($weather["wind_speed_avg"]>=0){echo "<ogreen>" .$weather["wind_speed_avg"]."</ogreen><valuetext> ".$windunit;}
+echo  "</valuetext><br>Average Direction <oorange>";
+if($weather["wind_direction_avg"]<=11.25){echo "North";}else if($weather["wind_direction_avg"]<=33.75){echo "NNE";}else if($weather["wind_direction_avg"]<=56.25){echo "NE";}else if($weather["wind_direction_avg"]<=78.75){echo "ENE";}else if($weather["wind_direction_avg"]<=101.25){echo "East";}else if($weather["wind_direction_avg"]<=123.75){echo "ESE";}else if($weather["wind_direction_avg"]<=146.25){echo "SE";}
+else if($weather["wind_direction_avg"]<=168.75){echo "SSE";}else if($weather["wind_direction_avg"]<=191.25){echo "South";}else if($weather["wind_direction_avg"]<=213.75){echo "SSW";}else if($weather["wind_direction_avg"]<=236.25){echo "SW";}else if($weather["wind_direction_avg"]<=258.75){echo "WSW";}else if($weather["wind_direction_avg"]<=281.25){echo "West";}else if($weather["wind_direction_avg"]<=303.75){echo "WNW";}else if($weather["wind_direction_avg"]<=326.25){echo "NW";}else if($weather["wind_direction_avg"]<=348.75){echo "NNW";}else{echo "North";}
+echo " </oorange><oblue> ".$weather["wind_direction_avg"]."</oblue>°";
+echo "</oorange><br><oblue>Rainfall</oblue> for the last hour <oblue> " .$weather["rain_lasthour"]."</oblue><valuetext> " .$rainunit;
+?></valuetext></div></div></div>
