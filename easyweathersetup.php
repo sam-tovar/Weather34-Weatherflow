@@ -349,7 +349,7 @@ Choose the default Language to display and use..</div>
            <option>aus</option>
            <option>en</option>
            <option>can</option>
-           <option>ch</option>   
+           <option>ch-switzerland</option>   
            <option>cat</option>             
            <option>dk</option>
            <option>dl</option>
