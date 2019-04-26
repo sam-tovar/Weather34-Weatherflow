@@ -14,8 +14,8 @@ else echo' <div class="menucolor"><a href="./?units=metric">Units</a></div>';?><
 <li><a href="#">ADMIN</a></li>
 <li><a href="easyweathersetup.php" target="_blank" title="WEATHERSTATION SETTINGS PAGE"><?php echo " <weather34menumarkeryellow></weather34menumarkeryellow> ",$lang['Settings']; ?> </a></li> 
 <p>
-<li><a href="#">USER PREFERENCES</a></li>
 <li><a href="index.php" title="WEATHERSTATION HOME PAGE"> <weather34menumarkergreen></weather34menumarkergreen> Home </a></li>  
+<li><a href="#">UI THEME</a></li>
 <li><a href=<?php if($theme=='dark'){echo'?theme=light';}else{echo'?theme=dark';}?>>
 <?php if($theme=='dark'){echo' <weather34menumarkerlight></weather34menumarkerlight> Light Mode';}else{echo'<weather34menumarkerbluegrey></weather34menumarkerbluegrey> Dark Mode';}?></a></li>
 <p>
