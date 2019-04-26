@@ -17,7 +17,7 @@ else echo' <div class="menucolor"><a href="./?units=metric">Units</a></div>';?><
 <li><a href="#">USER PREFERENCES</a></li>
 <li><a href="index.php" title="WEATHERSTATION HOME PAGE"> <weather34menumarkergreen></weather34menumarkergreen> Home </a></li>  
 <li><a href=<?php if($theme=='dark'){echo'?theme=light';}else{echo'?theme=dark';}?>>
-<?php if($theme=='dark'){echo' <weather34menumarkerlight></weather34menumarkerlight> Light Theme';}else{echo'<weather34menumarkerbluegrey></weather34menumarkerbluegrey> Dark Theme';}?></a></li>
+<?php if($theme=='dark'){echo' <weather34menumarkerlight></weather34menumarkerlight> Light Mode';}else{echo'<weather34menumarkerbluegrey></weather34menumarkerbluegrey> Dark Mode';}?></a></li>
 <p>
 <li><a href="#">UNITS</a></li>
 <?php
