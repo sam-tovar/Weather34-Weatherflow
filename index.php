@@ -99,9 +99,9 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <div class=weather-item><div class=chartforecast>
 <?php if ($purpleairhardware=='yes'){echo''?>
   <span class="almanacpopup">
-<a alt="moonphase" title="moonphase" href=mooninfo.php data-featherlight=iframe><?php echo $chartinfo?> <?php echo $lang['Moon'],"Info";}?></a></span>  
+<a alt="moonphase" title="moonphase" href=mooninfo.php data-lity><?php echo $chartinfo?> <?php echo $lang['Moon'],"Info";}?></a></span>  
 <span class="almanacpopup"><a alt="meteor showers" title="meteor showers" href="meteorshowers.php" data-lity><?php echo $meteorinfo;?> &nbsp;<?php if ($meteor_default=='No Meteor') {echo "Meteor Showers";} else {	echo $meteor_default;}?></a></span>
-<span class="almanacpopup"><a alt="aurora information" title="aurora information" href=aurora.php data-featherlight=iframe><?php echo $info;?> Aurora <?php if ($kp>=5) {echo '<oorange>Active</oorange>';}else {echo "";}?></a></span>
+<span class="almanacpopup"><a alt="aurora information" title="aurora information" href=aurora.php data-lity><?php echo $info;?> Aurora <?php if ($kp>=5) {echo '<oorange>Active</oorange>';}else {echo "";}?></a></span>
 
 </div>
 <span class='moduletitle'><?php echo $lang['Daylight']. " | ". $lang['Darkness'];?></span><br />
@@ -163,10 +163,6 @@ else if ($mbplatform== "MB TP-Link"){echo '<img src="img/meteobridge.svg" alt="M
 else if ($mbplatform== "MB D-Link"){echo '<img src="img/meteobridge.svg" alt="Meteobridge D-LINK" title="Meteobridge D-LINK"  width="140px" height="45px" >';}
 else if ($mbplatform== "MB Asus"){echo '<img src="img/meteobridge.svg" alt="Meteobridge Asus" title="Meteobridge Asus"  width="140px" height="45px" >';}
 else if ($mbplatform== "Meteobridge"){echo '<img src="img/meteobridge.svg" alt="Meteobridge TP-LINK" title="Meteobridge TP-LINK"  width="140px" height="45px" >';}
-
-
-
-
 ?></a> </div>
 <div class=hardwarelogo2 ><?php
 echo '<img src="img/designedwfbyweather34.svg" alt="Weatherflow-Meteobridge" title="Weatherflow Instruments-Meteobridge"  width="180px" height="75px" >';?> </div>

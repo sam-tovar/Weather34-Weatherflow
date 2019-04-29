@@ -22,7 +22,7 @@ header('Content-type: text/html; charset=UTF-8');
 	<link rel="stylesheet" type="text/css" href="css/wuoutlook.css?version=2">
 </head>
 <body>
-<div class="weather34darkbrowser" url="<?php echo "${stationName} \n";?> Forecast  (<?php echo $weather["temp_units"]?>&deg;)"></div>
+<div class="weather34darkbrowser" url="Forecast  (<?php echo $weather["temp_units"]?>&deg;)"></div>
 		<div style="position:absolute;width:725px;background:none;margin:0 auto;margin-left:7%;margin-top:5px;">
 			
         <br>
@@ -140,7 +140,7 @@ for ($k=0;$k<=8;$k++) {
 } // end foreach loop over periods        
 //end weather34 wu forecast
 				  ?></div></div></div>                   
- <div style="position:absolute;bottom:5px;z-index:9999;font-weight:normal;font-size:10px;color:#c0c0c0;text-decoration:none !important;float:right;font-family:arial;">  
+ <div style="position:absolute;bottom:10px;z-index:9999;font-weight:normal;font-size:10px;color:#c0c0c0;text-decoration:none !important;float:left;font-family:arial;margin-left:15%;">  
  &nbsp;&nbsp;data provided by <a href="" title="" target="_blank">Weather Underground</a> <?php echo $info;?> <a href="https://weather34.com" title="weather34.com" target="_blank"><?php echo "Weather34 Original CSS/SVG/PHP (improved by ktrue)";?></a>
   </div>
  </body>
