@@ -183,7 +183,7 @@ w34convertrain{font-family:weathertext2;position:absolute;font-size:.55em;top:56
 <w34convertrain>
 <?php //convert rain
 if($weather["wind_units"] =='km/h'){echo number_format($weather["winddmax"]*0.621371,1)." <smalluvunit>mph</smalluvunit";}
-if($weather["wind_units"] =='mph'){ echo number_format($weather["winddmax"]*0.609343502101025,1)."<smalluvunit>km/h</smalluvunit>";}
+if($weather["wind_units"] =='mph'){ echo number_format($weather["winddmax"]*1.60934,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='m/s'){ echo number_format($weather["winddmax"]*3.5999988862317131577,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='kts'){ echo number_format($weather["winddmax"]*1.8519994254280931489,1)."<smalluvunit>km/h</smalluvunit>";}
 ?>
@@ -292,7 +292,7 @@ if($weather["wind_units"] =='kts'){ echo number_format($weather["winddmax"]*1.85
 <w34convertrain>
 <?php //convert rain
 if($weather["wind_units"] =='km/h'){echo number_format($weather["windmmax"]*0.621371,1)." <smalluvunit>mph</smalluvunit";}
-if($weather["wind_units"] =='mph'){ echo number_format($weather["windmmax"]*0.609343502101025,1)."<smalluvunit>km/h</smalluvunit>";}
+if($weather["wind_units"] =='mph'){ echo number_format($weather["windmmax"]*1.60934,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='m/s'){ echo number_format($weather["windmmax"]*3.5999988862317131577,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='kts'){ echo number_format($weather["windmmax"]*1.8519994254280931489,1)."<smalluvunit>km/h</smalluvunit>";}
 ?>
@@ -382,7 +382,7 @@ if($weather["wind_units"] =='kts'){ echo number_format($weather["windmmax"]*1.85
 <w34convertrain>
 <?php //convert rain
 if($weather["wind_units"] =='km/h'){echo number_format($weather["windydmax"]*0.621371,1)." <smalluvunit>mph</smalluvunit";}
-if($weather["wind_units"] =='mph'){ echo number_format($weather["windydmax"]*0.609343502101025,1)."<smalluvunit>km/h</smalluvunit>";}
+if($weather["wind_units"] =='mph'){ echo number_format($weather["windydmax"]*1.60934,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='m/s'){ echo number_format($weather["windydmax"]*3.5999988862317131577,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='kts'){ echo number_format($weather["windydmax"]*1.8519994254280931489,1)."<smalluvunit>km/h</smalluvunit>";}
 ?>
@@ -463,7 +463,7 @@ if($weather["wind_units"] =='kts'){ echo number_format($weather["windydmax"]*1.8
 <w34convertrain>
 <?php //convert rain
 if($weather["wind_units"] =='km/h'){echo number_format($weather["windymax"]*0.621371,1)." <smalluvunit>mph</smalluvunit";}
-if($weather["wind_units"] =='mph'){ echo number_format($weather["windymax"]*0.609343502101025,1)."<smalluvunit>km/h</smalluvunit>";}
+if($weather["wind_units"] =='mph'){ echo number_format($weather["windymax"]*1.60934,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='m/s'){ echo number_format($weather["windymax"]*3.5999988862317131577,1)."<smalluvunit>km/h</smalluvunit>";}
 if($weather["wind_units"] =='kts'){ echo number_format($weather["windymax"]*1.8519994254280931489,1)."<smalluvunit>km/h</smalluvunit>";}
 ?>
