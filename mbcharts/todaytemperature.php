@@ -15,7 +15,7 @@
 	#   http://www.weather34.com 	                                                                   #
 	####################################################################################################
 	
-	include('../settings.php');header('Content-type: text/html; charset=utf-8');
+	include('chartslivedata.php');header('Content-type: text/html; charset=utf-8');	
 	$conv = 1;
 	if ($uk == true) {$conv= '1';}
 	if ($units == 'uk' && $windunit == 'mph') {$conv= '1';}
@@ -197,9 +197,9 @@
 });
 
     </script>
-     <link rel="stylesheet" href="weather34chartstyle.css?ver=8.0">
+    <link rel="stylesheet" href="weather34chartstyle.css?ver=<?php echo date('jSHi') ;?>">
 <body>
-<div class="weather34darkbrowser" url="<?php echo $stationlocation;?> Temperature/Dewpoint Recorded (°<?php echo $tempunit ;?>) <?php echo date('D F jS Y') ;?>"></div>
+<div class="weather34darkbrowser" url="<?php echo date('l') ;?> Temp Hi:<?php echo $weather["temp_today_high"]. "$tempunit" ;?> Temp Lo:<?php echo $weather["temp_today_low"]. "$tempunit" ;?> | Dew Hi:<?php echo $weather["dewmax"]. "$tempunit" ;?> Dew Lo:<?php echo $weather["dewmin"]."$tempunit" ;?>"></div> 
 <div style="width:auto;background:0;padding:0px;margin-left:5px;font-size: 12px;border-radius:3px;">
 <div id="chartContainer" class="chartContainer"></div></div>
 <div class="weather34browser-footer">

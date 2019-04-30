@@ -17,7 +17,7 @@
 	#   http://www.weather34.com 	                                                                   #
 	####################################################################################################
 	
-	include('../settings.php');include('../livedata.php');header('Content-type: text/html; charset=utf-8');
+	include('chartslivedata.php');header('Content-type: text/html; charset=utf-8');
 	$conv = 1;
 	
 	if ($uk == true) {$conv= '2.23694';}
@@ -175,10 +175,10 @@
 	}
 });
 
-    </script>
-    <link rel="stylesheet" href="weather34chartstyle.css?ver=8.0">
+  </script>
+   <link rel="stylesheet" href="weather34chartstyle.css?ver=<?php echo date('jSHi') ;?>">
 <body>
-<div class="weather34darkbrowser" url="<?php echo $stationlocation;?> Wind-Gusts Recorded (<?php echo $windunit ;?>) <?php echo date('D jS Y') ;?>"></div>
+<div class="weather34darkbrowser" url="<?php echo date('l') ;?> Wind Speed Hi:<?php echo $weather["wind_gust_speed_max"]. " $windunit" ;?> |  Avg:<?php echo $weather['wind_speed_avg30']. " $windunit" ;?>"></div> 
 <div style="width:auto;background:0;padding:0px;margin-left:5px;font-size: 12px;border-radius:3px;">
 <div id="chartContainer" class="chartContainer"></div></div>
 <div class="weather34browser-footer">

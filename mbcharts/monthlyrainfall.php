@@ -15,7 +15,7 @@
 	#   http://www.weather34.com 	                                                                   #
 	####################################################################################################
 	
-	include('../settings.php');include('conversion.php');header('Content-type: text/html; charset=utf-8');
+	include('chartslivedata.php');header('Content-type: text/html; charset=utf-8');
 	$weatherfile = date('M');
 	$conv = 1;
 	if ($uk == true && $windunit == 'mph') {$conv= '1';}
@@ -171,12 +171,12 @@
 	}
 });
 
-    </script>
-    <link rel="stylesheet" href="weather34chartstyle.css?ver=9.0">
+  </script>
+<link rel="stylesheet" href="weather34chartstyle.css?ver=<?php echo date('jSHi') ;?>">
 <body>
-<div class="weather34darkbrowser" url="<?php echo $stationlocation;?> Rainfall (<?php echo $rainunit ;?>) <?php echo date('F Y') ;?>"></div>
+<div class="weather34darkbrowser" url="Rainfall Recorded <?php echo date(' F Y') ;?> | Total: (<?php echo $weather["rain_month"] ;?> <?php echo $rainunit ;?>)"></div> 
 <div style="width:auto;background:0;padding:0px;margin-left:5px;font-size: 12px;border-radius:3px;">
-<div id="chartContainer" class="chartContainer"><span style="position:absolute;font-size:34px;text-align:center;line-height:100px;margin-left:100px;font-family:arial;"> Rainfall Chart Data N/A<br></span></div></div>
+<div id="chartContainer" class="chartContainer"></div></div>
 <div class="weather34browser-footer">
 <span style="position:absolute;color:#fff;font-size:10px;font-family:arial;padding-top:5px;margin-left:25px;border-radius:3px;">
 &nbsp;
@@ -192,4 +192,5 @@
 <div class="weather34browser-footerlogo"><a href="https://weather34.com/homeweatherstation/" title="https://weather34.com/homeweatherstation/" target="_blank"><img src="../img/weatherlogo34.svg" width="35px"</img></a></div></div>
 </body>
 <script src='canvasJs.js'></script>
+
 </html>

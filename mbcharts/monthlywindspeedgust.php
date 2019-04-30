@@ -15,7 +15,7 @@
 	#   http://www.weather34.com 	                                                                   #
 	####################################################################################################
 	
-	include('../settings.php');include('../livedata.php');header('Content-type: text/html; charset=utf-8');
+	include('chartslivedata.php');header('Content-type: text/html; charset=utf-8');
 	$weatherfile = date('M');
 	
 	$conv = 1;
@@ -175,12 +175,11 @@
 });
 
     </script>
-    
-<link rel="stylesheet" href="weather34chartstyle.css?ver=9.0">
+   <link rel="stylesheet" href="weather34chartstyle.css?ver=<?php echo date('jSHi') ;?>">
 <body>
-<div class="weather34darkbrowser" url="<?php echo $stationlocation;?> Wind-Gusts Recorded (<?php echo $windunit ;?>) <?php echo date('F Y') ;?>"></div>
+<div class="weather34darkbrowser" url="Wind Speed <?php echo date(' F Y') ;?> | Max: <?php echo $weather["windmmax"];?> <?php echo $windunit ;?>"></div> 
 <div style="width:auto;background:0;padding:0px;margin-left:5px;font-size: 12px;border-radius:3px;">
-<div id="chartContainer" class="chartContainer"><span style="position:absolute;font-size:34px;text-align:center;line-height:100px;margin-left:100px"> Windspeed Chart Data N/A<br></span></div></div>
+<div id="chartContainer" class="chartContainer"></div></div>
 <div class="weather34browser-footer">
 <span style="position:absolute;color:#fff;font-size:10px;font-family:arial;padding-top:5px;margin-left:25px;border-radius:3px;">
 &nbsp;

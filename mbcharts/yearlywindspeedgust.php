@@ -15,7 +15,7 @@
 	#   http://www.weather34.com 	                                                                   #
 	####################################################################################################
 	
-	include('../settings.php');include('../livedata.php');header('Content-type: text/html; charset=utf-8');
+	include('chartslivedata.php');header('Content-type: text/html; charset=utf-8');
 	$weatherfile = date('Y');
 	$conv = 1;
 	if ($uk == true) {$conv= '2.23694';}
@@ -175,10 +175,10 @@
 	}
 });
 
-    </script>
-  <link rel="stylesheet" href="weather34chartstyle.css?ver=8.0">
+   </script>
+<link rel="stylesheet" href="weather34chartstyle.css?ver=<?php echo date('jSHi') ;?>">
 <body>
-<div class="weather34darkbrowser" url="<?php echo $stationlocation;?>  Wind-Gusts Recorded (<?php echo $windunit ;?>) <?php echo date('Y') ;?>"></div>
+<div class="weather34darkbrowser" url="Wind Speed <?php echo date('Y') ;?> | Max: <?php echo $weather["windymax"];?> <?php echo $windunit ;?>"></div> 
 <div style="width:auto;background:0;padding:0px;margin-left:5px;font-size: 12px;border-radius:3px;">
 <div id="chartContainer" class="chartContainer"></div></div>
 <div class="weather34browser-footer">
@@ -193,7 +193,7 @@
 <svg id="i-external" viewBox="0 0 32 32" width="10" height="10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
 <path d="M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18" /></svg> 
 <a href="https://canvasjs.com" title="https://canvasjs.com" target="_blank"><?php echo $creditschart ;?> </a></span>
-<div class="weather34browser-footerlogo"><a href="https://weather34.com/homeweatherstation/" title="https://weather34.com/homeweatherstation/" target="_blank"><img src="../img/weatherlogo34.svg" width="35px"</img></a></div></div>
+<div class="weather34browser-footerlogo"><a href="https://weather34.com/homeweatherstation/" title="https://weather34.com/homeweatherstation/" target="_blank"><img src="../img/weatherlogo34.svg" width="35px"</img></a></div></div></div>
 </body>
 <script src='canvasJs.js'></script>
 </html>
