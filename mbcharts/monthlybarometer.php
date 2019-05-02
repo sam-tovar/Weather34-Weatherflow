@@ -104,17 +104,25 @@
 			   shared: true, 
  },
 		axisX: {
-			gridColor: "#aaa",
+			gridColor: "#ccc",
 		    labelFontSize: 10,
 			labelFontColor:' #555',
 			lineThickness: 1,
-			gridThickness: 1,	
+			gridThickness: 1,
+			gridDashType: "dot",	
 			titleFontFamily: "arial",	
 			labelFontFamily: "arial",	
-			minimum:-0.2,
-			gridDashType: "dot",
+			minimum:0,		
 			intervalType:"day",
 			xValueType: "dateTime",	
+			crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#009bab",
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#009bab",
+		}
 			
 			},
 			
@@ -135,9 +143,17 @@
 		titleFontFamily: "arial",
 		labelFontFamily: "arial",
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(2) + " <?php echo $pressureunit ;?> " ;  
+        return e.value .toFixed(1) + " <?php echo $pressureunit ;?> " ;  
          },		
-			 
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true,	
+			color: "#009bab",		
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#ff832f",
+			valueFormatString:"##.## <?php echo $pressureunit ;?>",
+		}		 
 		
       },
 	  

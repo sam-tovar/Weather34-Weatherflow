@@ -106,40 +106,56 @@
 			   shared: true, 
  },
 		axisX: {
-			gridColor: "#aaa",
+			gridColor: "#ccc",
 		    labelFontSize: 10,
 			labelFontColor:' #555',
 			lineThickness: 1,
-			gridThickness: 1,	
+			gridThickness: 1,
+			gridDashType: "dot",	
 			titleFontFamily: "arial",	
 			labelFontFamily: "arial",	
-			minimum:0,
-			gridDashType: "dot",
-			intervalType:"month",
+			minimum:0,		
+			intervalType:"day",
 			xValueType: "dateTime",	
+			crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#009bab",
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#009bab",
+		}
 			
 			},
 			
 		axisY:{
 		title: "Barometer (<?php echo $pressureunit ;?>) Recorded",
-		titleFontColor: "#aaa",
+		titleFontColor: "#555",
 		titleFontSize: 10,
         titleWrap: false,
 		margin: 10,
 		lineThickness: 1,		
 		gridThickness: 1,
-		interval:<?php echo $int ;?>,		
+		gridDashType: "dot",
+		interval:<?php echo $int;?>,		
         includeZero: false,
 		gridColor: "#aaa",
 		labelFontSize: 11,
-		gridDashType: "dot",
 		labelFontColor:' #555',
 		titleFontFamily: "arial",
 		labelFontFamily: "arial",
 		labelFormatter: function ( e ) {
         return e.value .toFixed(1) + " <?php echo $pressureunit ;?> " ;  
          },		
-			 
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true,	
+			color: "#009bab",		
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#ff832f",
+			valueFormatString:"##.## <?php echo $pressureunit ;?>",
+		}		 
 		
       },
 	  

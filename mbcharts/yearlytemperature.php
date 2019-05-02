@@ -99,15 +99,26 @@
     
  },
 		axisX: {
-			gridColor: "#aaa",
+			gridColor: "#aaa",	
 		    labelFontSize: 10,
 			labelFontColor:' #555',
 			lineThickness: 1,
-			gridDashType: "dot",
 			gridThickness: 1,	
+			gridDashType: "dot",
 			titleFontFamily: "arial",	
 			labelFontFamily: "arial",
-			minimum:0,				
+			minimum:-0.5,
+			interval:'auto',
+			intervalType:"month",
+			xValueType: "dateTime",	
+			crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#ff832f",			
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#ff832f",
+		}
 			
 			},
 			
@@ -118,18 +129,27 @@
         titleWrap: false,
 		margin: 10,
 		lineThickness: 1,		
-		gridThickness: 1,		
-        includeZero: false,
-		interval:5,
-		gridColor: "#aaa",
-		gridDashType: "dot",
+		gridThickness: 1,	
+		gridDashType: "dot",	
+        includeZero: false,		
+		interval:'auto',		
+		gridColor: "#aaa",	
 		labelFontSize: 11,
 		labelFontColor:' #555',
 		titleFontFamily: "arial",
 		labelFontFamily: "arial",
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) + " °<?php echo $tempunit ;?> " ;  
-         },		 
+         },	
+		 crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#ff832f",
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#ff832f",
+			valueFormatString: "#0.# °<?php echo $tempunit ;?>",
+		}		 
 		 
       },
 	  

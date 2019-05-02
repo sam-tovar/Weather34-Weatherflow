@@ -174,7 +174,7 @@
 			labelFontColor: "#fff",
 			labelFontSize:12,
 			labelBackgroundColor: "#3b9cac",
-			valueFormatString: "# '%'",
+			valueFormatString: "# '<?php echo $rainunit ?>'",
 		}	 
       },
 	  

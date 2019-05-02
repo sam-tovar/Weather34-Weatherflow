@@ -104,17 +104,27 @@
 			   shared: true, 
  },
 		axisX: {
-			gridColor: "#aaa",
+			gridColor: "#555",	
 		    labelFontSize: 10,
 			labelFontColor:' #555',
 			lineThickness: 1,
-			gridThickness: 1,	
+			gridThickness: 1,
+			gridDashType: "dot",	
+			lineColor: "#aaa",	
 			titleFontFamily: "arial",	
 			labelFontFamily: "arial",	
-			minimum:-0.2,
-			gridDashType: "dot",	
+			minimum:-0.5,
+			//interval:'auto',
+			intervalType:"month",
 			xValueType: "dateTime",	
-			},
+			crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#009bab",
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#44a6b5",
+		}},
 			
 		axisY:{
 		title: "Rainfall (<?php echo $rainunit ;?>) Recorded",
@@ -122,20 +132,28 @@
 		titleFontSize: 10,
         titleWrap: false,
 		margin: 10,
-		interval:<?php echo $interval;?>,
 		lineThickness: 1,		
-		gridThickness: 1,	
+		gridThickness: 1,
 		gridDashType: "dot",	
+		interval:'auto',		
         includeZero: true,
-		gridColor: "#aaa",
-		labelFontSize: 11,
+		gridColor: "#aaa",	
+		labelFontSize: 10,
 		labelFontColor:' #555',
 		titleFontFamily: "arial",
 		labelFontFamily: "arial",
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(1) + " <?php echo $rainunit ;?> " ;  
+        return e.value .toFixed(<?php if ($rainunit == 'mm'){echo '0';} else echo '1';?>) + " <?php echo $rainunit ;?> " ;  
          },		
-			 
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#009bab",
+			labelFontColor: "#F8F8F8",
+			labelFontSize:12,
+			labelBackgroundColor: "#44a6b5",
+			valueFormatString:"##.## <?php echo $rainunit ;?>",
+		}		 
 		 
       },
 	  

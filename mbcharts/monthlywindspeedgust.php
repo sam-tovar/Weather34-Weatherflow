@@ -107,6 +107,14 @@
 			gridDashType: "dot",
 			intervalType:"day",
 			xValueType: "dateTime",	
+			crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#009bab",			
+			labelFontColor: "#F8F8F8",
+			labelFontSize:10,
+			labelBackgroundColor: "#009bab",
+		}
 			
 			},
 			
@@ -119,7 +127,7 @@
 		gridDashType: "dot",
 		lineThickness: 1,		
 		gridThickness: 1,		
-        includeZero:false,
+        includeZero:true,
 		gridColor: "#aaa",
 		labelFontSize: 11,
 		labelFontColor:' #555',
@@ -128,9 +136,19 @@
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) + " <?php echo $windunit ;?> " ;  
          },		
-			 
+		 crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			color: "#cf5129",
+			labelFontColor: "#F8F8F8",
+			labelFontSize:11,
+			labelBackgroundColor: "#cf5129",
+			valueFormatString: "#0.# <?php echo $windunit ;?>",
+		}		 
 		 
-      },
+      },	 
+		 
+      
 	  
 	  legend:{
       fontFamily: "arial",
