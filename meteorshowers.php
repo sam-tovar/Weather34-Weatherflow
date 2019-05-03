@@ -67,7 +67,7 @@ $meteorinfo3="<svg width='22px' height='22px' viewBox='0 0 16 16'><path fill='cu
 html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
   color:#f5f7fc
@@ -107,19 +107,29 @@ moonphaseriseset{font-size:.9rem;}credit{position:relative;font-size:.8em;top:10
   
   <article>  
    <?php echo $info ;?> <orange>Guide to</orange> <green><?php echo date('Y');?> Major Meteor Showers<br></green> <br>
-       <?php echo $meteorinfo;?> <green>Quadrantids</green> Dec 28-Jan 12	Peak Jan 03<br>
-       <?php echo $meteorinfo;?> <green>Lyrids</green> Apr 18-Apr 25	Peak Apr 22<br>
-       <?php echo $meteorinfo;?> <green>Perseids</green> Jul 13-Aug 26	Peak Aug 12<br>
-       <?php echo $meteorinfo;?> <green>Leonids</green> Nov 05-Dec 03	Peak Nov 18<br>
-       <?php echo $meteorinfo;?> <green>Geminids</green> Nov 30-Dec 17	Peak Dec 13<br>
-       <?php echo $meteorinfo;?> <green>Ursids</green> Dec 17-Dec 24	Peak Dec 22  <br>
+       <?php echo $meteorinfo;?> <green>Quadrantids</green> Dec 28-Jan 12<br>
+       <?php echo $meteorinfo;?> <green>Lyrids</green> Apr 18-Apr 25<br>
+       <?php echo $meteorinfo;?> <green>Perseids</green> Jul 13-Aug 26<br>
+       <?php echo $meteorinfo;?> <green>Leonids</green> Nov 05-Dec 03<br>
+       <?php echo $meteorinfo;?> <green>Geminids</green> Nov 30-Dec 17<br>
+       <?php echo $meteorinfo;?> <green>Ursids</green> Dec 17-Dec 24<br>
        <br><br><?php echo $info ;?> Provided by <a href="https://en.wikipedia.org/wiki/Meteor_shower" title="https://en.wikipedia.org/wiki/Meteor_shower" target="_blank">International Meteor Organization</a>  
-   </article>  
-  
-  <article>
+   </article> 
+   
+    <article>
    <?php echo $info ;?> <orange>Viewing Guide</orange><br><green>Meteors</green> are best viewed during the night hours, though meteors enter the atmosphere at any time of the day. They are just harder to see in the daylight apart from dawn and dusk. Any nearby ambient light,Moon light can make it difficult viewing . Meteor showers are best viewed away from the city lights.<br>
-  <br><br>
- <?php echo $info?> CSS/SVG/PHP scripts by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com  &copy; 2015-<?php echo date('Y');?></a></span>
+ 
+ 
               
   </article>  
+  
+  <article>
+   <?php echo $info ;?> <orange>Radio Ham Guide</orange><br>Meteor scatter communications can used by Ham Radio VHF enthusiasts. Using meteor scatter propagation enables ham radio enthusiasts and also commercial radio communications contacts .
+Meteor scatter communications using specialised operating techniques achieving communications distances up to around 2000 km or more on the VHF frequencies.<br>
+ 
+ 
+              
+  </article> 
+  <article>
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span></article> 
 </main>

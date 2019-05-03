@@ -14,8 +14,8 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
 html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc
   }
@@ -34,16 +34,21 @@ html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-seri
   
  .weather34chart-btn.close:after,.weather34chart-btn.close:before{color:#ccc;position:absolute;font-size:14px;font-family:Arial,Helvetica,sans-serif;font-weight:600}.weather34browser-header{flex-basis:auto;height:35px;background:#ebebeb;background:0;border-bottom:0;display:flex;margin-top:-20px;width:100%;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-topright:5px;border-top-left-radius:5px;border-top-right-radius:5px}.weather34browser-footer{flex-basis:auto;height:35px;background:#ebebeb;background:rgba(56,56,60,1);border-bottom:0;display:flex;bottom:-20px;width:97.4%;-webkit-border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-bottomright:5px;-moz-border-radius-bottomleft:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.weather34chart-btns{position:absolute;height:35px;display:inline-block;padding:0 10px;line-height:38px;width:55px;flex-basis:auto;top:5px}.weather34chart-btn{width:14px;height:14px;border:1px solid rgba(0,0,0,.15);border-radius:6px;display:inline-block;margin:1px}.weather34chart-btn.close{background-color: rgba(255, 124, 57, 1.000)}.weather34chart-btn.close:before{content:"x";margin-top:-14px;margin-left:2px}.weather34chart-btn.close:after{content:"close window";margin-top:-13px;margin-left:15px;width:300px}a{color:#aaa;text-decoration:none}
 .weather34darkbrowser{position:relative;background:0;width:100%;max-height:30px;margin:auto;margin-top:-15px;margin-left:0px;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:45px;background-image:radial-gradient(circle,#EB7061 6px,transparent 8px),radial-gradient(circle,#F5D160 6px,transparent 8px),radial-gradient(circle,#81D982 6px,transparent 8px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),linear-gradient(to bottom,rgba(59,60,63,0.4) 40px,transparent 0);background-position:left top,left top,left top,right top,right top,right top,0 0;background-size:50px 45px,90px 45px,130px 45px,50px 30px,50px 45px,50px 60px,100%;background-repeat:no-repeat,no-repeat}.weather34darkbrowser[url]:after{content:attr(url);color:#aaa;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 50px 0 90px;border-radius:3px;background:rgba(97, 106, 114, 0.3);height:20px;box-sizing:border-box}
- blue{color:#01a4b4}orange{color:#009bb4}orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}green{color:#aaa}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#CC0}purple{color:#916392}meteotextshowertext{font-size:1.2rem;color:#009bb4}meteorsvgicon{color:#f5f7fc}  
-.moonphasetext{font-size:1.1rem;color:#f5f7fc;position:absolute;display:inline;left:140px;top:80px}
-moonphaseriseset{font-size:.9rem;}credit{position:relative;font-size:.8em;top:10%}
+ blue{color:#01a4b4}orange{color:#009bb4}orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}green{color:#aaa}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#CC0}purple{color:#916392}
+ meteotextshowertext{font-size:1.2rem;color:#009bb4}
+ meteorsvgicon{color:#f5f7fc}  
+.moonphasesvg{left:40px;}
+.moonphasetext{font-size:.9rem;color:#f5f7fc;position:absolute;display:inline;left:140px;top:90px}
+moonphaseriseset{font-size:.75rem;}
+credit{position:relative;font-size:.7em;top:10%}
 </style>
 <div class="weather34darkbrowser" url="Moon Phase Information"></div>
   
 <main class="grid">
   <article>       
 
-
+<div class=moonphasesvg>
+<?php echo $info;?> Current Moon Phase<br><br>   
 <div id="weather34moonphases"></div>
 <svg id="weather34 simple moonphase"><circle cx="50" cy="50" r="49.5" fill="rgba(86, 95, 103, 1.000)"/><path id="weather34shape" fill="rgba(230, 232, 239, 1)"/></svg>
 <script> //simple moonphase for weather34
@@ -53,7 +58,7 @@ switch (Math.round(phase / 3.75)){}document.getElementById("weather34moonphases"
 var val=15;	var weather34moonCurve;var lf=Math.min(3-4*(phase/30),1);var lc=Math.abs(lf*50);	var lb=(lf<0) ? "0" : "1";
 var rf=Math.min(3+4*((phase-30)/30),1);	var rc=Math.abs(rf*50);	var rb=(rf<0) ? "0" : "1";weather34moonCurve="M 50,0 "+ "a "+s(lc)+",50 0 0 "+lb+" 0,100 "+ "a "+s(rc)+",50 0 0 "+rb+" 0,-100";
 document.getElementById("weather34shape").setAttribute("d",weather34moonCurve);}</script>
-       
+       </div>
    <div class=moonphasetext>    
 <?php echo " ";{$day = date('l jS F Y');if($day===date("l jS F Y",strtotime('2019-7-2'))){echo 'Solar <orange>Eclipse</orange>';}else if($day===date("l jS F Y",strtotime('2019-7-16'))){echo 'Lunar <orange>Eclipse</orange>';}else if($day===date("l jS F Y",strtotime('2019-7-17'))){echo 'Lunar <orange>Eclipse</orange>';}else if($day===date("l jS F Y",strtotime('2019-12-26'))){echo 'Solar <orange>Eclipse</orange>';}		
 // weather34 moonphase no scraping its calculated from the livedata !
@@ -68,7 +73,7 @@ document.getElementById("weather34shape").setAttribute("d",weather34moonCurve);}
   
   <article>
  <moonphaseriseset>
-  <?php echo $info;?> Moon Rise/Set Information<br>
+  <?php echo $info;?> Moon Rise/Set Information<br><br>
 <svg id="i-ban" viewBox="0 0 32 32" width="10" height="10" fill="#39739f" stroke="#39739f" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
 <circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg> Moonrise:
 
@@ -111,15 +116,46 @@ $moon = new MoonPhase();$moonage =round($moon->age(),2);echo "Current Moon cycle
   <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
 <circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg> The Moon orbits the Earth every 27.3 days approximately. <br>
   <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg> When the sunlight hits the moon's surface,temperatures can reach 260&deg;F (127&deg;C).<br>
+<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg> As sunlight hits the moon's surface,temperatures can reach 260&deg;F (127&deg;C).<br>
 <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
 <circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg> On the dark side of the moon,temperatures can drop to minus -280&deg;F (-173&deg;C)..<br>
 
   </article> 
   
- <credit>
-&nbsp;
-&nbsp; <a href="https://weather34.com" title="weather34.com" target="_blank"><?php echo $info;?> <?php echo $copyrightcredit;?> 2015-<?php echo date('Y')?></a></credit>
-</credit>
-   
+<article>
+   <?php echo $info ;?> <orange>Moon Photography Guide</orange><br> <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg>
+ Use a Tripod
+ <br>
+ <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg>
+ Use a Zoom Lens
+ 
+ <br>
+ <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg>
+ Measure the exposure 
+ <br>
+ <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg>
+ Avoid ambient nearby lighting 
+ <br>
+ <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg>
+ Use a shutter remote release 
+ <br>
+ <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg>
+ Always shoot in RAW for post processing
+              
+  </article>  
+  
+  <article>
+   <?php echo $info ;?> <orange>Radio Ham Guide</orange>(EME)<<br>
+   Earth–Moon–Earth communication (EME), also known as Moon bounce, is a radio communications technique that relies on the propagation of radio waves from an Earth-based transmitter directed via reflection from the surface of the Moon back to an Earth-based receiver using VHF and UHF amateur radio bands.
+ 
+              
+  </article> 
+  <article>
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span></article> 
 </main>
