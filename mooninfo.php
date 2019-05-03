@@ -108,7 +108,7 @@ $moon = new MoonPhase();$moonage =round($moon->age(),2);echo "Current Moon cycle
    </article>  
   
   <article>
-   Moon Facts: Did you Know?<br>
+   <?php echo $info ;?> Moon Facts: Did you Know?<br>
             <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
 <circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg> The Moon was approximately formed 4.5 billion years ago  .<br>
   <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
