@@ -151,7 +151,7 @@ $moon = new MoonPhase();$moonage =round($moon->age(),2);echo "Current Moon cycle
   </article>  
   
   <article>
-   <?php echo $info ;?> <orange>Radio Ham Guide</orange>(EME)<<br>
+   <?php echo $info ;?> <orange>Radio Ham Guide</orange>(EME)<br>
    Earth–Moon–Earth communication (EME), also known as Moon bounce, is a radio communications technique that relies on the propagation of radio waves from an Earth-based transmitter directed via reflection from the surface of the Moon back to an Earth-based receiver using VHF and UHF amateur radio bands.
  
               
