@@ -22,7 +22,7 @@ html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-seri
 .grid > article {
   border: 1px solid #212428;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  padding:10px;
+  padding:20px;
   font-size:0.8em;
   -webkit-border-radius:4px;
   border-radius:4px;
