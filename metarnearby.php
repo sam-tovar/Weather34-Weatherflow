@@ -21,7 +21,7 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
   border: 1px solid #212428;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   padding:10px;
-  font-size:0.8em;
+  font-size:0.75em;
   -webkit-border-radius:4px;
   border-radius:4px;
 }
@@ -38,20 +38,21 @@ moonphaseriseset{font-size:.9rem;}credit{position:relative;font-size:.8em;top:10
 .metar34compass1{position:relative}
 
 .metar34compass1>.metar34compass-line1,.metar34compass>.metar34compass-line{right:25px;-webkit-clip-path:polygon(100%0,100%100%,100%100%,0100%,00);-ms-clip-path:polygon(100%0,100%100%,100%100%,0100%,00);-webkit-border-radius:100%;-moz-border-radius:100%;-ms-border-radius:100%}
-.text1,.windvalue1{font-family:weathertext2,Arial;font-size:20px;margin-left:3px}
+.text1{font-family:weathertext2,Arial;font-size:20px;margin-left:3px;}
+.windvalue1{font-family:weathertext2,Arial;font-size:20px;margin-left:3px;}
 .windseparator{color:rgba(57,61,64,1)}
 .text1,.windvalue1{color:#aaa}
 .windirection1{width:100%;}
 .metar34compass1{width:150px;height:150px;text-align:center;top:0px;left:35px;z-index:1}
 
-.text1{z-index:10;text-align:center;margin:5px 0 auto}
+text1{z-index:10;text-align:center;margin:5px 0 auto}
 .metar34compass1>.metar34compass-line1{position:absolute;z-index:10;left:25px;top:25px;bottom:25px;-o-border-radius:100%;border-radius:100%;border-left:8px solid rgba(95,96,97,.5);border-top:8px solid rgba(95,96,97,.8);border-right:8px solid rgba(95,96,97,.5);border-bottom:8px solid rgba(95,96,97,.8);}
 
 .thearrow1:before{width:6px;height:6px;position:absolute;z-index:9;left:2px;top:-3px;border:2px solid #fff;-webkit-border-radius:100%;-moz-border-radius:100%;-o-border-radius:100%;-ms-border-radius:100%;border-radius:100%}
-.metar34compass1>.windirectiontext1{display:block;text-align:center;color:#aaa;font-family:Arial,sans-serif;font-weight:600;line-height:12px;font-size:11px;z-index:10;margin:0 0 auto}
+.windirectiontext1{position:absolute;text-align:center;color:#aaa;font-family:Arial,sans-serif;font-weight:600;line-height:12px;font-size:11px;z-index:10;margin:0 0 auto;margin-top:55px;margin-left:80px}
 .windirectiontext1 span{color:#9aba2f}
 .thearrow2{-webkit-transform:rotate(<?php echo $metar34windir;?>deg);-moz-transform:rotate(<?php echo $metar34windir;?>deg);-o-transform:rotate(<?php echo $metar34windir;?>deg);-ms-transform:rotate(<?php echo $metar34windir;?>deg);transform:rotate(<?php echo $metar34windir;?>deg);position:absolute;z-index:200;top:0;left:50%;margin-left:-5px;width:10px;height:50%;-webkit-transform-origin:50% 100%;-moz-transform-origin:50% 100%;-o-transform-origin:50% 100%;-ms-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:after{content:'';position:absolute;left:50%;top:0;height:10px;width:10px;background-color:NONE;width:0;height:0;border-style:solid;border-width:14px 9px 0 9px;border-color:RGBA(255,121,58,1.00) transparent transparent transparent;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:before{content:'';width:3px;height:3px;position:absolute;z-index:9;left:2px;top:-5px;border:1px solid RGBA(255,255,255,0.8);-webkit-border-radius:100%;-moz-border-radius:100%;-o-border-radius:100%;-ms-border-radius:100%;border-radius:100%}
-spancalm{postion:relative;font-family:weathertext2,Arial;font-size:26px;}
+spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 
 .metartempcontainer1{left:70px;top:0}
 .metartempcontainer2{left:10px;top:90px;position:absolute}
@@ -128,10 +129,11 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 .metarwindtoday20{background:rgba(255, 124, 57, 1.000)}
 .metarwindtoday25{background:rgba(255, 124, 57, 0.7)}
 .metarwindtoday30{background:rgba(211, 93, 78, 1.000)}
-smalluvunit{font-size:.9rem;font-family:Arial,Helvetica,system;}
+smalluvunit{font-size:.8rem;font-family:Arial,Helvetica,system;}
 valuecalm{font-size:.8em;font-family:weathertext2;}
-.uppercase{font-size:1em;font-family:weathertext2;width:300px;margin-top:-70px;margin-left:100px;float:none;position:relative;}
-stationid{font-size:1.7em;font-family:weathertext2;color:#009bb4}
+.uppercase{font-size:.8em;font-family:weathertext2;width:300px;margin-top:-70px;margin-left:100px;float:none;position:relative;}
+stationid{font-size:1.4em;font-family:weathertext2;color:#009bb4}
+.hitemp,.lotemp{font-size:.95em;}
 </style>
 <div class="weather34darkbrowser" url="Nearby Airport Conditions"></div>
   
@@ -332,12 +334,17 @@ echo $$metarspot4;
 
 <article>
 <div class=actualw>&nbsp;&nbsp Wind Direction</div> 
-<div class="metar34compass1">
-<div class="metar34compass-line1">
-<div class="thearrow2"></div></div>
-<div class="text1" ><div class="windvalue1" id="windvalue" ><?php 
-if( $metar34windir==0){echo "<span><valuecalm>Calm</valuecalm</span>";}else echo $metar34windir,"&deg;";?></div></div>
-<div class="windirectiontext1" style="margin-top:40px" >
+
+
+
+
+
+
+<div class="windirectiontext1" >
+
+<?php 
+if( $metar34windir==0){echo "<span>Calm</span>";}else echo $metar34windir,"&deg;";?>
+<br>
 <?php 
 if($metar34windir<=11.25){echo "Due <span>North<br></span>";}
 else if($metar34windir<=33.75){echo "North North <br><span>East</span>";}
@@ -357,11 +364,17 @@ else if($metar34windir<=326.25){echo "North <span> West</span>";}
 else if($metar34windir<=348.75){echo "North North<br><span>West</span>";}
 else{echo "Due <span> North</span>";}?>
 
-
+</div>
 
 </div>
 
 </div> 
+
+
+
+<div class="metar34compass1">
+<div class="metar34compass-line1">
+<div class="thearrow2"></div></div></div>
 
  
 
@@ -415,7 +428,7 @@ if ($distanceunit =='mi') {
   
   <article>
   <div class=actualt>&nbsp;&nbsp Airport Data </div>   
-  <stationid><?php echo $metar34stationid ; ?></stationid>
+  <stationid><?php echo $metar34stationid ; ?></stationid><br>
    <?php
 echo "Location <yellow>",$metar34stationname  ;
 echo '</yellow> <green>'.$airport1dist.'</green> '.$distanceunit.' (<green>';
@@ -427,7 +440,7 @@ if ($distanceunit == 'mi') {
 	echo '</green> mi)';
 }
 ?>
- <div class="lotempraw">
+ <div class="lotemp">
 <?php //metar raw
 echo "<sup>Metar :" .$metar34raw."</greyuv>";?>
 </div>
@@ -436,14 +449,14 @@ echo "<sup>Metar :" .$metar34raw."</greyuv>";?>
 date_default_timezone_set($tz);$date = $metar34time;$date=str_replace('@', ' ', $date);
 $date=str_replace('Z', ' ', $date);$date1 = strtotime($date) + 60*60*$UTC;echo date('D jS F H:i a ',$date1);
 ?> </div></div>
-<span style="position:absolute;margin-top:10px;line-height:10px;font-size:10px;margin-left:80px;">Metar Data</span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank"><img src=img/checkwx.svg width=80px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>"></a></div>
-
-
-</div></div>
 
   </article> 
   
-  <article>
-  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span></article> 
+  <article><div class="lotemp">
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span>
+  <br><br><span style="margin-left:100px;margin-top:20px;">
+  Data Provided by </span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank" ><br><img src=img/checkwx.svg width=80px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>" style="margin-top:-5px;margin-left:100px;"></a>
+  
+  </div></article> 
    
 </main>
