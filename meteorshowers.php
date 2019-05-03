@@ -17,37 +17,37 @@
 //weather34 next meteor event original idea betejuice of cumulus forum..
 $meteor_nextevent="No Meteor Shower<br>s";
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 23,19),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date><br>Active Dec 28th-Jan 12th
-<br><green>Estimated ZHR: </green><orange>120</div></div>","event_end"=>mktime(23, 59, 59, 1, 2,20),);
+<br><green>Estimated ZHR: </green><orange>120 <br> Peaks <orange>Jan 3rd-4th</orange></div></div>","event_end"=>mktime(23, 59, 59, 1, 2,20),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 24),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date><br>Active Dec 28th-Jan 12th
-<br><green>Estimated ZHR: </green><orange>120</div></div>","event_end"=>mktime(23, 59, 59, 1, 2),);
+<br><green>Estimated ZHR: </green><orange>120 <br>Peaks <orange>Jan 3rd-4th</orange></div></div>","event_end"=>mktime(23, 59, 59, 1, 2),);
 $meteor_eventsnext[]=array("event_start"=>mktime(0, 0, 0, 1, 3),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date><br>Peak Viewing Now<br><div class=date>
 <br><green>Estimated ZHR: </green><orange>120</div></div>","event_end"=>mktime(23, 59, 59, 1, 4),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 1, 2),"event_title"=>"Meteor Shower<br> <orange1>Lyrids</orange1><div class=date><br>Active Apr 18th-Apr 25th<br>
-<green>Estimated ZHR: </green><orange>18</orange></div></div>","event_end"=>mktime(23, 59, 59, 4, 20),);
+<green>Estimated ZHR: </green><orange>18</orange><br>Peaks <orange>Apr 23rd</orange></div></div>","event_end"=>mktime(23, 59, 59, 4, 20),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 4, 20),"event_title"=>"Meteor Shower<br> <orange1>Lyrids</orange1> <div class=date><br>Peak Viewing Now<br>
-<green>Estimated ZHR: </green><orange>18</orange></div></div>","event_end"=>mktime(23, 59, 59, 4, 22),);
+<green>Estimated ZHR: </green><orange>18</orange><br>Peaks <orange>Apr 23rd</orange></div></div>","event_end"=>mktime(23, 59, 59, 4, 22),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 4, 22),"event_title"=>"Meteor Shower<br> <orange1>ETA Aquarids </orange1><br><div class=date><br>Active Apr 24th-May 19th<br>
-<green>Estimated ZHR: </green><orange>55</div></div>","event_end"=>mktime(23, 59, 59, 5, 6),);
+<green>Estimated ZHR: </green><orange>55 </orange><br> Peaks <orange>May 6th</orange></div></div>","event_end"=>mktime(23, 59, 59, 5, 6),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 5, 6),"event_title"=>"Meteor Shower<br> <orange1>Delta Aquarids</orange1><div class=date><br>Active Jul 21st-Aug 23rd<br>
-<green>Estimated ZHR: </green><orange>16</div></div>","event_end"=>mktime(23, 59, 59, 7, 27),);
+<green>Estimated ZHR: </green><orange>16</orange><br> Peaks <orange>May 6th</orange></div></div>","event_end"=>mktime(23, 59, 59, 7, 27),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 7, 27),"event_title"=>"Meteor Shower<br> <orange1> Perseids</orange1><div class=date><br>Active Jul 13th-Aug 26th<br>
-<green>Estimated ZHR: </green><orange>100</div>","event_end"=>mktime(23, 59, 59, 8, 10),);
+<green>Estimated ZHR: </green><orange>100</orange><br> Peaks <orange>Aug 11th-13th</orange></div>","event_end"=>mktime(23, 59, 59, 8, 10),);
 $meteor_eventsnext[]=array("event_start"=>mktime(0, 0, 0, 8, 12),"event_title"=>"Meteor Shower<br><orange1> Perseids</orange1><div class=date><br>Peak Viewing Now<br>
-<green>Estimated ZHR: </green><orange>100</div></div>","event_end"=>mktime(23, 59, 59, 8, 13),);
+<green>Estimated ZHR: </green><orange>100</orange><br> Peaks <orange>Aug 11th-13th</orange></div></div>","event_end"=>mktime(23, 59, 59, 8, 13),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 8, 13),"event_title"=>"Meteor Shower<br> <orange1> Draconids</orange1><div class=date><br>Active October 6th-10th<br>
-<green>Estimated ZHR: </green><orange>5</div></div>","event_end"=>mktime(23, 59, 59, 10, 7),);
+<green>Estimated ZHR: </green><orange>5</orange><br> Peaks <orange>Oct 9th</orange></div></div>","event_end"=>mktime(23, 59, 59, 10, 7),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 10, 7),"event_title"=>"Meteor Shower<br> <orange1> Orionids</orange1><div class=date><br>Active Oct 21st-Oct 22nd<br>
-<green>Estimated ZHR: </green><orange>25</div></div>","event_end"=>mktime(23, 59, 59, 10, 21),);
+<green>Estimated ZHR: </green><orange>25</orange><br> Peaks <orange>Oct 22nd</orange></div></div>","event_end"=>mktime(23, 59, 59, 10, 21),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 10, 21),"event_title"=>"Meteor Shower<br> <orange1> South Taurids</orange1><div class=date><br>Active Nov 4th- Nov 5th<br>
-<green>Estimated ZHR: </green><orange>5</div></div>","event_end"=>mktime(23, 59, 59, 11, 5),);
+<green>Estimated ZHR: </green><orange>5</orange><br> Peaks <orange>Oct 10th</orange></div></div>","event_end"=>mktime(23, 59, 59, 11, 5),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 11, 5),"event_title"=>"Meteor Shower<br> <orange1> North Taurids</orange1><div class=date><br>Active Nov 11th
-<green>Estimated ZHR: </green><orange>5</div></div>","event_end"=>mktime(23, 59, 59, 11, 11),);
+<green>Estimated ZHR: </green><orange>5</orange><br> Peaks <orange>No 13th</orange></div></div>","event_end"=>mktime(23, 59, 59, 11, 11),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 11, 11),"event_title"=>"Meteor Shower<br> <orange1> Leonids</orange1><div class=date><br>Active Nov 5th-Dec 3rd<br>
-<green>Estimated ZHR: </green><orange>15</div></div>","event_end"=>mktime(23, 59, 59, 11, 18),);
+<green>Estimated ZHR: </green><orange>15</orange><br> Peaks <orange>Nov 18th</orange></div></div>","event_end"=>mktime(23, 59, 59, 11, 18),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 11, 18),"event_title"=>"Meteor Shower<br> <orange1> Geminids</orange1><div class=date><br>Active Nov 30th-Dec 17th<br>
-<green>Estimated ZHR: </green><orange>120</div></div>","event_end"=>mktime(23, 59, 59, 12, 16),);
+<green>Estimated ZHR: </green><orange>120</orange><br> Peaks <orange>Dec 14th</orange></div></div>","event_end"=>mktime(23, 59, 59, 12, 16),);
 $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 15),"event_title"=>"Meteor Shower<br> <orange1> Ursids</orange1><div class=date><br>Active Dec 17th-Dec 24th<br>
-<green>Estimated ZHR: </green><orange>5-10</div></div>","event_end"=>mktime(23, 59, 59, 12, 18),);
+<green>Estimated ZHR: </green><orange>5-10</orange><br> Peaks <orange>Dec 23rd</orange></div></div>","event_end"=>mktime(23, 59, 59, 12, 18),);
 
 $meteorNext=time();$meteorOP=false;
 foreach ($meteor_eventsnext as $meteor_check) {if ($meteor_check["event_start"]<=$meteorNext&&$meteorNext<=$meteor_check["event_end"]) {$meteorOP=true;$meteor_nextevent=$meteor_check["event_title"];}};
