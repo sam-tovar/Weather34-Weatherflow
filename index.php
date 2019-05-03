@@ -72,7 +72,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
   <!--currentsky for homeweatherstation template-->
   <div class="weather-item"><div class="chartforecast">
          <!-- HOURLY & Outlook for homeweather station-->
-  <span class="almanacpopup"> <a alt="nearby metar station" title="nearby metar station" href="metarnearby.php" data-lity><?php echo $chartinfo?> <?php echo 'Nearby Metar';?> <?php if(filesize('jsondata/metar34.txt')<160){echo "(<ored>Offline</ored>)";}else echo "" ?></a></span>
+  <span class="yearpopup"> <a alt="nearby metar station" title="nearby metar station" href="metarnearby.php" data-lity><?php echo $chartinfo?> <?php echo 'Nearby Metar';?> <?php if(filesize('jsondata/metar34.txt')<160){echo "(<ored>Offline</ored>)";}else echo "" ?></a></span>
 
          </div>
   <span class='moduletitle'><?php echo $lang['Currentsky'];?></span><br />
@@ -98,10 +98,10 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
       <!--moonphase for homeweatherstation template includes reverse for southern hemisohere-->
 <div class=weather-item><div class=chartforecast>
 <?php if ($purpleairhardware=='yes'){echo''?>
-  <span class="almanacpopup">
+  <span class="yearpopup">
 <a alt="moonphase" title="moonphase" href=mooninfo.php data-lity><?php echo $chartinfo?> <?php echo $lang['Moon'],"Info";}?></a></span>  
-<span class="almanacpopup"><a alt="meteor showers" title="meteor showers" href="meteorshowers.php" data-lity><?php echo $meteorinfo;?> &nbsp;<?php if ($meteor_default=='No Meteor') {echo "Meteor Showers";} else {	echo $meteor_default;}?></a></span>
-<span class="almanacpopup"><a alt="aurora information" title="aurora information" href=aurora.php data-lity><?php echo $info;?> Aurora <?php if ($kp>=5) {echo '<oorange>Active</oorange>';}else {echo "";}?></a></span>
+<span class="yearpopup"><a alt="meteor showers" title="meteor showers" href="meteorshowers.php" data-lity><?php echo $meteorinfo;?> &nbsp;<?php if ($meteor_default=='No Meteor') {echo "Meteor Showers";} else {	echo $meteor_default;}?></a></span>
+<span class="almanacpopup">&nbsp;<a alt="aurora information" title="aurora information" href=aurora.php data-lity><?php echo $info;?> Aurora <?php if ($kp>=5) {echo '<oorange>Active</oorange>';}else {echo "";}?></a></span>
 
 </div>
 <span class='moduletitle'><?php echo $lang['Daylight']. " | ". $lang['Darkness'];?></span><br />
