@@ -6,7 +6,7 @@ include('livedata.php');
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Weather34 UV-INDEX Almanac Information</title>
+  <title>Weather34 UV-INDEX and Solar Information</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 @font-face{font-family:weathertext2;src:url(css/fonts/verbatim-regular.woff) format("woff"),url(fonts/verbatim-regular.woff2) format("woff2"),url(fonts/verbatim-regular.ttf) format("truetype")}
@@ -140,7 +140,7 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 
 
 </style>
-<div class="weather34darkbrowser" url="UV-INDEX Almanac"></div>
+<div class="weather34darkbrowser" url="UV-INDEX | Solar | Lux Info"></div>
   
 <main class="grid">
   <article>  
