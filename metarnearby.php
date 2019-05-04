@@ -49,7 +49,7 @@ text1{z-index:10;text-align:center;margin:5px 0 auto}
 .metar34compass1>.metar34compass-line1{position:absolute;z-index:10;left:25px;top:25px;bottom:25px;-o-border-radius:100%;border-radius:100%;border-left:8px solid rgba(95,96,97,.5);border-top:8px solid rgba(95,96,97,.8);border-right:8px solid rgba(95,96,97,.5);border-bottom:8px solid rgba(95,96,97,.8);}
 
 .thearrow1:before{width:6px;height:6px;position:absolute;z-index:9;left:2px;top:-3px;border:2px solid #fff;-webkit-border-radius:100%;-moz-border-radius:100%;-o-border-radius:100%;-ms-border-radius:100%;border-radius:100%}
-.windirectiontext1{position:absolute;text-align:center;color:#aaa;font-family:Arial,sans-serif;font-weight:600;line-height:12px;font-size:11px;z-index:10;margin:0 0 auto;margin-top:55px;margin-left:80px}
+.windirectiontext1{position:absolute;text-align:center;color:#aaa;font-family:'weathertext2',Arial,sans-serif;line-height:12px;font-size:11px;z-index:10;margin:0 0 auto;margin-top:55px;margin-left:80px}
 .windirectiontext1 span{color:#9aba2f}
 .thearrow2{-webkit-transform:rotate(<?php echo $metar34windir;?>deg);-moz-transform:rotate(<?php echo $metar34windir;?>deg);-o-transform:rotate(<?php echo $metar34windir;?>deg);-ms-transform:rotate(<?php echo $metar34windir;?>deg);transform:rotate(<?php echo $metar34windir;?>deg);position:absolute;z-index:200;top:0;left:50%;margin-left:-5px;width:10px;height:50%;-webkit-transform-origin:50% 100%;-moz-transform-origin:50% 100%;-o-transform-origin:50% 100%;-ms-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:after{content:'';position:absolute;left:50%;top:0;height:10px;width:10px;background-color:NONE;width:0;height:0;border-style:solid;border-width:14px 9px 0 9px;border-color:RGBA(255,121,58,1.00) transparent transparent transparent;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:before{content:'';width:3px;height:3px;position:absolute;z-index:9;left:2px;top:-5px;border:1px solid RGBA(255,255,255,0.8);-webkit-border-radius:100%;-moz-border-radius:100%;-o-border-radius:100%;-ms-border-radius:100%;border-radius:100%}
 spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
@@ -133,7 +133,7 @@ smalluvunit{font-size:.8rem;font-family:Arial,Helvetica,system;}
 valuecalm{font-size:.8em;font-family:weathertext2;}
 .uppercase{font-size:.8em;font-family:weathertext2;width:300px;margin-top:-70px;margin-left:100px;float:none;position:relative;}
 stationid{font-size:1.4em;font-family:weathertext2;color:#009bb4}
-.hitemp,.lotemp{font-size:.95em;}
+.hitemp,.lotemp{font-size:9px;}
 </style>
 <div class="weather34darkbrowser" url="Nearby Airport Conditions"></div>
   
@@ -429,6 +429,7 @@ if ($distanceunit =='mi') {
   <article>
   <div class=actualt>&nbsp;&nbsp Airport Data </div>   
   <stationid><?php echo $metar34stationid ; ?></stationid><br>
+  <div class="lotemp">
    <?php
 echo "Location <yellow>",$metar34stationname  ;
 echo '</yellow> <green>'.$airport1dist.'</green> '.$distanceunit.' (<green>';
@@ -442,7 +443,7 @@ if ($distanceunit == 'mi') {
 ?>
  <div class="lotemp">
 <?php //metar raw
-echo "<sup>Metar :" .$metar34raw."</greyuv>";?>
+echo "Metar :" .$metar34raw."";?>
 </div>
 <div class="hitemp">
 <?php //update timestamp
@@ -452,8 +453,10 @@ $date=str_replace('Z', ' ', $date);$date1 = strtotime($date) + 60*60*$UTC;echo d
 
   </article> 
   
-  <article><div class="lotemp">
-  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span>
+  <article>
+  <div class=actualt>&nbsp;&nbsp API & &copy; Info</div>  
+  <div class="lotemp">
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?>
   <br><br><span style="margin-left:100px;margin-top:20px;">
   Data Provided by </span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank" ><br><img src=img/checkwx.svg width=80px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>" style="margin-top:-5px;margin-left:100px;"></a>
   

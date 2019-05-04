@@ -41,6 +41,13 @@ html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-seri
 .moonphasetext{font-size:.9rem;color:#f5f7fc;position:absolute;display:inline;left:140px;top:90px}
 moonphaseriseset{font-size:.75rem;}
 credit{position:relative;font-size:.7em;top:10%}
+.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
+padding:5px;font-family:Arial, Helvetica, sans-serif;width:100px;height:0.8em;font-size:0.8rem;padding-top:2px;color:#aaa;border-bottom:2px solid rgba(56,56,60,1);
+align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
+padding:5px;font-family:Arial, Helvetica, sans-serif;width:100px;height:0.8em;font-size:0.8rem;padding-top:2px;color:#aaa;border-bottom:2px solid rgba(56,56,60,1);
+align-items:center;justify-content:center;margin-bottom:10px;top:0}
+
 </style>
 <div class="weather34darkbrowser" url="Moon Phase Information"></div>
   
@@ -52,8 +59,8 @@ credit{position:relative;font-size:.7em;top:10%}
 <div id="weather34moonphases"></div>
 <svg id="weather34 simple moonphase"><circle cx="50" cy="50" r="49.5" fill="rgba(86, 95, 103, 1.000)"/><path id="weather34shape" fill="rgba(230, 232, 239, 1)"/></svg>
 <script> //simple moonphase for weather34
-weather34Moon();function weather34Moon() {var day = Date.now() / 86400000;var referenceweather34Moon = Date.UTC(2018, 0, 17, 2, 12, 0, 0);
-var refweather34Day = referenceweather34Moon / 86400000;var phase = (day - refweather34Day) % 29.4829;var s=String;
+weather34Moon();function weather34Moon() {var day = Date.now() / 86400000;var referenceweather34Moon = Date.UTC(2018, 0, 17, 4, 0, 23, 23);
+var refweather34Day = referenceweather34Moon / 86400000;var phase = (day - refweather34Day) % 29.5;var s=String;
 switch (Math.round(phase / 3.75)){}document.getElementById("weather34moonphases");
 var val=15;	var weather34moonCurve;var lf=Math.min(3-4*(phase/30),1);var lc=Math.abs(lf*50);	var lb=(lf<0) ? "0" : "1";
 var rf=Math.min(3+4*((phase-30)/30),1);	var rc=Math.abs(rf*50);	var rb=(rf<0) ? "0" : "1";weather34moonCurve="M 50,0 "+ "a "+s(lc)+",50 0 0 "+lb+" 0,100 "+ "a "+s(rc)+",50 0 0 "+rb+" 0,-100";
@@ -108,7 +115,7 @@ $moon = new MoonPhase();$moonage =round($moon->age(),2);echo "Current Moon cycle
    </article>  
   
   <article>
-   <?php echo $info ;?> Moon Facts: Did you Know?<br>
+   Moon Facts: Did you Know?<br>
             <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
 <circle cx="16" cy="16" r="14" /><path d="M6 6 L26 26" /></svg> The Moon was approximately formed 4.5 billion years ago  .<br>
   <svg id="i-ban" viewBox="0 0 32 32" width="8" height="8" fill="#3b9cac" stroke="#3b9cac" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
@@ -157,5 +164,6 @@ $moon = new MoonPhase();$moonage =round($moon->age(),2);echo "Current Moon cycle
               
   </article> 
   <article>
+   <div class=actualt>&nbsp;&nbsp &copy; Information</div>  
   <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span></article> 
 </main>

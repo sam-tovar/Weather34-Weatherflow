@@ -88,6 +88,13 @@ html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-seri
  blue{color:#01a4b4}orange{color:#009bb4}orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}green{color:#aaa}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#CC0}purple{color:#916392}meteotextshowertext{font-size:1.2rem;color:#009bb4}meteorsvgicon{color:#f5f7fc}  
 .moonphasetext{font-size:1.1rem;color:#f5f7fc;position:absolute;display:inline;left:140px;top:80px}
 moonphaseriseset{font-size:.9rem;}credit{position:relative;font-size:.8em;top:10%}
+.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
+padding:5px;font-family:Arial, Helvetica, sans-serif;width:100px;height:0.8em;font-size:0.8rem;padding-top:2px;color:#aaa;border-bottom:2px solid rgba(56,56,60,1);
+align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
+padding:5px;font-family:Arial, Helvetica, sans-serif;width:100px;height:0.8em;font-size:0.8rem;padding-top:2px;color:#aaa;border-bottom:2px solid rgba(56,56,60,1);
+align-items:center;justify-content:center;margin-bottom:10px;top:0}
+
 </style>
 
 </style>
@@ -113,7 +120,7 @@ moonphaseriseset{font-size:.9rem;}credit{position:relative;font-size:.8em;top:10
        <?php echo $meteorinfo;?> <green>Leonids</green> Nov 05-Dec 03<br>
        <?php echo $meteorinfo;?> <green>Geminids</green> Nov 30-Dec 17<br>
        <?php echo $meteorinfo;?> <green>Ursids</green> Dec 17-Dec 24<br>
-       <br><br><?php echo $info ;?> Provided by <a href="https://en.wikipedia.org/wiki/Meteor_shower" title="https://en.wikipedia.org/wiki/Meteor_shower" target="_blank">International Meteor Organization</a>  
+        
    </article> 
    
     <article>
@@ -124,12 +131,15 @@ moonphaseriseset{font-size:.9rem;}credit{position:relative;font-size:.8em;top:10
   </article>  
   
   <article>
-   <?php echo $info ;?> <orange>Radio Ham Guide</orange><br>Meteor scatter communications can used by Ham Radio VHF enthusiasts. Using meteor scatter propagation enables ham radio enthusiasts and also commercial radio communications contacts .
-Meteor scatter communications using specialised operating techniques achieving communications distances up to around 2000 km or more on the VHF frequencies.<br>
+   <?php echo $info ;?> <orange>Radio Ham Guide</orange><br>Meteor scatter communications can be used by Ham Radio VHF enthusiasts. Using meteor scatter propagation enables ham radio enthusiasts and also commercial radio communications contacts .Meteor scatter communications using specialised operating techniques allows communications distances up to 2000 km or more on the VHF frequencies.<br>
  
  
               
   </article> 
   <article>
-  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span></article> 
+  <div class=actualt> &copy; Information</div>  
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span>
+  <br><br><?php echo $info ;?> Data Provided by <a href="https://en.wikipedia.org/wiki/Meteor_shower" title="https://en.wikipedia.org/wiki/Meteor_shower" target="_blank">International Meteor Organization</a> 
+  
+  </article> 
 </main>
