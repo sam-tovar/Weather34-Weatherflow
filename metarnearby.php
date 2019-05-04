@@ -12,7 +12,7 @@
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc
@@ -56,9 +56,9 @@ spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 
 .metartempcontainer1{left:70px;top:0}
 .metartempcontainer2{left:10px;top:90px;position:absolute}
-.metartempcontainer3{left:105px;top:125px;position:absolute}
-.metartempcontainer4{left:105px;top:76px;position:absolute}
-.metartempcontainer5{left:105px;top:142px;position:absolute}
+.metartempcontainer3{left:85px;top:125px;position:absolute}
+.metartempcontainer4{left:85px;top:76px;position:absolute}
+.metartempcontainer5{left:85px;top:142px;position:absolute}
 
 
 
@@ -89,8 +89,8 @@ spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 .metardewtoday20{background:rgba(255, 124, 57, 1.000)}
 .metardewtoday25{background:rgba(255, 124, 57, 0.7)}
 .metardewtoday30{background:rgba(211, 93, 78, 1.000)}
-.metarhumcontainer1{left:200px;margin-top:10px}
-.metarhumcontainer2{left:200px;margin-top:10px}
+.metarhumcontainer1{left:150px;margin-top:10px}
+.metarhumcontainer2{left:150px;margin-top:10px}
 
 .metarhumtoday0-35,.metarhumtoday35-70,.metarhumtoday70-85,.metarhumtoday85-100{font-family:weathertext2,Arial,Helvetica,system;width:4.5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}.metarhumtoday0-35,.metarhumtoday35-70,.metarhumtoday70-85,.metarhumtoday85-100{font-size:1.1rem;padding-top:2px;color:#fff;border-bottom:12px solid rgba(56,56,60,1);align-items:center;justify-content:center;border-radius:3px;margin-bottom:21px;}
 .metarhumtoday0-35{background:rgba(211, 93, 78, 1.000)}.metarhumtoday35-70{background:rgba(230, 161, 65, 1.000)}.metarhumtoday70-85{background:rgba(230, 161, 65, 1.000)}.metarhumtoday85-100{background:rgba(68, 166, 181, 1.000)}
@@ -99,12 +99,12 @@ spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 .dewword{margin-left:6px}
 .tword{margin-left:2px}
 .tword2{position:absolute;margin-top:-32px;font-size:.65rem;z-index:1;color:#fff}
-.dewword2{position:absolute;margin-top:33px;font-size:.65rem;z-index:1;color:#fff;margin-left:95px}
-.tword2{margin-left:90px}
+.dewword2{position:absolute;margin-top:33px;font-size:.65rem;z-index:1;color:#fff;margin-left:75px}
+.tword2{margin-left:70px}
 .maxword{position:absolute;margin-top:-32px;font-size:.65rem;z-index:1;color:#fff}
 .maxword{margin-left:10px}
 .windword{position:absolute;margin-top:32px;font-size:.65rem;z-index:1;color:#fff;margin-left:7px}
-.humword{position:absolute;top:140px;font-size:.7rem;z-index:1;color:#fff;margin-left:170px}
+.humword{position:absolute;top:140px;font-size:.7rem;z-index:1;color:#fff;margin-left:140px}
 .metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}
 .metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday15,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-size:1.1rem;padding-top:0;color:#fff;border-bottom:10px solid rgba(56,56,60,1);align-items:center;justify-content:center;border-radius:3px;display:flex}
 .metarwindtodaykts0,.metarwindtodaykts5,.metarwindtodaykts10,.metarwindtodaykts20,.metarwindtodaykts25,.metarwindtodaykts30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}
@@ -235,7 +235,7 @@ if ($tempunit == 'C') {
 
 <div class="lotemp">
 
- <div class="metarhumcontainer1" style="position:absolute;left:180px;top:95px"><?php 
+ <div class="metarhumcontainer1" style="position:absolute;left:150px;top:95px"><?php 
 if ($metar34humidity >85) {echo '<div class=metarhumtoday85-100>'.$metar34humidity ."<smalluvunit> &nbsp;%";}
 else if ($metar34humidity >70) {echo '<div class=metarhumtoday70-85>'.$metar34humidity ."<smalluvunit> &nbsp;%";}
 else if ($metar34humidity  >35) {echo '<div class=metarhumtoday35-70>'.$metar34humidity ."<smalluvunit> &nbsp;%";}

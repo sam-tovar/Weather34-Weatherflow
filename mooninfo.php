@@ -14,7 +14,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
 html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc
@@ -38,7 +38,7 @@ html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-seri
  meteotextshowertext{font-size:1.2rem;color:#009bb4}
  meteorsvgicon{color:#f5f7fc}  
 .moonphasesvg{left:40px;}
-.moonphasetext{font-size:.9rem;color:#f5f7fc;position:absolute;display:inline;left:140px;top:90px}
+.moonphasetext{font-size:.9rem;color:#f5f7fc;position:absolute;display:inline;left:100px;top:190px}
 moonphaseriseset{font-size:.75rem;}
 credit{position:relative;font-size:.7em;top:10%}
 .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);

@@ -67,7 +67,7 @@ $meteorinfo3="<svg width='22px' height='22px' viewBox='0 0 16 16'><path fill='cu
 html,body{font-size:13px;font-family: "weathertext", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
   color:#f5f7fc
