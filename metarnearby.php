@@ -12,7 +12,7 @@
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc;
@@ -33,25 +33,22 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
   
  .weather34chart-btn.close:after,.weather34chart-btn.close:before{color:#ccc;position:absolute;font-size:14px;font-family:Arial,Helvetica,sans-serif;font-weight:600}.weather34browser-header{flex-basis:auto;height:35px;background:#ebebeb;background:0;border-bottom:0;display:flex;margin-top:-20px;width:100%;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-topright:5px;border-top-left-radius:5px;border-top-right-radius:5px}.weather34browser-footer{flex-basis:auto;height:35px;background:#ebebeb;background:rgba(56,56,60,1);border-bottom:0;display:flex;bottom:-20px;width:97.4%;-webkit-border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-bottomright:5px;-moz-border-radius-bottomleft:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.weather34chart-btns{position:absolute;height:35px;display:inline-block;padding:0 10px;line-height:38px;width:55px;flex-basis:auto;top:5px}.weather34chart-btn{width:14px;height:14px;border:1px solid rgba(0,0,0,.15);border-radius:6px;display:inline-block;margin:1px}.weather34chart-btn.close{background-color: rgba(255, 124, 57, 1.000)}.weather34chart-btn.close:before{content:"x";margin-top:-14px;margin-left:2px}.weather34chart-btn.close:after{content:"close window";margin-top:-13px;margin-left:15px;width:300px}a{color:#aaa;text-decoration:none}
 .weather34darkbrowser{position:relative;background:0;width:100%;max-height:30px;margin:auto;margin-top:-15px;margin-left:0px;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:45px;background-image:radial-gradient(circle,#EB7061 6px,transparent 8px),radial-gradient(circle,#F5D160 6px,transparent 8px),radial-gradient(circle,#81D982 6px,transparent 8px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),linear-gradient(to bottom,rgba(59,60,63,0.4) 40px,transparent 0);background-position:left top,left top,left top,right top,right top,right top,0 0;background-size:50px 45px,90px 45px,130px 45px,50px 30px,50px 45px,50px 60px,100%;background-repeat:no-repeat,no-repeat}.weather34darkbrowser[url]:after{content:attr(url);color:#aaa;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 50px 0 90px;border-radius:3px;background:rgba(97, 106, 114, 0.3);height:20px;box-sizing:border-box}
- blue{color:#01a4b4}orange{color:#009bb4}orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}green{color:#aaa}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#CC0}purple{color:#916392}meteotextshowertext{font-size:1.2rem;color:#009bb4}meteorsvgicon{color:#f5f7fc}  
-.moonphasetext{font-size:1.1rem;color:#f5f7fc;position:absolute;display:inline;left:140px;top:80px}
-moonphaseriseset{font-size:.9rem;}credit{position:relative;font-size:.8em;top:10%}
+ blue{color:#01a4b4}orange{color:#009bb4}orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}green{color:#aaa}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#CC0}purple{color:#916392}
 .metar34compass1{position:relative}
-
 .metar34compass1>.metar34compass-line1,.metar34compass>.metar34compass-line{right:25px;-webkit-clip-path:polygon(100%0,100%100%,100%100%,0100%,00);-ms-clip-path:polygon(100%0,100%100%,100%100%,0100%,00);-webkit-border-radius:100%;-moz-border-radius:100%;-ms-border-radius:100%}
 .text1{font-family:weathertext2,Arial;font-size:20px;margin-left:3px;}
 .windvalue1{font-family:weathertext2,Arial;font-size:20px;margin-left:3px;}
 .windseparator{color:rgba(57,61,64,1)}
 .text1,.windvalue1{color:#aaa}
-.windirection1{width:100%;}
 .metar34compass1{width:150px;height:150px;text-align:center;top:0px;left:35px;z-index:1}
 
 text1{z-index:10;text-align:center;margin:5px 0 auto}
-.metar34compass1>.metar34compass-line1{position:absolute;z-index:10;left:25px;top:25px;bottom:25px;-o-border-radius:100%;border-radius:100%;border-left:8px solid rgba(95,96,97,.5);border-top:8px solid rgba(95,96,97,.8);border-right:8px solid rgba(95,96,97,.5);border-bottom:8px solid rgba(95,96,97,.8);}
-
+.metar34compass1>.metar34compass-line1{position:absolute;z-index:10;left:24px;top:25px;bottom:25px;-o-border-radius:100%;border-radius:100%;border-left:8px solid rgba(95,96,97,.5);border-top:8px solid rgba(95,96,97,.8);border-right:8px solid rgba(95,96,97,.5);border-bottom:8px solid rgba(95,96,97,.8);}
 .thearrow1:before{width:6px;height:6px;position:absolute;z-index:9;left:2px;top:-3px;border:2px solid #fff;-webkit-border-radius:100%;-moz-border-radius:100%;-o-border-radius:100%;-ms-border-radius:100%;border-radius:100%}
-.windirectiontext1{position:absolute;text-align:center;color:#fff;font-family:'weathertext2',Arial,sans-serif;line-height:12px;font-size:12px;z-index:10;margin:0 0 auto;margin-top:55px;margin-left:75px}
-.windirectiontext1 span{color:#9aba2f}
+.windirectiontext1{flex-basis:auto;width:150px;position:absolute;text-align:center;color:#fff;font-family:'weathertext2',Arial,sans-serif;line-height:12px;font-size:.85rem;z-index:10;margin-top:25px;margin-left:10px;display:flex}
+
+
+
 .thearrow2{-webkit-transform:rotate(<?php echo $metar34windir;?>deg);-moz-transform:rotate(<?php echo $metar34windir;?>deg);-o-transform:rotate(<?php echo $metar34windir;?>deg);-ms-transform:rotate(<?php echo $metar34windir;?>deg);transform:rotate(<?php echo $metar34windir;?>deg);position:absolute;z-index:200;top:0;left:50%;margin-left:-5px;width:10px;height:50%;-webkit-transform-origin:50% 100%;-moz-transform-origin:50% 100%;-o-transform-origin:50% 100%;-ms-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:after{content:'';position:absolute;left:50%;top:0;height:10px;width:10px;background-color:NONE;width:0;height:0;border-style:solid;border-width:14px 9px 0 9px;border-color:RGBA(255,121,58,1.00) transparent transparent transparent;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:before{content:'';width:3px;height:3px;position:absolute;z-index:9;left:2px;top:-5px;border:1px solid RGBA(255,255,255,0.8);-webkit-border-radius:100%;-moz-border-radius:100%;-o-border-radius:100%;-ms-border-radius:100%;border-radius:100%}
 spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 
@@ -90,7 +87,7 @@ spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 .metardewtoday20{background:rgba(255, 124, 57, 1.000)}
 .metardewtoday25{background:rgba(255, 124, 57, 0.7)}
 .metardewtoday30{background:rgba(211, 93, 78, 1.000)}
-.metarhumcontainer1{left:150px;margin-top:10px}
+.metarhumcontainer1{left:150px;margin-top:-19px}
 .metarhumcontainer2{left:150px;margin-top:10px}
 
 .metarhumtoday0-35,.metarhumtoday35-70,.metarhumtoday70-85,.metarhumtoday85-100{font-family:weathertext2,Arial,Helvetica,system;width:4.5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}.metarhumtoday0-35,.metarhumtoday35-70,.metarhumtoday70-85,.metarhumtoday85-100{font-size:1.1rem;padding-top:2px;color:#fff;border-bottom:12px solid rgba(56,56,60,1);align-items:center;justify-content:center;border-radius:3px;margin-bottom:21px;}
@@ -105,7 +102,7 @@ spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 .maxword{position:absolute;margin-top:-32px;font-size:.65rem;z-index:1;color:#fff}
 .maxword{margin-left:10px}
 .windword{position:absolute;margin-top:32px;font-size:.65rem;z-index:1;color:#fff;margin-left:7px}
-.humword{position:absolute;top:140px;font-size:.7rem;z-index:1;color:#fff;margin-left:90px}
+.humword{position:absolute;top:111px;font-size:.7rem;z-index:1;color:#fff;margin-left:90px}
 .metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}
 .metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday15,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-size:1.1rem;padding-top:0;color:#fff;border-bottom:10px solid rgba(56,56,60,1);align-items:center;justify-content:center;border-radius:3px;display:flex}
 .metarwindtodaykts0,.metarwindtodaykts5,.metarwindtodaykts10,.metarwindtodaykts20,.metarwindtodaykts25,.metarwindtodaykts30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}
@@ -300,32 +297,6 @@ echo $$metarspot4;
 
 
 
-<div class="windirectiontext1" >
-
-<?php 
-if( $metar34windir==0){echo "<span>Calm</span>";}else echo $metar34windir,"&deg;";?>
-<br>
-<?php 
-if($metar34windir<=11.25){echo "Due <span>North<br></span>";}
-else if($metar34windir<=33.75){echo "North North <br><span>East</span>";}
-else if($metar34windir<=56.25){echo "North <span> East<br></span>";}
-else if($metar34windir<=78.75){echo "East North<br><span>East</span>";}
-else if($metar34windir<=101.25){echo "Due <span> East<br></span>";}
-else if($metar34windir<=123.75){echo "East South<br><span>East</span>";}
-else if($metar34windir<=146.25){echo "South <span> East</span>";}
-else if($metar34windir<=168.75){echo "South South<br><span>East</span>";}
-else if($metar34windir<=191.25){echo "Due <span> South</span>";}
-else if($metar34windir<=213.75){echo "South South<br><span>West</span>";}
-else if($metar34windir<=236.25){echo "South <span> West</span>";}
-else if($metar34windir<=258.75){echo "West South<br><span>West</span>";}
-else if($metar34windir<=281.25){echo "Due <span> West</span>";}
-else if($metar34windir<=303.75){echo "West North<br><span>West</span>";}
-else if($metar34windir<=326.25){echo "North <span> West</span>";}
-else if($metar34windir<=348.75){echo "North North<br><span>West</span>";}
-else{echo "Due <span> North</span>";}?>
-
-</div>
-
 </div>
 
 </div> 
@@ -334,6 +305,34 @@ else{echo "Due <span> North</span>";}?>
 
 <div class="metar34compass1">
 <div class="metar34compass-line1">
+
+<div class="windirectiontext1" >
+
+<?php 
+if( $metar34windir==0){echo "Calm";}else echo $metar34windir,"&deg;";?>
+<br>
+<?php 
+if($metar34windir<=11.25){echo "Due North";}
+else if($metar34windir<=33.75){echo "North North <br>East";}
+else if($metar34windir<=56.25){echo "North East";}
+else if($metar34windir<=78.75){echo "East North<br>East";}
+else if($metar34windir<=101.25){echo "Due East";}
+else if($metar34windir<=123.75){echo "East South<br>East";}
+else if($metar34windir<=146.25){echo "South East";}
+else if($metar34windir<=168.75){echo "South South<br>East";}
+else if($metar34windir<=191.25){echo "Due South";}
+else if($metar34windir<=213.75){echo "South South<br>West";}
+else if($metar34windir<=236.25){echo "South West";}
+else if($metar34windir<=258.75){echo "West South<br>West";}
+else if($metar34windir<=281.25){echo "Due West";}
+else if($metar34windir<=303.75){echo "West North<br>West";}
+else if($metar34windir<=326.25){echo "North West";}
+else if($metar34windir<=348.75){echo "North North<br>West";}
+else{echo "Due North";}?>
+
+</div>
+
+
 <div class="thearrow2"></div></div></div>
 
  
