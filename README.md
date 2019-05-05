@@ -19,6 +19,8 @@ you may also find a Weewx version maintained by Ian Millard is also avaialble vi
 # This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 http://creativecommons.org/licenses/by-nc-nd/4.0/
 
-# Credits and thanks to the contributors who made this all possible since 2015.
-
+<p align="center">
+  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1553679424/weather34_meteobridge2019_bzq4sa.png" width="550" title="weather34 meteobridge template ">
+ 
+</p>
  
