@@ -1,31 +1,69 @@
-# Weather34-Weatherflow
+# Meteobridge-Weather34-Template MB-UB40-EDS
+Github repository for the Meteobridge version of the original weather34 template 
 
-# Template is a slimmed down version of the original Meteobridge version specifically for Weatherflow Hardware and fully tested on 2019 Weatherflow hardware package with solar panel and vibration absorber mount APRIL 2019 .
+Weather Template for Meteobridge users only , original info page found at https://weather34.com/homeweatherstation/
+all icons are produced and made by weather34 in svg format .
 
-Requirements you need to aware of and have 
+# 10th MARCH 2019 new values added to the meteobridge API . requires reboot of meteobridge to pick up new values..
 
-1.Meteobridge HUB capable of using Weatherflow Hardware .
-
-2.Weatherflow hardware Air and Sky 
-
-3.a local server or hosted with capability of PHP 7+
-
-4.some basic knowledge of mysql/phpmyadmin use
-
-5.Meteobridge hub must be on latest firmware of 3.9 or above
-
-6.Uses a dedicated weather34 API function in meteobridge so above is important to be firmware 3.9
-
-7.more info about meteobridge https://www.meteobridge.com/wiki/index.php/Home
-
-8.more info about weatherflow https://community.weatherflow.com
-
-
-# Screenshot 
+# Meteobridge Version Screenshot MB-UB40-EDS
 <p align="center">
-  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1555183957/wfgithub2_nclyb5.png" width="550" title="weather34 meteobridge weatherflow template ">
+  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1553679424/weather34_meteobridge2019_bzq4sa.png" width="550" title="weather34 meteobridge template ">
  
+</p>
+
+# Thanks to the following sites which I have monitored for anomalies this helps due to different scenarios and hardware which is not always obvious when changes happen.ps my brain is stuck in metric :-)
+
+Singapore Weather
+
+Bath(UK) Weather
+
+Myrtle Beach WX
+
+Milehighweather
+
+Okawville WX
+
+Baxley, GA Weather Station
+
+Toulouse Meteo
+
+
+# Alternative versions 
+you may also find the Cumulus version maintained by Ken True (Saratoga) at https://github.com/ktrue/CU-HWS
+
+you may also find a Weewx version maintained by Ian Millard is also avaialble via https://github.com/steepleian/WX-HWS
 
 
 
 
+# This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+http://creativecommons.org/licenses/by-nc-nd/4.0/
+
+# Credits and thanks to the contributors who made this all possible since 2015.
+
+ Erik M Madsen for language idea and initial script
+ 
+ Paul @komoka weather in Canada for continous support and testing 
+ 
+ Josep for Spanish/Catalan language translation and for many ideas and refinements
+ 
+ Pascal Catte French translation and ideas fowarded 
+ 
+ Steve the developer of Cumulus for support and providing a platform to resolve issues 
+ 
+ Mats Ahlklo Swedish translation and his work on using Davis weatherlink 
+ 
+ Betejuice (Cumulus Forum) for providing a solution for meteor shower listings 
+ 
+ Ken True (Saratoga) for kindly granting permission allowing use of many scripts he developed which gave inspiration and ideas  though not used today it was the inspiration that allowed to do something more suited to the design. 
+ 
+ Eric Rechlin Special thanks for originally creating the theme switching and extensive work on metrics/non metrics
+ 
+ Boris at smartbedded (meteobridge) for ongoing support and upkeep of meteobridge 
+ 
+ Wim van der Kuil for the original meteobridge script (now offers Weather Display and other versions of template)
+ 
+ David St John at weatherflow for providing hardware for testing and his non bias logical views 
+ 
+ Paul Wilman , Tina Thomas, Vaggos , Chuck M , Aaron Gersztoff , Ian Millard, and many many more for continous constructive supportive feedback .. 
