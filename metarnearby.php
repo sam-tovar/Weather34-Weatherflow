@@ -312,23 +312,23 @@ echo $$metarspot4;
 if( $metar34windir==0){echo "Calm";}else echo $metar34windir,"&deg;";?>
 <br>
 <?php 
-if($metar34windir<=11.25){echo "Due North";}
+if($metar34windir<=11.25){echo "&nbsp;&nbsp;Due North";}
 else if($metar34windir<=33.75){echo "North North <br>East";}
-else if($metar34windir<=56.25){echo "North East";}
+else if($metar34windir<=56.25){echo "&nbsp;&nbsp;North East";}
 else if($metar34windir<=78.75){echo "East North<br>East";}
-else if($metar34windir<=101.25){echo "Due East";}
+else if($metar34windir<=101.25){echo "&nbsp;&nbsp;Due East";}
 else if($metar34windir<=123.75){echo "East South<br>East";}
-else if($metar34windir<=146.25){echo "South East";}
+else if($metar34windir<=146.25){echo "&nbsp;South East";}
 else if($metar34windir<=168.75){echo "South South<br>East";}
-else if($metar34windir<=191.25){echo "Due South";}
+else if($metar34windir<=191.25){echo "&nbsp;Due South";}
 else if($metar34windir<=213.75){echo "South South<br>West";}
-else if($metar34windir<=236.25){echo "South West";}
+else if($metar34windir<=236.25){echo "&nbsp;South West";}
 else if($metar34windir<=258.75){echo "West South<br>West";}
-else if($metar34windir<=281.25){echo "Due West";}
+else if($metar34windir<=281.25){echo "&nbsp;&nbsp;Due West";}
 else if($metar34windir<=303.75){echo "West North<br>West";}
-else if($metar34windir<=326.25){echo "North West";}
+else if($metar34windir<=326.25){echo "&nbsp;North West";}
 else if($metar34windir<=348.75){echo "North North<br>West";}
-else{echo "Due North";}?>
+else{echo "&nbsp;&nbsp;Due North";}?>
 
 </div>
 
