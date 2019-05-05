@@ -81,7 +81,7 @@ if($weather["rain_units"] =='in'){ echo number_format($weather["rain_today"]*25.
 ?>
 <div></div>
 
-<div class="hitempy"><?php if (date('jS')==$rainlasttoday1){ echo $raininfo ." Last <blue>Rainfall </blue>",$rainlasttoday;} else echo $raininfo . "<blue>Rainfall</blue> Last Hour<blue> ", $weather["rain_lasthour"]."</blue> " .$weather["rain_units"] ?></div>
+<div class="hitempy"><?php echo $raininfo . "<blue>Rainfall</blue> Last Hour<blue> ", $weather["rain_lasthour"]."</blue> " .$weather["rain_units"] ?></div>
 </article>  
 
  <article>  
@@ -95,7 +95,7 @@ if($weather["rain_units"] =='in'){ echo number_format($weather["rainydmax"]*25.4
 ?>
 <div></div>
 
-<div class="hitempy"><?php if (date('jS')==$rainlasttoday1){ echo $raininfo ." Last <blue>Rainfall </blue>",$rainlasttoday;} else echo $raininfo . "<blue>Rainfall</blue> Last 24 Hours<blue> ", $weather["rain_24hrs"]."</blue> " .$weather["rain_units"] ?></div>
+<div class="hitempy"><?php echo $raininfo . "<blue>Rainfall</blue> Last 24 Hours<blue> ", $weather["rain_24hrs"]."</blue> " .$weather["rain_units"] ?></div>
 </article>  
   
   
