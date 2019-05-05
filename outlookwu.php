@@ -501,7 +501,7 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
 .grid { 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 5px;
   align-items: stretch;
   color:#f5f7fc
   }
@@ -520,7 +520,7 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
 .weather34darkbrowser{position:relative;background:0;width:100%;max-height:30px;margin:auto;margin-top:-15px;margin-left:0px;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:45px;background-image:radial-gradient(circle,#EB7061 6px,transparent 8px),radial-gradient(circle,#F5D160 6px,transparent 8px),radial-gradient(circle,#81D982 6px,transparent 8px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),radial-gradient(circle,rgba(97,106,114,1) 2px,transparent 2px),linear-gradient(to bottom,rgba(59,60,63,0.4) 40px,transparent 0);background-position:left top,left top,left top,right top,right top,right top,0 0;background-size:50px 45px,90px 45px,130px 45px,50px 30px,50px 45px,50px 60px,100%;background-repeat:no-repeat,no-repeat}.weather34darkbrowser[url]:after{content:attr(url);color:#aaa;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 50px 0 90px;border-radius:3px;background:rgba(97, 106, 114, 0.3);height:20px;box-sizing:border-box}
  blue{color:#01a4b4}orange{color:#ff832f}green{color:#84a927}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#e7963b}purple{color:#916392}
 smalluvunit{font-size:.6rem;font-family:Arial,Helvetica,system;}.hitempy{position:relative;background:rgba(61, 64, 66, 0.5);color:#fff;font-size:12px;width:110px;padding:1px;-webit-border-radius:2px;border-radius:2px;
-margin-top:-44px;margin-left:72px;padding:2px;line-height:10px;font-size:9px}.actualt{position:relative;left:1px;-webkit-border-radius:2px;border-radius:2px;background:rgba(86, 95, 103,.4);font-family:Arial, Helvetica, sans-serif;padding:1px 3px 1px 3px;width:6rem;font-size:0.8rem;color:#c0c0c0;align-items:center;justify-content:center;margin-bottom:10px;top:-2px;display:flex}.svgimage{background:rgba(0, 155, 171, 1.000);-webit-border-radius:2px;border-radius:2px;}orange1{color:#aaa;}.greydesc{color:#c5c5c5;margin-left:40px;margin-top:-20px;position:absolute;font-size:0.85em}.none{float:none;margin-top:10px;position:absolute}spantemp{font-size:0.75em;color:#fff;font-family:weathertext2;}.tempicon{position:relative;font-family:weathertext2;margin-top:0;margin-left:125px}.uvforecast{font-size:0.8rem;color:#c0c0c0;font-family:Arial,Helvetica;line-height:auto;margin-top:-15px;margin-bottom:2px}.storm{font-size:0.8rem;color:#c0c0c0;font-family:Arial,Helvetica;line-height:auto;margin-top:5px;margin-bottom:2px}.iconpos{margin-top:-5px;}.valuehi{position:absolute;font-size:1.2em;padding:5px;margin-top:-65px;color:#fff;font-family:weathertext2;}bluet,blueu{background:#01a4b5}yellowt,yellowu{background:#e6a141}oranget,orangeu{background:#d05f2d}greent{background:#90b12a}greenu{background:#565f67}redt,redu{background:#cd5245}purplet,purpleu{background:#b600b0}bluet,yellowt,oranget,greent,redt,purplet{margin-top:-20px;-webkit-border-radius:2px;border-radius:2px;padding:2px;height:.9rem}blueu,yellowu,orangeu,greenu,redu,purpleu{color:#fff;border-radius:2px;padding:0 3px 0 3px;align-items:center;justify-content:center;}.summarytext{font-size:.9em;color:#aaa;margin-top:5px;margin-bottom:2px}thunder{font-size:.9em;color:#aaa}summary{font-size:.9em;color:#aaa}blue1{color:#009bb4}value{font-size:.95em;color:#aaa}</style>
+margin-top:-44px;margin-left:72px;padding:2px;line-height:10px;font-size:9px}.actualt{position:relative;left:1px;-webkit-border-radius:2px;border-radius:2px;background:rgba(86, 95, 103,.4);font-family:Arial, Helvetica, sans-serif;padding:1px 3px 1px 3px;width:6rem;font-size:0.8rem;color:#c0c0c0;align-items:center;justify-content:center;margin-bottom:10px;top:-2px;display:flex}.svgimage{background:rgba(0, 155, 171, 1.000);-webit-border-radius:2px;border-radius:2px;}orange1{color:#aaa;}.greydesc{color:#c5c5c5;margin-left:40px;margin-top:-20px;position:absolute;font-size:0.85em}.none{float:none;margin-top:10px;position:absolute}spantemp{font-size:0.75em;color:#fff;font-family:weathertext2;}.tempicon{position:relative;font-family:weathertext2;margin-top:4px;margin-left:125px}.uvforecast{font-size:0.8rem;color:#c0c0c0;font-family:Arial,Helvetica;line-height:auto;margin-top:-15px;margin-bottom:2px}.storm{font-size:0.8rem;color:#c0c0c0;font-family:Arial,Helvetica;line-height:auto;margin-top:5px;margin-bottom:2px}.iconpos{margin-top:-5px;}.valuehi{position:absolute;font-size:1.2em;padding:5px;margin-top:-65px;color:#fff;font-family:weathertext2;}bluet,blueu{background:#01a4b5}yellowt,yellowu{background:#e6a141}oranget,orangeu{background:#d05f2d}greent{background:#90b12a}greenu{background:#565f67}redt,redu{background:#cd5245}purplet,purpleu{background:#b600b0}bluet,yellowt,oranget,greent,redt,purplet{margin-top:-20px;-webkit-border-radius:2px;border-radius:2px;padding:2px;height:.9rem}blueu,yellowu,orangeu,greenu,redu,purpleu{color:#fff;border-radius:2px;padding:0 3px 0 3px;align-items:center;justify-content:center;}.summarytext{font-size:.9em;color:#aaa;margin-top:5px;margin-bottom:2px}thunder{font-size:.9em;color:#aaa}summary{font-size:.9em;color:#aaa}blue1{color:#009bb4}value{font-size:.95em;color:#aaa}</style>
 <div class="weather34darkbrowser" url="Weather Underground Forecast"></div>  
 <main class="grid">
   <article>  
@@ -855,10 +855,65 @@ if ($wuskydaynight6=='N'){echo '<img src="css/wuicons/nt_'.$wuskydayIcon6.'.svg"
 ?>
     
   </article> 
+  
+  
+  
+  
+  <article>
+   <div class=actualt><?php echo $wuskydayTime7 ;?></div>        
+     <?php   //7         
+echo"<div class=iconpos> ";      		  			  
+if ($wuskydaynight7=='D'){echo '<img src="css/wuicons/'.$wuskydayIcon7.'.svg" width="40" class="iconpos"></img></div>';}
+if ($wuskydaynight7=='N'){echo '<img src="css/wuicons/nt_'.$wuskydayIcon7.'.svg" width="40" class="iconpos"></img></div>';}
+	 //summary icon
+	 echo '<div class=greydesc>'. $wuskydesc7.'</div><br>';					  
+	//temp				  
+	echo "<div class='tempicon'>"; 				  
+	if($tempunit=='F' && $wuskydayTempHigh7<44.7){echo "<div class=valuehi><bluet>".number_format($wuskydayTempHigh7,0);}
+	else if($tempunit=='F' && $wuskydayTempHigh7>80.7){echo "<div class=valuehi><redt>".number_format($wuskydayTempHigh7,0);}
+	else if($tempunit=='F' && $wuskydayTempHigh7>74.4){echo "<div class=valuehi><oranget>".number_format($wuskydayTempHigh7,0);}
+	else if($tempunit=='F' && $wuskydayTempHigh7>55){echo "<div class=valuehi><yellowt>".number_format($wuskydayTempHigh7,0);}
+	else if($tempunit=='F' && $wuskydayTempHigh7>=44.6){echo "<div class=valuehi><greent>".number_format($wuskydayTempHigh7,0);}
+	else if($wuskydayTempHigh7<7){echo "<div class=valuehi><bluet>".number_format($wuskydayTempHigh7,0);}
+	else if($wuskydayTempHigh7>27){echo "<div class=valuehi><redt>".number_format($wuskydayTempHigh7,0);}
+	else if($wuskydayTempHigh7>18){echo "<div class=valuehi><oranget>".number_format($wuskydayTempHigh7,0);}
+	else if($wuskydayTempHigh7>12.7){echo "<div class=valuehi><yellowt>".number_format($wuskydayTempHigh7,0);}			  
+	else if($wuskydayTempHigh7>=7){echo "<div class=valuehi><greent>".number_format($wuskydayTempHigh7,0);}
+	echo "°<spantemp>" .$tempunit. "</spantemp></div></div>";
+				  //uvi	+ tstorm		  
+				  echo '<div class=uvforecast><grey><value'.$sunlight.' UVI ';				 
+				  if ($wuskydayUV7>10){echo 	"<purpleu>".$wuskydayUV7. '</purpleu><grey> '.$wuskydayUVdesc7;}
+				  else if ($wuskydayUV7>7){echo 	"<redu>".$wuskydayUV7. '</redu><grey> '.$wuskydayUVdesc7;}
+				  else if ($wuskydayUV7>5){echo 	"<orangeu>".$wuskydayUV7. '</orangeu><grey> '.$wuskydayUVdesc7;}
+				  else if ($wuskydayUV7>2){echo 	"<yellowu>".$wuskydayUV7. '</yellowu><grey> '.$wuskydayUVdesc7;}
+				  else if ($wuskydayUV7>=0){echo 	"<greenu>".$wuskydayUV7. '</greenu><grey> '.$wuskydayUVdesc7;}				  
+				  echo '</grey></div>
+				  <divclass=storm>				 
+				   '.$lightningalert4;
+				   if ($wuskythunder7=="No thunder"){ echo ' <thunder>'.$wuskythunder7.'</thunder></grey>	 </value></div>';}
+				   else echo ' <thunder><orange1>'.$wuskythunder7.'</orange1></thunder></grey>	 </value></div><br>'; 
+				  //text summary
+				  echo '<div class=summarytext><summary>Summary</summary><span>'.$wuskydaysummary7.' </div></span><br>';		
+				  //snow		  
+				  if ( $wuskydayacumm7>0){echo '<precip><value>'.$snowflakesvg.'&nbsp;<value><span2><valuer>Snow <blue1>&nbsp;'.$wuskydayacumm7.'</blue1><value> cm<br></span2></precip>';}  				  
+				  //rain
+				  else if ($wuskydayPrecipType7='rain' && $rainunit=='in'){
+				  echo '<precip>'.$rainsvg.'&nbsp;<value><span2><valuer>Rain <blue1>&nbsp;'. number_format($wuskydayprecipIntensity7,2).'</blue1><value>&nbsp;'.$rainunit.'&nbsp;<blue1>'.$wuskydayPrecipProb7.'</blue1>%</span2></precip>';} 				  
+				  else if ($wuskydayPrecipType7='rain'){
+				  echo '<precip>'.$rainsvg.'&nbsp;<value><span2><valuer>Rain <blue1>&nbsp;'. number_format($wuskydayprecipIntensity7,2).'</blue1><value>&nbsp;'.$rainunit.'&nbsp;<blue1>'.$wuskydayPrecipProb7.'</blue1>%</span2></precip><br>';}echo  '</div>';				  
+?>
+    
+  </article> 
+  
+  
+  
+  
   <article>
     <span style="font-size:8px;">
-  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:8px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?><br><br>
-  <?php echo $info?> Data Forecast provide by <a href="https://www.wunderground.com/weather/api/" title="Weather Underground API" target="_blank">Weather Underground</a></span>
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:8px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span> </article> 
+  <article>
+  <span style="font-size:8px;">
+  <?php echo $info?> Data Forecast provided by <a href="https://www.wunderground.com/weather/api/" title="Weather Underground API" target="_blank">Weather Underground</a></span>
   
   </article> 
 </main>
