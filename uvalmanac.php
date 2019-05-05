@@ -13,7 +13,7 @@ include('livedata.php');
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 2fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc;
@@ -152,7 +152,36 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 
 
 
+</article> 
+
+ <article> 
+  <div class=actualt>&nbsp;&nbsp Max UV-INDEX Yesterday </div>        
+   <div class="temperaturecontainer">
+	
+            <?php
+	// UV INDEX
+	if ($weather["uvydmax"]>=10)  {
+	echo "<div class='uvtoday11'>",$weather["uvydmax"] . "</value>";} 	
+	else if ($weather["uvydmax"]>=8)  {
+	echo "<div class='uvtoday9-10'>",$weather["uvydmax"] . "</value>";}
+	else if ($weather["uvydmax"]>=5)  {
+	echo "<div class='uvtoday6-8'>",$weather["uvydmax"] . "</value>";}
+	else if ($weather["uvydmax"]>=3)  {
+	echo "<div class='uvtoday4-5'>",$weather["uvydmax"] . "</value>";} 		
+	else if ($weather["uvydmax"]>=-0) {
+	echo "<div class='uvtoday1'>",$weather["uvydmax"] . "</value>";}		
+	echo "<smalluvunit> UVI</smalluvunit>"
+?>
+
+</div>
+
+<div class="higust">Max UV-INDEX Measured <span><?php echo $weather["uvydmaxtime"];?></span></div>
+
+
+
 </article>  
+  
+ 
   
   <article> 
   <div class=actualt>&nbsp;&nbsp Max UV-INDEX <?php echo date('F Y')?> </div>        
@@ -181,32 +210,6 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 
 </article>  
   
-   <article> 
-  <div class=actualt>&nbsp;&nbsp Max UV-INDEX Yesterday </div>        
-   <div class="temperaturecontainer">
-	
-            <?php
-	// UV INDEX
-	if ($weather["uvydmax"]>=10)  {
-	echo "<div class='uvtoday11'>",$weather["uvydmax"] . "</value>";} 	
-	else if ($weather["uvydmax"]>=8)  {
-	echo "<div class='uvtoday9-10'>",$weather["uvydmax"] . "</value>";}
-	else if ($weather["uvydmax"]>=5)  {
-	echo "<div class='uvtoday6-8'>",$weather["uvydmax"] . "</value>";}
-	else if ($weather["uvydmax"]>=3)  {
-	echo "<div class='uvtoday4-5'>",$weather["uvydmax"] . "</value>";} 		
-	else if ($weather["uvydmax"]>=-0) {
-	echo "<div class='uvtoday1'>",$weather["uvydmax"] . "</value>";}		
-	echo "<smalluvunit> UVI</smalluvunit>"
-?>
-
-</div>
-
-<div class="higust">Max UV-INDEX Measured <span><?php echo $weather["uvydmaxtime"];?></span></div>
-
-
-
-</article>  
   
     <article> 
   <div class=actualt>&nbsp;&nbsp Max UV-INDEX <?php echo date('Y')?> </div>        

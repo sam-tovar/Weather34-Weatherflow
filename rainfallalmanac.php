@@ -13,7 +13,7 @@ include('livedata.php');
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc
@@ -83,6 +83,21 @@ if($weather["rain_units"] =='in'){ echo number_format($weather["rain_today"]*25.
 
 <div class="hitempy"><?php if (date('jS')==$rainlasttoday1){ echo $raininfo ." Last <blue>Rainfall </blue>",$rainlasttoday;} else echo $raininfo . "<blue>Rainfall</blue> Last Hour<blue> ", $weather["rain_lasthour"]."</blue> " .$weather["rain_units"] ?></div>
 </article>  
+
+ <article>  
+    <div class=actualt>&nbsp;&nbsp Rainfall Measured Yesterday </div>      
+  <?php // rain yesterday
+echo "<div class='rainfalltoday1'>",$weather["rainydmax"] . "</value>";echo "<smalluvunit>".$weather["rain_units"]."</smalluvunit>"?>
+<div class='w34convertrain'>
+<?php //convert rain
+if($weather["rain_units"] =='mm'){ echo number_format($weather["rainydmax"]*0.0393701,2)." inches";}
+if($weather["rain_units"] =='in'){ echo number_format($weather["rainydmax"]*25.400013716,2)."mm";}
+?>
+<div></div>
+
+<div class="hitempy"><?php if (date('jS')==$rainlasttoday1){ echo $raininfo ." Last <blue>Rainfall </blue>",$rainlasttoday;} else echo $raininfo . "<blue>Rainfall</blue> Last 24 Hours<blue> ", $weather["rain_24hrs"]."</blue> " .$weather["rain_units"] ?></div>
+</article>  
+  
   
   <article> 
   <div class=actualt>&nbsp;&nbsp Rainfall Measured <?php echo date('M Y')?> </div>          
@@ -97,22 +112,9 @@ if($weather["rain_units"] =='in'){ echo number_format($weather["rain_month"]*25.
 
 <div class="hitempy"><?php if ($meteobridgeapi[124]=='--'){echo "";}else echo $raininfo." Last <blue>Rainfall </blue>";?>
 <?php if ($meteobridgeapi[124]=='--'){echo $raininfo," Last <blue>Rainfall</blue> N/A";}else echo " ".$rainlasttime?></div>
-</article>  
+</article> 
   
-    <article>  
-    <div class=actualt>&nbsp;&nbsp Rainfall Measured Yesterday </div>      
-  <?php // rain yesterday
-echo "<div class='rainfalltoday1'>",$weather["rainydmax"] . "</value>";echo "<smalluvunit>".$weather["rain_units"]."</smalluvunit>"?>
-<div class='w34convertrain'>
-<?php //convert rain
-if($weather["rain_units"] =='mm'){ echo number_format($weather["rainydmax"]*0.0393701,2)." inches";}
-if($weather["rain_units"] =='in'){ echo number_format($weather["rainydmax"]*25.400013716,2)."mm";}
-?>
-<div></div>
-
-<div class="hitempy"><?php if (date('jS')==$rainlasttoday1){ echo $raininfo ." Last <blue>Rainfall </blue>",$rainlasttoday;} else echo $raininfo . "<blue>Rainfall</blue> Last 24 Hours<blue> ", $weather["rain_24hrs"]."</blue> " .$weather["rain_units"] ?></div>
-</article>  
-  
+   
    <article> 
    <div class=actualt>&nbsp;&nbsp Rainfall Measured <?php echo date("Y");?> </div>      
   <?php // rain year

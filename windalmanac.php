@@ -13,7 +13,7 @@ include('livedata.php');
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc
@@ -44,17 +44,8 @@ padding:5px;font-family:Arial, Helvetica, sans-serif;width:100px;height:0.8em;fo
 align-items:center;justify-content:center;margin-bottom:10px;top:0}
 
 
-<!--weather34 rain beaker csss-->
-.rainfallcontainer1{left:5px;top:0}
-.rainfalltoday1{font-family:weathertext2,Arial,Helvetica,system;width:7rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;}
-.rainfalltoday1{font-size:1.5rem;padding-top:22px;color:#fff;border-bottom:15px solid rgba(56,56,60,1);align-items:center;justify-content:center;text-align:center;border-radius:3px;}
-.rainfallcaution,.rainfalltrend{position:absolute;font-size:1rem}
-.rainfalltoday1{background:rgba(68, 166, 181, 1.000)}
-smalluvunit{font-size:.7rem;font-family:Arial,Helvetica,system;}
-
-
 .windcontainer1{left:5px;top:0}
-.windtoday,.windtoday10,.windtoday30,.windtoday40,.windtoday60{font-family:weathertext2,Arial,Helvetica,system;width:7rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;}.windtoday,.windtoday10,.windtoday30,.windtoday40,.windtoday60{font-size:1.6rem;padding-top:20px;color:#fff;border-bottom:15px solid rgba(56,56,60,1);align-items:center;justify-content:center;text-align:center;border-radius:3px;}
+.windtoday,.windtoday10,.windtoday30,.windtoday40,.windtoday60{font-family:weathertext2,Arial,Helvetica,system;width:7rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;}.windtoday,.windtoday10,.windtoday30,.windtoday40,.windtoday60{font-size:1.25rem;padding-top:15px;color:#fff;border-bottom:15px solid rgba(56,56,60,1);align-items:center;justify-content:center;text-align:center;border-radius:3px;}
 
 .windcaution,.windtrend{position:absolute;font-size:1rem}
 .windtoday{background:#9aba2f}
@@ -62,18 +53,11 @@ smalluvunit{font-size:.7rem;font-family:Arial,Helvetica,system;}
 .windcaution{margin-left:120px;margin-top:112px;font-family:Arial,Helvetica,system}
 .windtrend{margin-left:135px;margin-top:48px;z-index:1;color:#fff}
 smalluvunit{font-size:.6rem;font-family:Arial,Helvetica,system;}
-
-
-
-
-
-
 .almanac{font-size:1.25em;margin-top:30px;color:rgba(56, 56, 60, 1.000);width:12em}
 metricsblue{color:#44a6b5;font-family:"weathertext2",Helvetica, Arial, sans-serif;background:rgba(86, 95, 103, 0.5);-webkit-border-radius:2px;border-radius:2px;align-items:center;justify-content:center;font-size:.9em;left:10px;padding:0 3px 0 3px;}
-.w34convertrain{position:relative;font-size:.5em;top:10px;color:#c0c0c0;margin-left:5px}
+.w34convertrain{position:relative;font-size:.7em;top:13px;color:#c0c0c0;margin-left:5px}
 .hitempy{position:relative;background:rgba(61, 64, 66, 0.5);color:#aaa;font-size:12px;width:90px;padding:1px;-webit-border-radius:2px;border-radius:2px;
-margin-top:-20px;margin-left:92px;padding-left:3px;line-height:11px;font-size:10px}
-
+margin-top:-24px;margin-left:92px;padding-left:3px;line-height:11px;font-size:10px}
 .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
 padding:5px;font-family:Arial, Helvetica, sans-serif;width:170px;height:0.8em;font-size:0.8rem;padding-top:2px;color:#aaa;border-bottom:2px solid rgba(56,56,60,1);
 align-items:center;justify-content:center;margin-bottom:10px;top:0}
@@ -142,6 +126,64 @@ if($weather["wind_units"] =='kts'){ echo number_format($weather["winddmax"]*1.85
 Max Wind Speed <br>Recorded <blue><?php echo $weather["winddmaxtime"];?></blue></div>
 </smalluvunit>
 </article>  
+
+ <article>  
+   <div class=actualt>&nbsp;&nbsp Max Wind Speed Yesterday </div>        
+   <?php
+	// wind yesterday km/h
+	if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=60)  {
+	echo "<div class='windtoday60'>",$weather["windydmax"] . "</value>";} 	
+	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=40)  {
+	echo "<div class='windtoday40'>",$weather["windydmax"] . "</value>";}
+	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=30)  {
+	echo "<div class='windtoday30'>",$weather["windydmax"] . "</value>";}
+	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=10)  {
+	echo "<div class='windtoday10'>",$weather["windydmax"] . "</value>";} 		
+	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=-0) {
+	echo "<div class='windtoday'>",$weather["windydmax"] . "</value>";}		
+	
+	//mph
+	if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=37.2)  {
+	echo "<div class='windtoday60'>",$weather["windydmax"] . "</value>";} 	
+	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=24.85)  {
+	echo "<div class='windtoday40'>",$weather["windydmax"] . "</value>";}
+	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=18.64)  {
+	echo "<div class='windtoday30'>",$weather["windydmax"] . "</value>";}
+	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=6.2)  {
+	echo "<div class='windtoday10'>",$weather["windydmax"] . "</value>";} 		
+	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=-0) {
+	echo "<div class='windtoday'>",$weather["windydmax"] . "</value>";}
+	
+	//ms
+	if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=16.66)  {
+	echo "<div class='windtoday60'>",$weather["windydmax"] . "</value>";} 	
+	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=11.11)  {
+	echo "<div class='windtoday40'>",$weather["windydmax"] . "</value>";}
+	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=8.33)  {
+	echo "<div class='windtoday30'>",$weather["windydmax"] . "</value>";}
+	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=2.77)  {
+	echo "<div class='windtoday10'>",$weather["windydmax"] . "</value>";} 		
+	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=-0) {
+	echo "<div class='windtoday'>",$weather["windydmax"] . "</value>";}
+	echo "<smalluvunit>".$weather["wind_units"]."</smalluvunit>";	
+	
+?>
+<div></div>
+<div class='w34convertrain'>
+<?php //convert rain
+if($weather["wind_units"] =='km/h'){echo number_format($weather["windydmax"]*0.621371,1)." <smalluvunit>mph</smalluvunit";}
+if($weather["wind_units"] =='mph'){ echo number_format($weather["windydmax"]*1.60934,1)."<smalluvunit>km/h</smalluvunit>";}
+if($weather["wind_units"] =='m/s'){ echo number_format($weather["windydmax"]*3.5999988862317131577,1)."<smalluvunit>km/h</smalluvunit>";}
+if($weather["wind_units"] =='kts'){ echo number_format($weather["windydmax"]*1.8519994254280931489,1)."<smalluvunit>km/h</smalluvunit>";}
+?>
+</div>
+
+<div class="hitempy">
+Max Recorded <br><blue><?php echo $weather["windydmaxtime"];?></blue></div>
+
+</article>  
+
+
   
   <article> 
   <div class=actualt>&nbsp;&nbsp Max Wind Speed <?php echo date('F Y')?> </div>        
@@ -199,62 +241,7 @@ Max Recorded <br><blue><?php echo $weather["windmmaxtime"];?></blue></div>
 
 </article>  
   
-    <article>  
-   <div class=actualt>&nbsp;&nbsp Max Wind Speed Yesterday </div>        
-   <?php
-	// wind yesterday km/h
-	if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=60)  {
-	echo "<div class='windtoday60'>",$weather["windydmax"] . "</value>";} 	
-	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=40)  {
-	echo "<div class='windtoday40'>",$weather["windydmax"] . "</value>";}
-	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=30)  {
-	echo "<div class='windtoday30'>",$weather["windydmax"] . "</value>";}
-	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=10)  {
-	echo "<div class='windtoday10'>",$weather["windydmax"] . "</value>";} 		
-	else if ($weather["wind_units"]=='km/h' && $weather["windydmax"]>=-0) {
-	echo "<div class='windtoday'>",$weather["windydmax"] . "</value>";}		
-	
-	//mph
-	if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=37.2)  {
-	echo "<div class='windtoday60'>",$weather["windydmax"] . "</value>";} 	
-	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=24.85)  {
-	echo "<div class='windtoday40'>",$weather["windydmax"] . "</value>";}
-	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=18.64)  {
-	echo "<div class='windtoday30'>",$weather["windydmax"] . "</value>";}
-	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=6.2)  {
-	echo "<div class='windtoday10'>",$weather["windydmax"] . "</value>";} 		
-	else if ($weather["wind_units"]=='mph' && $weather["windydmax"]>=-0) {
-	echo "<div class='windtoday'>",$weather["windydmax"] . "</value>";}
-	
-	//ms
-	if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=16.66)  {
-	echo "<div class='windtoday60'>",$weather["windydmax"] . "</value>";} 	
-	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=11.11)  {
-	echo "<div class='windtoday40'>",$weather["windydmax"] . "</value>";}
-	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=8.33)  {
-	echo "<div class='windtoday30'>",$weather["windydmax"] . "</value>";}
-	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=2.77)  {
-	echo "<div class='windtoday10'>",$weather["windydmax"] . "</value>";} 		
-	else if ($weather["wind_units"]=='m/s' && $weather["windydmax"]>=-0) {
-	echo "<div class='windtoday'>",$weather["windydmax"] . "</value>";}
-	echo "<smalluvunit>".$weather["wind_units"]."</smalluvunit>";	
-	
-?>
-<div></div>
-<div class='w34convertrain'>
-<?php //convert rain
-if($weather["wind_units"] =='km/h'){echo number_format($weather["windydmax"]*0.621371,1)." <smalluvunit>mph</smalluvunit";}
-if($weather["wind_units"] =='mph'){ echo number_format($weather["windydmax"]*1.60934,1)."<smalluvunit>km/h</smalluvunit>";}
-if($weather["wind_units"] =='m/s'){ echo number_format($weather["windydmax"]*3.5999988862317131577,1)."<smalluvunit>km/h</smalluvunit>";}
-if($weather["wind_units"] =='kts'){ echo number_format($weather["windydmax"]*1.8519994254280931489,1)."<smalluvunit>km/h</smalluvunit>";}
-?>
-</div>
-
-<div class="hitempy">
-Max Recorded <br><blue><?php echo $weather["windydmaxtime"];?></blue></div>
-
-</article>  
-  
+     
    <article> 
    <div class=actualt>&nbsp;&nbsp Max Wind Speed <?php echo date('Y')?> </div>        
    <?php

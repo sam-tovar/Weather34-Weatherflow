@@ -556,8 +556,9 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
   align-items: stretch;
   color:#f5f7fc
   }
-.grid > article {
-  border: 1px solid rgba(86, 95, 103,.1);
+
+ .grid > article {
+  border: 1px solid #212428;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   padding:5px;
   font-size:0.8em;

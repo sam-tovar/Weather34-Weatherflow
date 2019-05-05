@@ -13,7 +13,7 @@ include('livedata.php');
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 2fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc;
@@ -151,6 +151,31 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 
 
 </article>  
+
+ <article> 
+  <div class=actualt>&nbsp;&nbsp Max Solar Radiation Yesterday </div>        
+   <div class="temperaturecontainer">
+	
+             <?php
+	// Solar month
+	if ($weather["solarydmax"]>1000)  {
+	echo "<div class='uvtoday9-10'>",$weather["solarydmax"] . "</value>";}
+	else if ($weather["solarydmax"]>500)  {
+	echo "<div class='uvtoday6-8'>",$weather["solarydmax"] . "</value>";}
+	else if ($weather["solarydmax"]>300)  {
+	echo "<div class='uvtoday4-5'>",$weather["solarymax"] . "</value>";} 		
+	else if ($weather["solarydmax"]>=-0) {
+	echo "<div class='uvtoday1'>",$weather["solarydmax"] . "</value>";}		
+	echo "<smalluvunit> W/m<sup>2</sup></smalluvunit>"
+?>
+
+</div>
+
+<div class="higust">Highest Solar W/m<supwm2>2</supwm2> <span><?php echo $weather["solarydmaxtime"];?></span></div>
+
+
+
+</article>  
   
   <article> 
   <div class=actualt>&nbsp;&nbsp Max Solar Radiation <?php echo date('F Y')?> </div>        
@@ -177,30 +202,7 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 
 </article>  
   
-   <article> 
-  <div class=actualt>&nbsp;&nbsp Max Solar Radiation Yesterday </div>        
-   <div class="temperaturecontainer">
-	
-             <?php
-	// Solar month
-	if ($weather["solarydmax"]>1000)  {
-	echo "<div class='uvtoday9-10'>",$weather["solarydmax"] . "</value>";}
-	else if ($weather["solarydmax"]>500)  {
-	echo "<div class='uvtoday6-8'>",$weather["solarydmax"] . "</value>";}
-	else if ($weather["solarydmax"]>300)  {
-	echo "<div class='uvtoday4-5'>",$weather["solarymax"] . "</value>";} 		
-	else if ($weather["solarydmax"]>=-0) {
-	echo "<div class='uvtoday1'>",$weather["solarydmax"] . "</value>";}		
-	echo "<smalluvunit> W/m<sup>2</sup></smalluvunit>"
-?>
-
-</div>
-
-<div class="higust">Highest Solar W/m<supwm2>2</supwm2> <span><?php echo $weather["solarydmaxtime"];?></span></div>
-
-
-
-</article>  
+  
   
     <article> 
   <div class=actualt>&nbsp;&nbsp Max Solar Radiation <?php echo date('Y')?> </div>        

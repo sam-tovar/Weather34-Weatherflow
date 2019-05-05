@@ -13,8 +13,8 @@ include('livedata.php');
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 2fr));
+  grid-gap: 5px;
   align-items: stretch;
   color:#f5f7fc;
  
@@ -229,7 +229,139 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 <div class="hitempd1" >Hum Max<orange><?php echo "&nbsp;".$weather["humidity_max"],"</orange>% ",$weather["humidity_maxtime"];?></span><br></div><br>
 <div class="hitempd1" >Hum Min<blue><?php echo "&nbsp;".$weather["humidity_min"],"</blue>% ",$weather["humidity_mintime"];?></span><br></div>
 </div>    
+</article> 
+
+<article>  
+   <div class=actualt>&nbsp;&nbsp Temperature Yesterday </div>        
+   <div class="temperaturecontainer">
+	 <?php	
+	//temp max yesterday
+	if ($tempunit=='C' && $weather["tempydmax"]>=41)  {
+	echo "<div class='temperaturetoday41-45'>",$weather["tempydmax"] . "</value>";} 
+	else if ($tempunit=='C' && $weather["tempydmax"]>=36)  {
+	echo "<div class='temperaturetoday36-40'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmax"]>=31)  {
+	echo "<div class='temperaturetoday31-35'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmax"]>=26)  {
+	echo "<div class='temperaturetoday26-30'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmax"]>=21)  {
+	echo "<div class='temperaturetoday21-25'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmax"]>=16)  {
+	echo "<div class='temperaturetoday16-20'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmax"]>=10)  {
+	echo "<div class='temperaturetoday11-15'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmax"]>=6)  {
+	echo "<div class='temperaturetoday6-10'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmax"]>=0)  {
+	echo "<div class='temperaturetoday0-5'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmax"]<0)  {
+	echo "<div class='temperaturetodayminus'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmax"]<-5)  {
+	echo "<div class='temperaturetodayminus5'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmax"]<-10)  {
+	echo "<div class='temperaturetodayminus10'>",$weather["tempydmax"] . "</value>";}		
+	
+	//f
+	//temp max yesterday
+	if ($tempunit=='F' && $weather["tempydmax"]>=105.8)  {
+	echo "<div class='temperaturetoday41-45'>",$weather["tempydmax"] . "</value>";} 
+	else if ($tempunit=='F' && $weather["tempydmax"]>=96.8)  {
+	echo "<div class='temperaturetoday36-40'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmax"]>=87.8)  {
+	echo "<div class='temperaturetoday31-35'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmax"]>=78.8)  {
+	echo "<div class='temperaturetoday26-30'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmax"]>=69.8)  {
+	echo "<div class='temperaturetoday21-25'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmax"]>=60.8)  {
+	echo "<div class='temperaturetoday16-20'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmax"]>=50)  {
+	echo "<div class='temperaturetoday11-15'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmax"]>=42.8)  {
+	echo "<div class='temperaturetoday6-10'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmax"]>=32)  {
+	echo "<div class='temperaturetoday0-5'>",$weather["tempydmax"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmax"]<32)  {
+	echo "<div class='temperaturetodayminus'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmax"]<-23)  {
+	echo "<div class='temperaturetodayminus5'>",$weather["tempydmax"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmax"]<-14)  {
+	echo "<div class='temperaturetodayminus10'>",$weather["tempydmax"] . "</value>";}		
+	echo "<smalluvunit>".$weather["temp_units"]."</smalluvunit>"
+	?>	</div>
+    <div class="temperaturetrend">Max:<?php echo $weather["tempydmaxtime"];?></span></div>	
+    
+    <div class="temperaturecontainer">
+	 <?php	
+	//temp min yesterday
+	if ($tempunit=='C' && $weather["tempydmin"]>=41)  {
+	echo "<div class='temperaturetoday41-45'>",$weather["tempydmin"] . "</value>";} 
+	else if ($tempunit=='C' && $weather["tempydmin"]>=36)  {
+	echo "<div class='temperaturetoday36-40'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmin"]>=31)  {
+	echo "<div class='temperaturetoday31-35'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmin"]>=26)  {
+	echo "<div class='temperaturetoday26-30'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmin"]>=21)  {
+	echo "<div class='temperaturetoday21-25'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmin"]>=16)  {
+	echo "<div class='temperaturetoday16-20'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmin"]>=10)  {
+	echo "<div class='temperaturetoday11-15'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmin"]>=6)  {
+	echo "<div class='temperaturetoday6-10'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmin"]>=0)  {
+	echo "<div class='temperaturetoday0-5'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='C' && $weather["tempydmin"]<0)  {
+	echo "<div class='temperaturetodayminus'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmin"]<-5)  {
+	echo "<div class='temperaturetodayminus5'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='C' && $weather["tempydmin"]<-10)  {
+	echo "<div class='temperaturetodayminus10'>",$weather["tempydmin"] . "</value>";}		
+	
+	//f
+	//temp min yesterday
+	if ($tempunit=='F' && $weather["tempydmin"]>=105.8)  {
+	echo "<div class='temperaturetoday41-45'>",$weather["tempydmin"] . "</value>";} 
+	else if ($tempunit=='F' && $weather["tempydmin"]>=96.8)  {
+	echo "<div class='temperaturetoday36-40'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmin"]>=87.8)  {
+	echo "<div class='temperaturetoday31-35'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmin"]>=78.8)  {
+	echo "<div class='temperaturetoday26-30'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmin"]>=69.8)  {
+	echo "<div class='temperaturetoday21-25'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmin"]>=60.8)  {
+	echo "<div class='temperaturetoday16-20'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmin"]>=50)  {
+	echo "<div class='temperaturetoday11-15'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmin"]>=42.8)  {
+	echo "<div class='temperaturetoday6-10'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmin"]>=32)  {
+	echo "<div class='temperaturetoday0-5'>",$weather["tempydmin"] . "</value>";}	
+	else if ($tempunit=='F' && $weather["tempydmin"]<32)  {
+	echo "<div class='temperaturetodayminus'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmin"]<-23)  {
+	echo "<div class='temperaturetodayminus5'>",$weather["tempydmin"] . "</value>";}
+	else if ($tempunit=='F' && $weather["tempydmin"]<-14)  {
+	echo "<div class='temperaturetodayminus10'>",$weather["tempydmin"] . "</value>";}		
+	echo "<smalluvunit>".$weather["temp_units"]."</smalluvunit>"
+	?>	</div></div>
+    <div class="temperaturetrend">Min:<?php echo $weather["tempydmintime"];?></span></div>	
+     
+ <div class=hitempypos> 
+ <div class="hitempd" >Dew Max<orange><?php echo "&nbsp;".$weather["dewydmax"],"</orange>&deg;",$weather["temp_units"]," ",$weather["dewydmaxtime"];?></span><br></div><br>
+ <div class="hitempd" >Dew Min<blue><?php echo "&nbsp;".$weather["dewydmin"],"</blue>&deg;",$weather["temp_units"]," ",$weather["dewydmintime"];?></span><br></div><br>
+</div>
+
+ <div class=hitempypos> 
+<div class="hitempd1" >Hum Max<orange><?php echo "&nbsp;".$weather["humidity_ydmax"],"</orange>% ",$weather["humidity_ydmaxtime"];?></span><br></div><br>
+<div class="hitempd1" >Hum Min<blue><?php echo "&nbsp;".$weather["humidity_ydmin"],"</blue>% ",$weather["humidity_ydmintime"];?></span><br></div><br>
+</div>    
 </article>  
+  
+
+ 
   
   <article> 
   <div class=actualt>&nbsp;&nbsp Temperature <?php echo date(' F Y')?> </div>        
@@ -360,135 +492,7 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 </div>    
 </article>  
   
-    <article>  
-   <div class=actualt>&nbsp;&nbsp Temperature Yesterday </div>        
-   <div class="temperaturecontainer">
-	 <?php	
-	//temp max yesterday
-	if ($tempunit=='C' && $weather["tempydmax"]>=41)  {
-	echo "<div class='temperaturetoday41-45'>",$weather["tempydmax"] . "</value>";} 
-	else if ($tempunit=='C' && $weather["tempydmax"]>=36)  {
-	echo "<div class='temperaturetoday36-40'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmax"]>=31)  {
-	echo "<div class='temperaturetoday31-35'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmax"]>=26)  {
-	echo "<div class='temperaturetoday26-30'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmax"]>=21)  {
-	echo "<div class='temperaturetoday21-25'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmax"]>=16)  {
-	echo "<div class='temperaturetoday16-20'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmax"]>=10)  {
-	echo "<div class='temperaturetoday11-15'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmax"]>=6)  {
-	echo "<div class='temperaturetoday6-10'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmax"]>=0)  {
-	echo "<div class='temperaturetoday0-5'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmax"]<0)  {
-	echo "<div class='temperaturetodayminus'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmax"]<-5)  {
-	echo "<div class='temperaturetodayminus5'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmax"]<-10)  {
-	echo "<div class='temperaturetodayminus10'>",$weather["tempydmax"] . "</value>";}		
-	
-	//f
-	//temp max yesterday
-	if ($tempunit=='F' && $weather["tempydmax"]>=105.8)  {
-	echo "<div class='temperaturetoday41-45'>",$weather["tempydmax"] . "</value>";} 
-	else if ($tempunit=='F' && $weather["tempydmax"]>=96.8)  {
-	echo "<div class='temperaturetoday36-40'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmax"]>=87.8)  {
-	echo "<div class='temperaturetoday31-35'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmax"]>=78.8)  {
-	echo "<div class='temperaturetoday26-30'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmax"]>=69.8)  {
-	echo "<div class='temperaturetoday21-25'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmax"]>=60.8)  {
-	echo "<div class='temperaturetoday16-20'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmax"]>=50)  {
-	echo "<div class='temperaturetoday11-15'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmax"]>=42.8)  {
-	echo "<div class='temperaturetoday6-10'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmax"]>=32)  {
-	echo "<div class='temperaturetoday0-5'>",$weather["tempydmax"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmax"]<32)  {
-	echo "<div class='temperaturetodayminus'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmax"]<-23)  {
-	echo "<div class='temperaturetodayminus5'>",$weather["tempydmax"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmax"]<-14)  {
-	echo "<div class='temperaturetodayminus10'>",$weather["tempydmax"] . "</value>";}		
-	echo "<smalluvunit>".$weather["temp_units"]."</smalluvunit>"
-	?>	</div>
-    <div class="temperaturetrend">Max:<?php echo $weather["tempydmaxtime"];?></span></div>	
     
-    <div class="temperaturecontainer">
-	 <?php	
-	//temp min yesterday
-	if ($tempunit=='C' && $weather["tempydmin"]>=41)  {
-	echo "<div class='temperaturetoday41-45'>",$weather["tempydmin"] . "</value>";} 
-	else if ($tempunit=='C' && $weather["tempydmin"]>=36)  {
-	echo "<div class='temperaturetoday36-40'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmin"]>=31)  {
-	echo "<div class='temperaturetoday31-35'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmin"]>=26)  {
-	echo "<div class='temperaturetoday26-30'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmin"]>=21)  {
-	echo "<div class='temperaturetoday21-25'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmin"]>=16)  {
-	echo "<div class='temperaturetoday16-20'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmin"]>=10)  {
-	echo "<div class='temperaturetoday11-15'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmin"]>=6)  {
-	echo "<div class='temperaturetoday6-10'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmin"]>=0)  {
-	echo "<div class='temperaturetoday0-5'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='C' && $weather["tempydmin"]<0)  {
-	echo "<div class='temperaturetodayminus'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmin"]<-5)  {
-	echo "<div class='temperaturetodayminus5'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='C' && $weather["tempydmin"]<-10)  {
-	echo "<div class='temperaturetodayminus10'>",$weather["tempydmin"] . "</value>";}		
-	
-	//f
-	//temp min yesterday
-	if ($tempunit=='F' && $weather["tempydmin"]>=105.8)  {
-	echo "<div class='temperaturetoday41-45'>",$weather["tempydmin"] . "</value>";} 
-	else if ($tempunit=='F' && $weather["tempydmin"]>=96.8)  {
-	echo "<div class='temperaturetoday36-40'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmin"]>=87.8)  {
-	echo "<div class='temperaturetoday31-35'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmin"]>=78.8)  {
-	echo "<div class='temperaturetoday26-30'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmin"]>=69.8)  {
-	echo "<div class='temperaturetoday21-25'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmin"]>=60.8)  {
-	echo "<div class='temperaturetoday16-20'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmin"]>=50)  {
-	echo "<div class='temperaturetoday11-15'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmin"]>=42.8)  {
-	echo "<div class='temperaturetoday6-10'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmin"]>=32)  {
-	echo "<div class='temperaturetoday0-5'>",$weather["tempydmin"] . "</value>";}	
-	else if ($tempunit=='F' && $weather["tempydmin"]<32)  {
-	echo "<div class='temperaturetodayminus'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmin"]<-23)  {
-	echo "<div class='temperaturetodayminus5'>",$weather["tempydmin"] . "</value>";}
-	else if ($tempunit=='F' && $weather["tempydmin"]<-14)  {
-	echo "<div class='temperaturetodayminus10'>",$weather["tempydmin"] . "</value>";}		
-	echo "<smalluvunit>".$weather["temp_units"]."</smalluvunit>"
-	?>	</div></div>
-    <div class="temperaturetrend">Min:<?php echo $weather["tempydmintime"];?></span></div>	
-     
- <div class=hitempypos> 
- <div class="hitempd" >Dew Max<orange><?php echo "&nbsp;".$weather["dewydmax"],"</orange>&deg;",$weather["temp_units"]," ",$weather["dewydmaxtime"];?></span><br></div><br>
- <div class="hitempd" >Dew Min<blue><?php echo "&nbsp;".$weather["dewydmin"],"</blue>&deg;",$weather["temp_units"]," ",$weather["dewydmintime"];?></span><br></div><br>
-</div>
-
- <div class=hitempypos> 
-<div class="hitempd1" >Hum Max<orange><?php echo "&nbsp;".$weather["humidity_ydmax"],"</orange>% ",$weather["humidity_ydmaxtime"];?></span><br></div><br>
-<div class="hitempd1" >Hum Min<blue><?php echo "&nbsp;".$weather["humidity_ydmin"],"</blue>% ",$weather["humidity_ydmintime"];?></span><br></div><br>
-</div>    
-</article>  
-  
    <article> 
   <div class=actualt>&nbsp;&nbsp Temperature <?php echo date('Y')?> </div>        
    <div class="temperaturecontainer">
