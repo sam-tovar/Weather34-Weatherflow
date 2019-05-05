@@ -556,9 +556,8 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
   align-items: stretch;
   color:#f5f7fc
   }
-
- .grid > article {
-  border: 1px solid #212428;
+.grid > article {
+  border: 1px solid rgba(86, 95, 103,.1);
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   padding:5px;
   font-size:0.8em;
@@ -894,7 +893,7 @@ if ($wuskydaynight5=='N'){echo '<img src="css/wuicons/nt_'.$wuskydayIcon5.'.svg"
 	else if($wuskydayTempHigh6>27){echo "<redt>".number_format($wuskydayTempHigh6,0);}
 	else if($wuskydayTempHigh6>18){echo "<oranget>".number_format($wuskydayTempHigh6,0);}
 	else if($wuskydayTempHigh6>12.7){echo "<yellowt>".number_format($wuskydayTempHigh6,0);}			  
-	else if($wuskydayTempHigh6>=7){echo "<greent>".number_format($wuskydayTempHigh7,0);}
+	else if($wuskydayTempHigh6>=7){echo "<greent>".number_format($wuskydayTempHigh6,0);}
 	echo "°<spantemp>" .$tempunit. "</spantemp></tempicon>";	        
 	echo"<div class=iconpos> ";      		  			  
 if ($wuskydaynight6=='D'){echo '<img src="css/wuicons/'.$wuskydayIcon6.'.svg" width="40" class="iconpos"></img></div>';}
