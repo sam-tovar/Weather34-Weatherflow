@@ -57,7 +57,7 @@ $eqalert6='<svg id="i-activity" viewBox="0 0 32 32" width="28" height="28" fill=
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc
@@ -138,7 +138,7 @@ orange1{color:rgba(255, 131, 47, 1.000);}
   
 <main class="grid">
   <article>  
-   <div class=actualt>&nbsp;&nbsp Last Earthquake </div>        
+   <div class=actualt>&nbsp;&nbsp Recent Earthquake </div>        
     <?php 
 				if($magnitude[0]>=7){echo "<div class=mag9-10>",$magnitude[0],"";}
 				else if($magnitude[0]>=5.8){echo "<div class=mag9-10>",$magnitude[0],"";}
@@ -796,13 +796,14 @@ else if ($windunit == 'mph') {
   
   
   <article>
-   <div class=actualt>&nbsp;&nbsp &copy; Information</div>  
-  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?></span>
+   <div class=actualt>&nbsp;&nbsp &copy; Information</div>
+   <span style="font-size:8px;">  
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?>
   
   <br>
   <br>
   <?php echo $info?>  
-<a href="http://earthquake-report.com" title="Earthquake-Report.com" target="_blank">Data © <?php echo date('Y');?> Earthquake-Report.com</a>
+<a href="http://earthquake-report.com" title="Earthquake-Report.com" target="_blank">Data © <?php echo date('Y');?> Earthquake-Report.com</a></span>
 
   
   </article> 
