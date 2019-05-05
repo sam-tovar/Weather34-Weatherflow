@@ -12,17 +12,17 @@
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
   grid-gap: 10px;
   align-items: stretch;
   color:#f5f7fc;
   over
   }
 .grid > article {
-  border: 1px solid rgba(86, 95, 103,.1);
+  border: 1px solid #212428;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  padding:5px;
-  font-size:0.8em;
+  padding:10px;
+  font-size:0.75em;
   -webkit-border-radius:4px;
   border-radius:4px;
 }
@@ -40,7 +40,7 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
 .windvalue1{font-family:weathertext2,Arial;font-size:20px;margin-left:3px;}
 .windseparator{color:rgba(57,61,64,1)}
 .text1,.windvalue1{color:#aaa}
-.metar34compass1{width:150px;height:150px;text-align:center;margin-top:-20px;left:35px;z-index:1}
+.metar34compass1{width:150px;height:150px;text-align:center;margin-top:-20px;left:0px;z-index:1}
 
 text1{z-index:10;text-align:center;margin:5px 0 auto}
 .metar34compass1>.metar34compass-line1{position:absolute;z-index:10;left:24px;top:25px;bottom:25px;-o-border-radius:100%;border-radius:100%;border-left:8px solid rgba(95,96,97,.5);border-top:8px solid rgba(95,96,97,.8);border-right:8px solid rgba(95,96,97,.5);border-bottom:8px solid rgba(95,96,97,.8);}
@@ -87,7 +87,7 @@ spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 .metardewtoday20{background:rgba(255, 124, 57, 1.000)}
 .metardewtoday25{background:rgba(255, 124, 57, 0.7)}
 .metardewtoday30{background:rgba(211, 93, 78, 1.000)}
-.metarhumcontainer1{left:150px;margin-top:-24px}
+.metarhumcontainer1{left:150px;margin-top:-19px}
 .metarhumcontainer2{left:150px;margin-top:10px}
 
 .metarhumtoday0-35,.metarhumtoday35-70,.metarhumtoday70-85,.metarhumtoday85-100{font-family:weathertext2,Arial,Helvetica,system;width:4.5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}.metarhumtoday0-35,.metarhumtoday35-70,.metarhumtoday70-85,.metarhumtoday85-100{font-size:1.1rem;padding-top:2px;color:#fff;border-bottom:12px solid rgba(56,56,60,1);align-items:center;justify-content:center;border-radius:3px;margin-bottom:21px;}
@@ -102,7 +102,7 @@ spancalm{postion:relative;font-family:weathertext2,Arial;font-size:16px;}
 .maxword{position:absolute;margin-top:-32px;font-size:.65rem;z-index:1;color:#fff}
 .maxword{margin-left:10px}
 .windword{position:absolute;margin-top:32px;font-size:.65rem;z-index:1;color:#fff;margin-left:7px}
-.humword{position:absolute;top:107px;font-size:.65rem;z-index:1;color:#fff;margin-left:94px}
+.humword{position:absolute;top:111px;font-size:.7rem;z-index:1;color:#fff;margin-left:90px}
 .metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}
 .metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday15,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-size:1.1rem;padding-top:0;color:#fff;border-bottom:10px solid rgba(56,56,60,1);align-items:center;justify-content:center;border-radius:3px;display:flex}
 .metarwindtodaykts0,.metarwindtodaykts5,.metarwindtodaykts10,.metarwindtodaykts20,.metarwindtodaykts25,.metarwindtodaykts30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex}
@@ -291,31 +291,44 @@ echo $$metarspot4;
 
 <article>
 <div class=actualw>&nbsp;&nbsp Wind Direction</div> 
-</div></div> 
+
+
+
+
+
+
+</div>
+
+</div> 
+
+
+
 <div class="metar34compass1">
 <div class="metar34compass-line1">
+
 <div class="windirectiontext1" >
+
 <?php 
-if( $metar34windir==0){echo "Calm";}else echo "&nbsp;&nbsp;".$metar34windir,"&deg;";?>
+if( $metar34windir==0){echo "Calm";}else echo $metar34windir,"&deg;";?>
 <br>
 <?php 
-if($metar34windir<=11.25){echo "&nbsp;Due North";}
+if($metar34windir<=11.25){echo "Due North";}
 else if($metar34windir<=33.75){echo "North North <br>East";}
-else if($metar34windir<=56.25){echo "&nbsp;North East";}
+else if($metar34windir<=56.25){echo "North East";}
 else if($metar34windir<=78.75){echo "East North<br>East";}
-else if($metar34windir<=101.25){echo "&nbsp;&nbsp;Due East";}
+else if($metar34windir<=101.25){echo "Due East";}
 else if($metar34windir<=123.75){echo "East South<br>East";}
-else if($metar34windir<=146.25){echo "&nbsp;South East";}
+else if($metar34windir<=146.25){echo "South East";}
 else if($metar34windir<=168.75){echo "South South<br>East";}
-else if($metar34windir<=191.25){echo "&nbsp;Due South";}
+else if($metar34windir<=191.25){echo "Due South";}
 else if($metar34windir<=213.75){echo "South South<br>West";}
-else if($metar34windir<=236.25){echo "&nbsp;South West";}
+else if($metar34windir<=236.25){echo "South West";}
 else if($metar34windir<=258.75){echo "West South<br>West";}
-else if($metar34windir<=281.25){echo "&nbsp;&nbsp;Due West";}
+else if($metar34windir<=281.25){echo "Due West";}
 else if($metar34windir<=303.75){echo "West North<br>West";}
-else if($metar34windir<=326.25){echo "&nbsp;North West";}
+else if($metar34windir<=326.25){echo "North West";}
 else if($metar34windir<=348.75){echo "North North<br>West";}
-else{echo "&nbsp;Due North";}?>
+else{echo "Due North";}?>
 
 </div>
 
@@ -330,13 +343,13 @@ else{echo "&nbsp;Due North";}?>
   
   <article>
   <div class=actualt>&nbsp;&nbsp Current Conditions </div>   
- <?php 	echo "<img rel='prefetch' src='css/icons/".$sky_icon."' width='80px' height='60px' style='margin-top:3px;' >";?>
+ <?php 	echo "<img rel='prefetch' src='css/icons/".$sky_icon."' width='100px' height='70px'>";?>
   
   
-   <?php //min year 
- echo '<div class=uppercase>',$sky_desc.'</div> '; ?>
-<div class="lotemp" style="margin-top:40px;">
-<div class="hitemp">Pressure <green>
+   <?php 
+ echo "<span style='float:left;margin-top:-20px;'>",$sky_desc.''; ?>
+<br>
+<blue>Pressure</blue> <br><green>
 <?php
 if ($pressureunit == 'mb' || $pressureunit == 'hPa') {
 	echo $metar34pressuremb ," </green>(".$pressureunit.")";
@@ -350,20 +363,20 @@ if ($pressureunit == 'mb' || $pressureunit == 'hPa') {
 } else {
 	echo $metar34pressuremb ," </green>(mb)";
 }
-?></span></div>
-<div class="hitemp">Visibility <yellow>
+?></span><br>
+<blue>Visibility</blue> <br><green>
 <?php
 if ($distanceunit == 'mi') {
-	echo $metar34vismiles  ," </yellow>(mi)";
+	echo $metar34vismiles  ," </green>(mimiles)";
 } else {
-	echo $metar34viskm ,"</yellow> (km)";
+	echo $metar34viskm ,"</green> (km)";
 }
-?> - <yellow>
+?> - <green>
 <?php
 if ($distanceunit =='mi') {
-	echo $metar34viskm  ," </yellow>(km)";
+	echo $metar34viskm  ," </green>(km)";
 } else {
-	echo $metar34vismiles ,"</yellow> (mi)";
+	echo $metar34vismiles ,"</green> (miles)";
 }
 ?>
    
@@ -400,12 +413,29 @@ $date=str_replace('Z', ' ', $date);$date1 = strtotime($date) + 60*60*$UTC;echo d
   </article> 
   
   <article>
-  <div class=actualt>&nbsp;&nbsp API & &copy; Info</div>  
+  <div class=actualt>&nbsp;&nbsp Raw Metar Info</div>  
+  <div class="lotemp">
+  <?php echo $info?> Raw METAR is the most common format in the world for the transmission of observational weather data. It is highly standardized through the International Civil Aviation Organization (ICAO), which allows it to be understood throughout most of the world.</span></div>
+  </article> 
+  
+  <article>
+  <div class=actualt>&nbsp;&nbsp API  Info</div>  
+  <div class="lotemp">
+  <?php echo $info?> Data Provided by </span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank" ><br><img src=img/checkwx.svg width=130px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>"></a></span></div>
+  </article> 
+  
+  
+  <article>
+  <div class=actualt>&nbsp;&nbsp &copy; Info</div>  
   <div class="lotemp">
   <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?>
-  <br><br><span style="margin-left:100px;margin-top:20px;">
-  Data Provided by </span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank" ><br><img src=img/checkwx.svg width=80px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>" style="margin-top:-5px;margin-left:100px;"></a>
-  
+  <br><br>
+  <?php echo $info?> Guide Info provided  by <a href="https://en.wikipedia.org/wiki/METAR" title="https://en.wikipedia.org/wiki/METAR" target="_blank" style="font-size:9px;">Metar-Wikipedia </a>  
   </div></article> 
+   
+   
+  
+  
+   
    
 </main>
