@@ -487,6 +487,57 @@ else {
 	//rain mm to inches metric
 	if ($rainunit=='in' && $wuapiunit=='m' ){
 	$wuskydayprecipIntensity5=$wuskydayprecipIntensity5*0.0393701;}
+	//wu convert temps-rain period6 
+	//metric to F
+	if ($tempunit=='F' && $wuapiunit=='m' ){
+	$wuskydayTempHigh6=($wuskydayTempHigh6*9/5)+32;}	
+	// metric to F UK
+	if ($tempunit=='F' && $wuapiunit=='h' ){
+	$wuskydayTempHigh6=($wuskydayTempHigh6*9/5)+32;}	
+	// ms non metric Scandinavia 
+	if ($tempunit=='F' && $wuapiunit=='s'){
+	$wuskydayTempHigh6=($wuskydayTempHigh6*9/5)+32;}	
+	// non metric to c US
+	if ($tempunit=='C' && $wuapiunit=='e' ){
+	$wuskydayTempHigh6=($wuskydayTempHigh6-32)/1.8;}	
+	//rain inches to mm
+	if ($rainunit=='mm' && $wuapiunit=='e' ){
+	$wuskydayprecipIntensity6=$wuskydayprecipIntensity6*25.4;}
+	//rain mm to inches scandinavia
+	if ($rainunit=='in' && $wuapiunit=='s' ){
+	$wuskydayprecipIntensity6=$wuskydayprecipIntensity6*0.0393701;}
+	//rain mm to inches uk
+	if ($rainunit=='in' && $wuapiunit=='h' ){
+	$wuskydayprecipIntensity6=$wuskydayprecipIntensity6*0.0393701;}
+	//rain mm to inches metric
+	if ($rainunit=='in' && $wuapiunit=='m' ){
+	$wuskydayprecipIntensity6=$wuskydayprecipIntensity6*0.0393701;}
+	
+	//wu convert temps-rain period7 
+	//metric to F
+	if ($tempunit=='F' && $wuapiunit=='m' ){
+	$wuskydayTempHigh7=($wuskydayTempHigh7*9/5)+32;}	
+	// metric to F UK
+	if ($tempunit=='F' && $wuapiunit=='h' ){
+	$wuskydayTempHigh7=($wuskydayTempHigh7*9/5)+32;}	
+	// ms non metric Scandinavia 
+	if ($tempunit=='F' && $wuapiunit=='s'){
+	$wuskydayTempHigh7=($wuskydayTempHigh7*9/5)+32;}	
+	// non metric to c US
+	if ($tempunit=='C' && $wuapiunit=='e' ){
+	$wuskydayTempHigh7=($wuskydayTempHigh7-32)/1.8;}	
+	//rain inches to mm
+	if ($rainunit=='mm' && $wuapiunit=='e' ){
+	$wuskydayprecipIntensity7=$wuskydayprecipIntensity7*25.4;}
+	//rain mm to inches scandinavia
+	if ($rainunit=='in' && $wuapiunit=='s' ){
+	$wuskydayprecipIntensity7=$wuskydayprecipIntensity7*0.0393701;}
+	//rain mm to inches uk
+	if ($rainunit=='in' && $wuapiunit=='h' ){
+	$wuskydayprecipIntensity7=$wuskydayprecipIntensity7*0.0393701;}
+	//rain mm to inches metric
+	if ($rainunit=='in' && $wuapiunit=='m' ){
+	$wuskydayprecipIntensity7=$wuskydayprecipIntensity7*0.0393701;}
 ?>
 <script src="js/jquery.js"></script>
 <!DOCTYPE html>
@@ -528,8 +579,8 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
  blue{color:#01a4b4}orange{color:#ff832f}green{color:#84a927}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#e7963b}purple{color:#916392}
 smalluvunit{font-size:.6rem;font-family:Arial,Helvetica,system;}.hitempy{position:relative;background:rgba(61, 64, 66, 0.5);color:#fff;font-size:12px;width:110px;padding:1px;-webit-border-radius:2px;border-radius:2px;
 margin-top:-44px;margin-left:72px;padding:2px;line-height:10px;font-size:9px}.svgimage{background:rgba(0, 155, 171, 1.000);-webit-border-radius:2px;border-radius:2px;}orange1{color:#aaa;}.greydesc{color:#c5c5c5;margin-left:40px;margin-top:-20px;position:absolute;font-size:0.85em}.none{float:none;margin-top:10px;position:absolute}spantemp{font-size:0.75em;color:#fff;font-family:weathertext2;}.tempicon{position:relative;font-family:weathertext2;margin-top:4px;margin-left:125px}.uvforecast{font-size:0.8rem;color:#c0c0c0;font-family:Arial,Helvetica;line-height:auto;margin-top:-15px;margin-bottom:2px}.storm{font-size:0.8rem;color:#c0c0c0;font-family:Arial,Helvetica;line-height:auto;margin-top:5px;margin-bottom:2px}.iconpos{margin-top:-5px;}
-bluer{color:#fff;border-radius:2px;padding:0 2px 0 2px;align-items:center;justify-content:center;}
-bluet,blueu,bluer{background:#01a4b5}yellowt,yellowu{background:#e6a141}oranget,orangeu{background:#d05f2d}greent{background:#90b12a}greenu{background:#565f67}redt,redu{background:#cd5245}purplet,purpleu{background:#b600b0}bluet,yellowt,oranget,greent,redt,purplet{-webkit-border-radius:2px;border-radius:2px;padding:2px;height:.9rem}
+bluer{color:#fff;border-radius:2px;padding:0 2px 0 2px;align-items:center;justify-content:center;background:rgba(0, 155, 180, .7)}
+bluet,blueu{background:#01a4b5}yellowt,yellowu{background:#e6a141}oranget,orangeu{background:#d05f2d}greent{background:#90b12a}greenu{background:#565f67}redt,redu{background:#cd5245}purplet,purpleu{background:#b600b0}bluet,yellowt,oranget,greent,redt,purplet{-webkit-border-radius:2px;border-radius:2px;padding:2px;height:.9rem}
 blueu,yellowu,orangeu,greenu,redu,purpleu{color:#fff;border-radius:2px;padding:0 3px 0 3px;align-items:center;justify-content:center;}.summarytext{font-size:.9em;color:#aaa;margin-top:5px;margin-bottom:2px}thunder{font-size:.9em;color:#aaa}summary{font-size:.9em;color:#aaa}blue1{color:#009bb4}value{font-size:.95em;color:#aaa}valuer{color:#aaa;font-size:.9em;}
 </style>
 <div class="weather34darkbrowser" url="Weather Underground Forecast"></div>  
@@ -627,9 +678,9 @@ if ($wuskydaynight=='N'){echo '<img src="css/wuicons/nt_'.$wuskydayIcon.'.svg" w
 				  if ( $wuskydayacumm1>0){echo ''.$snowflakesvg.'<valuer>Snow <bluer>'.$wuskydayacumm1.'cm</bluer><br>';}  				  
 				  //rain
 				  else if ($wuskydayPrecipType1='rain' && $rainunit=='in'){
-				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity1,2).'&nbsp;'.$rainunit.'&nbsp;<blueu>'.$wuskydayPrecipProb1.'%</bluer></span2>';} 	  				  //mm
+				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity1,2).'&nbsp;'.$rainunit.'&nbsp;'.$wuskydayPrecipProb1.'%</bluer></span2>';} 	  				  //mm
 				  else if ($wuskydayPrecipType1='rain'){
-				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity1,2).'&nbsp;'.$rainunit.'&nbsp;<blueu>'.$wuskydayPrecipProb1.'%</bluer></span2>';}									  				  echo  '</div>';?>
+				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity1,2).'&nbsp;'.$rainunit.'&nbsp;'.$wuskydayPrecipProb1.'%</bluer></span2>';}									  				  echo  '</div>';?>
 </article>  
 
 
@@ -680,9 +731,9 @@ if ($wuskydaynight2=='N'){echo '<img src="css/wuicons/nt_'.$wuskydayIcon2.'.svg"
 				  if ( $wuskydayacumm2>0){echo ''.$snowflakesvg.'<valuer>Snow <bluer>'.$wuskydayacumm2.'cm</bluer><br>';}  				  
 				  //rain
 				  else if ($wuskydayPrecipType2='rain' && $rainunit=='in'){
-				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity2,2).'&nbsp;'.$rainunit.'&nbsp;<blueu>'.$wuskydayPrecipProb2.'%</bluer></span2>';} 	  				  //mm
+				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity2,2).'&nbsp;'.$rainunit.'&nbsp;'.$wuskydayPrecipProb2.'%</bluer></span2>';} 	  				  //mm
 				  else if ($wuskydayPrecipType2='rain'){
-				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity2,2).'&nbsp;'.$rainunit.'&nbsp;<blueu>'.$wuskydayPrecipProb2.'%</bluer></span2>';}									  				  echo  '</div>';?>	
+				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity2,2).'&nbsp;'.$rainunit.'&nbsp;'.$wuskydayPrecipProb2.'%</bluer></span2>';}									  				  echo  '</div>';?>	
 </article>  
 
  <article>  
@@ -730,10 +781,10 @@ if ($wuskydaynight3=='N'){echo '<img src="css/wuicons/nt_'.$wuskydayIcon3.'.svg"
 				  if ( $wuskydayacumm3>0){echo ''.$snowflakesvg.'<valuer>Snow <bluer>'.$wuskydayacumm3.'cm</bluer><br>';}  				  
 				  //rain
 				  else if ($wuskydayPrecipType3='rain' && $rainunit=='in'){
-				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity3,2).'>&nbsp;'.$rainunit.'&nbsp;<blueu>'.$wuskydayPrecipProb3.'%</bluer></span2>';} 	  				  
+				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity3,2).'&nbsp;'.$rainunit.'&nbsp;'.$wuskydayPrecipProb3.'%</bluer></span2>';} 	  				  
 				  //mm
 				  else if ($wuskydayPrecipType3='rain'){
-				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity3,2).'&nbsp;'.$rainunit.'&nbsp;<blueu>'.$wuskydayPrecipProb3.'%</bluer></span2>';}									  				  echo  '</div>';?>
+				  echo $rainsvg.'<valuer>Rain <bluer>'. number_format($wuskydayprecipIntensity3,2).'&nbsp;'.$rainunit.'&nbsp;'.$wuskydayPrecipProb3.'%</bluer></span2>';}									  				  echo  '</div>';?>
     
 
 </article>  
