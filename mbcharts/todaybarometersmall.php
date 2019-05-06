@@ -120,6 +120,7 @@
 		titleFontSize: 6,
         titleWrap: false,
 		margin: 3,
+		interval:'auto',
 		lineThickness: 1,		
 		gridThickness: 1,	
 		gridDashType: "dot",

@@ -130,7 +130,7 @@
 		titleFontSize: 8,
         titleWrap: false,
 		margin: 3,
-		interval:1,
+		interval:3,
 		//maximum: <?php echo $max ;?>,		
 		lineThickness: 1,		
 		gridThickness: 1,	
