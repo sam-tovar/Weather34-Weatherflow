@@ -101,7 +101,9 @@ smalluvunit{font-size:.8rem;font-family:Arial,Helvetica,system;}
 valuecalm{font-size:.8em;font-family:weathertext2;}
 stationid{font-size:1.4em;font-family:weathertext2;color:#009bb4}
 .hitemp,.lotemp{font-size:9px;}
-.iconcondition{position:relative;float:left;margin-bottom:-15px;}
+.iconcondition{float:left;}
+.icontext{position:absolute;float:left;margin-top:40px;text-align:left;}
+.pressure{position:absolute;float:left;margin-top:30px;text-align:left;}
 </style>
 <div class="weather34darkbrowser" url="Nearby Airport Conditions"></div>
   
@@ -109,41 +111,41 @@ stationid{font-size:1.4em;font-family:weathertext2;color:#009bb4}
 
  <article>
   <div class=actualt>&nbsp;&nbsp Current Conditions </div>
-  <div class="iconcondition"><?php echo "<img rel='prefetch' src='css/icons/".$sky_icon."' width='60px' height='60px'>";?></div>
-  
-   <?php 
- echo "<span style='float:left;'>",$sky_desc.''; ?>
-<br>
-<blue>Pressure</blue> <br><green>
+  <div class="iconcondition"><?php echo "<img rel='prefetch' src='css/icons/".$sky_icon."' width='60px'>";?></div>
+  <div class="icontext"><?php  echo $sky_desc; ?> </div>
+<br><br><br>
+<div class="pressure">
+<blue>Pressure</blue> <br>
 <?php
 if ($pressureunit == 'mb' || $pressureunit == 'hPa') {
-	echo $metar34pressuremb ," </green>(".$pressureunit.")";
+	echo $metar34pressuremb ," (".$pressureunit.")";
 } else {
-	echo $metar34pressurehg ," </green>(inHG)";
+	echo $metar34pressurehg ," (inHG)";
 }
-?> - <green>
+?> - 
 <?php
 if ($pressureunit == 'mb' || $pressureunit == 'hPa') {
-	echo $metar34pressurehg ," </green>(inHG)";
+	echo $metar34pressurehg ," (inHG)";
 } else {
-	echo $metar34pressuremb ," </green>(mb)";
+	echo $metar34pressuremb ," (mb)";
 }
 ?>
-<blue><br>Visibility</blue> <br><green>
+<blue><br>Visibility</blue> <br>
 <?php
 if ($distanceunit == 'mi') {
-	echo $metar34vismiles  ," </green>(mimiles)";
+	echo $metar34vismiles  ," (mimiles)";
 } else {
-	echo $metar34viskm ,"</green> (km)";
+	echo $metar34viskm ," (km)";
 }
-?> - <green>
+?> - 
 <?php
 if ($distanceunit =='mi') {
-	echo $metar34viskm  ," </green>(km)";
+	echo $metar34viskm  ," (km)";
 } else {
-	echo $metar34vismiles ,"</green> (miles)";
+	echo $metar34vismiles ," (miles)";
 }
 ?>
+</div>
   </article> 
   
   
